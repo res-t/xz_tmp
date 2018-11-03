@@ -24,8 +24,8 @@
                           <li><a href="#">消息通知</a><span>  |</span></li>
                           <li id="l1">
                               <a href="#" class="car_mini" >购物车
-                                  <img src="img/car1.png" alt="" class="car_mini_img">
-                                  <img src="img/car2.png" alt="" class="car_mini_img my_display" >(0)</a></li>
+                                  <img src="http://127.0.0.1:3000/img/car1.png" alt="" class="car_mini_img">
+                                  <img src="http://127.0.0.1:3000/img/car2.png" alt="" class="car_mini_img my_display" >(0)</a></li>
                       </ul>
                       <div class="my_shopp_car my_display">
                           <p>购物车中还没有商品，赶紧选购吧！</p>
@@ -83,37 +83,37 @@
                               <li>
                                   <div class="new_pcoducts">新品</div>
                                   <a href="http://127.0.0.1:3000/mi8_Youth.html">
-                                      <img src="img/qingchun1.png" alt=""></a>
+                                      <img src="http://127.0.0.1:3000/img/qingchun1.png" alt=""></a>
                                   <a href="http://127.0.0.1:3000/mi8_Youth.html" class="my_pcoducts_name">小米青春版</a> 
                                   <p class="my_price">1399元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts">新品</div>
-                                  <a href="#"><img src="img/pingmu2.png" alt=""></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/pingmu2.png" alt=""></a>
                                   <a href="#" class="my_pcoducts_name">小米8 屏幕指纹版</a> 
                                   <p class="my_price">3199元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="img/qingchun3.png" alt="" class=""></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/qingchun3.png" alt="" class=""></a>
                                   <a href="#" class="my_pcoducts_name">小米8</a> 
                                   <p class="my_price">2699元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="img/1qingchun4.png" alt="" class=""></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/1qingchun4.png" alt="" class=""></a>
                                   <a href="#" class="my_pcoducts_name">小米8SE</a> 
                                   <p class="my_price">1899元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="img/qingchun5.png" alt="" class=""></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/qingchun5.png" alt="" class=""></a>
                                   <a href="#" class="my_pcoducts_name">小米Max 3</a> 
                                   <p class="my_price">1699元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="img/qingchun6.png" alt="" class="my_none"></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/qingchun6.png" alt="" class="my_none"></a>
                                   <a href="#" class="my_pcoducts_name">小米MIX 2S</a> 
                                   <p class="my_price">3299元起</p>  
                               </li>
@@ -128,37 +128,37 @@
                                   <li>
                                       <div class="new_pcoducts">新品</div>
                                       <a href="#">
-                                          <img src="img/hongmi1.png" alt=""></a>
+                                          <img src="http://127.0.0.1:3000/img/hongmi1.png" alt=""></a>
                                       <a href="#" class="my_pcoducts_name">红米6 Pro</a> 
                                       <p class="my_price">999元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts">新品</div>
-                                      <a href="#"><img src="img/homgmi2.png" alt=""></a>
+                                      <a href="#"><img src="http://127.0.0.1:3000/img/homgmi2.png" alt=""></a>
                                       <a href="#" class="my_pcoducts_name">红米6</a> 
                                       <p class="my_price">799元起</p>  
                                   </li>
                                   <li>
                                           <div class="new_pcoducts">新品</div>
-                                      <a href="#"><img src="img/homgmi3.png" alt="" class=""></a>
+                                      <a href="#"><img src="http://127.0.0.1:3000/img/homgmi3.png" alt="" class=""></a>
                                       <a href="#" class="my_pcoducts_name">红米6A</a> 
                                       <p class="my_price">599元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts new_pcoducts_bor"></div>
-                                      <a href="#"><img src="img/hongmi4-220.png" alt="" class=""></a>
+                                      <a href="#"><img src="http://127.0.0.1:3000/img/hongmi4-220.png" alt="" class=""></a>
                                       <a href="#" class="my_pcoducts_name">红米Note 5</a> 
                                       <p class="my_price">1099元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts new_pcoducts_bor"></div>
-                                      <a href="#"><img src="img/hongmi5.png" alt="" class=""></a>
+                                      <a href="#"><img src="http://127.0.0.1:3000/img/hongmi5.png" alt="" class=""></a>
                                       <a href="#" class="my_pcoducts_name">红米S2</a> 
                                       <p class="my_price">999元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts new_pcoducts_bor"></div>
-                                      <a href="#"><img src="img/hongmi6.png" alt="" class="my_none"></a>
+                                      <a href="#"><img src="http://127.0.0.1:3000/img/hongmi6.png" alt="" class="my_none"></a>
                                       <a href="#" class="my_pcoducts_name">红米5 Plus</a> 
                                       <p class="my_price">999元起</p>  
                                   </li>
@@ -172,37 +172,37 @@
                                   <li>
                                       <div class="new_pcoducts">新品</div>
                                       <a href="#">
-                                          <img src="img/tv1.png" alt=""></a>
+                                          <img src="http://127.0.0.1:3000/img/tv1.png" alt=""></a>
                                       <a href="#" class="my_pcoducts_name">小米电视4 75英寸</a> 
                                       <p class="my_price">8999元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts">新品</div>
-                                      <a href="#"><img src="img/tv2.png" alt=""></a>
+                                      <a href="#"><img src="http://127.0.0.1:3000/img/tv2.png" alt=""></a>
                                       <a href="#" class="my_pcoducts_name">小米电视4A 32英寸</a> 
                                       <p class="my_price">899元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts">新品</div>
-                                      <a href="#"><img src="img/tv3.png" alt="" class=""></a>
+                                      <a href="#"><img src="http://127.0.0.1:3000/img/tv3.png" alt="" class=""></a>
                                       <a href="#" class="my_pcoducts_name">小米电视4A 43英寸青春版</a> 
                                       <p class="my_price">1499元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts">新品</div>
-                                      <a href="#"><img src="img/tv4.png" alt="" class=""></a>
+                                      <a href="#"><img src="http://127.0.0.1:3000/img/tv4.png" alt="" class=""></a>
                                       <a href="#" class="my_pcoducts_name">小米电视4A 50英寸</a> 
                                       <p class="my_price">1999元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts">新品</div>
-                                      <a href="#"><img src="img/tv5.png" alt="" class="mr-10"></a>
+                                      <a href="#"><img src="http://127.0.0.1:3000/img/tv5.png" alt="" class="mr-10"></a>
                                       <a href="#" class="my_pcoducts_name">小米电视4A 55英寸</a> 
                                       <p class="my_price">2499元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts new_pcoducts_bor"></div>
-                                      <a href="#"><img src="img/tv6.png" alt="" class="my_none"></a>
+                                      <a href="#"><img src="http://127.0.0.1:3000/img/tv6.png" alt="" class="my_none"></a>
                                       <a href="#" class="my_pcoducts_name">查看全部</a> 
                                       <p class="my_price">小米电视</p>  
                                   </li>
@@ -210,43 +210,43 @@
                       </div>
                   </div>
                   <div id="loptop" class="hide_list  my_display">     
-                      <!--小米电脑--->
+                      <!--小米电脑-->
                       <div class="hide_list_pocgucts ">
                           <ul class="phone_pc clearfix">
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
                                   <a href="#">
-                                      <img src="img/computer1.png" alt=""></a>
+                                      <img src="http://127.0.0.1:3000/img/computer1.png" alt=""></a>
                                   <a href="#" class="my_pcoducts_name">小米平板</a> 
                                   <p class="my_price">1099元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts">新品</div>
-                                  <a href="#"><img src="img/computer2.png" alt=""></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/computer2.png" alt=""></a>
                                   <a href="#" class="my_pcoducts_name">小米笔记本 15.6"</a> 
                                   <p class="my_price">4199元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts">新品</div>
-                                  <a href="#"><img src="img/computer3.png" alt="" class=""></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/computer3.png" alt="" class=""></a>
                                   <a href="#" class="my_pcoducts_name">小米游戏本 8代</a> 
                                   <p class="my_price">6699元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts">新品</div>
-                                  <a href="#"><img src="img/computer4.png" alt="" class=""></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/computer4.png" alt="" class=""></a>
                                   <a href="#" class="my_pcoducts_name">小米笔记本Pro 15.6" GTX版</a> 
                                   <p class="my_price">6299元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="img/computer5.png" alt="" class="mr-10"></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/computer5.png" alt="" class="mr-10"></a>
                                   <a href="#" class="my_pcoducts_name">小米笔记本 Pro</a> 
                                   <p class="my_price">5599元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="img/computer6.5.jpg" alt="" class="my_none"></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/computer6.5.jpg" alt="" class="my_none"></a>
                                   <a href="#" class="my_pcoducts_name">小米笔记本 Air 系列</a> 
                                   <p class="my_price">3599元起</p>  
                               </li>
@@ -259,7 +259,7 @@
                           <ul class="phone_pc clearfix">
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="img/kongtiao.jpg" alt="" class="my_none"></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/kongtiao.jpg" alt="" class="my_none"></a>
                                   <a href="#" class="my_pcoducts_name">米家互联网空调</a> 
                                   <p class="my_price">1999元起</p>  
                               </li>
@@ -273,31 +273,31 @@
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
                                   <a href="#">
-                                      <img src="img/new1.png" alt=""></a>
+                                      <img src="http://127.0.0.1:3000/img/new1.png" alt=""></a>
                                   <a href="#" class="my_pcoducts_name">小米手环3</a> 
                                   <p class="my_price">169元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="img/luyouqi.png" alt=""></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/luyouqi.png" alt=""></a>
                                   <a href="#" class="my_pcoducts_name">小米路由器4</a> 
                                   <p class="my_price">199元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="img/toiuyingyi.png" alt="" class=""></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/toiuyingyi.png" alt="" class=""></a>
                                   <a href="#" class="my_pcoducts_name">米家投影仪</a> 
                                   <p class="my_price">3399元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="img/VR.png" alt="" class=""></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/VR.png" alt="" class=""></a>
                                   <a href="#" class="my_pcoducts_name">小米VR 一体机</a> 
                                   <p class="my_price">1499元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="img/shexiangji.png" alt="" class="my_none"></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/shexiangji.png" alt="" class="my_none"></a>
                                   <a href="#" class="my_pcoducts_name">小米米家智能摄像机 云台版</a> 
                                   <p class="my_price">199元起</p>  
                               </li>
@@ -311,37 +311,37 @@
                               <li>
                                   <div class="new_pcoducts">双频双核</div>
                                   <a href="#">
-                                      <img src="img/A4.png" alt=""></a>
+                                      <img src="http://127.0.0.1:3000/img/A4.png" alt=""></a>
                                   <a href="#" class="my_pcoducts_name">小米路由器 4</a> 
                                   <p class="my_price">199元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="img/4Q.png" alt=""></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/4Q.png" alt=""></a>
                                   <a href="#" class="my_pcoducts_name">小米路由器 4Q</a> 
                                   <p class="my_price">99元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="img/3A.png" alt="" class=""></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/3A.png" alt="" class=""></a>
                                   <a href="#" class="my_pcoducts_name">小米路由器 3A</a> 
                                   <p class="my_price">129元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts">双千兆</div>
-                                  <a href="#"><img src="img/3G.png" alt="" class=""></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/3G.png" alt="" class=""></a>
                                   <a href="#" class="my_pcoducts_name">小米路由器 3G</a> 
                                   <p class="my_price">299元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts">大容量</div>
-                                  <a href="#"><img src="img/PRO.png" alt="" class=""></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/PRO.png" alt="" class=""></a>
                                   <a href="#" class="my_pcoducts_name">小米路由器 HD/Pro</a> 
                                   <p class="my_price">499元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="img/quanbu.png" alt="" class="my_none"></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/quanbu.png" alt="" class="my_none"></a>
                                   <a href="#" class="my_pcoducts_name">查看全部小米路由器</a>  
                               </li>
                           </ul>
@@ -354,31 +354,31 @@
                               <li>
                                   <div class="new_pcoducts">新品</div>
                                   <a href="#">
-                                      <img src="img/plane.jpg" alt=""></a>
+                                      <img src="http://127.0.0.1:3000/img/plane.jpg" alt=""></a>
                                   <a href="#" class="my_pcoducts_name">小米无人机</a> 
                                   <p class="my_price">2999元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts">新品</div>
-                                  <a href="#"><img src="img/xiaomijingshuiqi.jpg" alt=""></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/xiaomijingshuiqi.jpg" alt=""></a>
                                   <a href="#" class="my_pcoducts_name">小米净水器</a> 
                                   <p class="my_price">1999元起</p>  
                               </li>
                               <li>
                                       <div class="new_pcoducts">新品</div>
-                                  <a href="#"><img src="img/saodijiqiren320-220.jpg" alt="" class=""></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/saodijiqiren320-220.jpg" alt="" class=""></a>
                                   <a href="#" class="my_pcoducts_name">米家扫地机器人</a> 
                                   <p class="my_price">1699元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="img/dfb.jpg" alt="" class=""></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/dfb.jpg" alt="" class=""></a>
                                   <a href="#" class="my_pcoducts_name">米家压力IH电饭煲</a> 
                                   <p class="my_price">999元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="img/air2.jpg" alt="" class="my_none"></a>
+                                  <a href="#"><img src="http://127.0.0.1:3000/img/air2.jpg" alt="" class="my_none"></a>
                                   <a href="#" class="my_pcoducts_name">查看全部智能硬件</a> 
                                   <p class="my_price"></p>  
                               </li>
@@ -399,25 +399,74 @@ export default {
         return{}
     },
      mounted(){
-        $(".my_serch>input").click(function(){
+    this.serch();
+    this.product();
+    this.shopCart();
+    this.serchIco();
+    },
+    methods:{
+        /*商品*/
+        product(){
+             /**商品**/
+            $(".my_top_nav>li").mouseenter(function(){
+                var li = $(this)
+                if( $(li.attr('data-target')).is('.my_display')){
+                $(li.attr('data-target')).removeClass("my_display").siblings(".hide_list").addClass("my_display")
+            }
+            
+            });
+            $(".my_title").parent().parent().mouseleave(function(){
+                
+            $('.hide_list').addClass('my_display')
+            
+            })
+        },
+        /**搜索*/
+        serch(){
+              $(".my_serch>input").click(function(){
                 var $input = $(this);
                 $input.css("border","1px solid #FF6B00")
                 $(".d1").css("border","1px solid #FF6B00")
                 .css("border-left","none")
                 $(".my_resou").addClass("my_opacity")
                 $(".my_p_input").removeClass("my_display")
-        })
-        $(".my_serch>input").parent().parent().parent().hover(function(){
-            $(".my_serch>input").css("border","1px solid rgba(150, 149, 149, 0.212)")
-            $(".my_resou").removeClass("my_opacity")
-            $(".d1").css("border","1px solid rgba(150, 149, 149, 0.212)")
-            $(".my_p_input").addClass("my_display")
-        })
-    },
-    method:{
-           
-            
-        
+             })
+            $(".my_serch>input").parent().parent().parent().hover(function(){
+                $(".my_serch>input").css("border","1px solid rgba(150, 149, 149, 0.212)")
+                $(".my_resou").removeClass("my_opacity")
+                $(".d1").css("border","1px solid rgba(150, 149, 149, 0.212)")
+                $(".my_p_input").addClass("my_display")
+            })
+        },
+        /**购物车 */
+        shopCart(){
+              $('.topbar-nav_right>ul>li:last-child').mouseenter(function(){
+                    var a=$(this)
+                    $('.topbar-nav_right>ul>li:last-child>a').css('background','white')
+                    .css('color','orange')
+                    $('.my_shopp_car').removeClass('my_display')
+                    a.children().children().removeClass('my_display')
+                    $('.topbar-nav_right>ul>li:last-child>a>img:first-child').addClass('my_display')           
+              });
+
+                $('.topbar-nav_right>ul>li:last-child').parent().parent().mouseleave(function(){
+                    var a=$(this)
+                    $('.topbar-nav_right>ul>li:last-child>a>img:first-child').removeClass('my_display')
+                    $('.topbar-nav_right>ul>li:last-child>a>img:nth-child(2)').toggleClass('my_display')
+                    $('.my_shopp_car').toggleClass('my_display')
+                    $('.topbar-nav_right>ul>li:last-child>a').css('background',' #424242')
+                    .css('color','#b0b0b0')
+                    console.log(1);
+                })
+        },  
+        serchIco(){
+            /*搜索图标*/
+            $('.d1').mouseenter(function(){
+                $(".search.icon").css("color","#fff")
+            }).mouseleave(function(){
+                $(".search.icon").css("color","#000")
+            })
+        }
        
     },
    
