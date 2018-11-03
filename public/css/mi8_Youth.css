@@ -1333,3 +1333,67 @@ body{
         margin-right: 70px;
     }
 }
+/**轮播*/
+#container_img-m8{
+	width:1226px;
+	height:720px;
+	position:relative;
+    
+    /*border-radius:10px;*/
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.item-m8{
+	position:absolute;
+}
+ 
+#tabs-m8{
+	position:absolute;
+	left:50%;
+    bottom:-60px;
+    width: 1226px;
+    margin-left: -613px;
+    text-align: center;
+    
+}
+.tab-m8{
+	float:left;
+	
+	width:150px;
+	height:4px;
+	background: rgba(184,178,182,.8);
+
+    cursor:pointer;
+    list-style: none;
+    margin-left:70px;
+}
+.active-m8{
+    background: rgba(0,0,0,0.4);
+	border-color:#999497;
+}
+.btn-m8{
+	position:absolute;
+	top:50%;
+	margin-top:-35px;
+	width:40px;
+	height:70px;
+	color:#d6d3d5;
+	font-size:36px;
+	line-height:70px;
+	text-align:center;
+	cursor:pointer;
+}
+.btn-m8:hover{
+	background:rgba(121, 118, 119, 0.274);
+}
+.prev-m8{
+	position:absolute;
+	left:20px;
+	border-radius:0 5px 5px 0;	
+}
+.next-m8{
+	position:absolute;
+    right:0;
+    margin-right: 20px;
+	border-radius:5px 0 0 5px;
+}
