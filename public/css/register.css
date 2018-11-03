@@ -177,19 +177,19 @@ body{
 .xieyi>a{
     color: #333;
 }
-.my_footer{
+.my_footer-R{
     width: 300px;
     height: 20px;
     margin: 0 auto;
     margin-top: 20px;
 }
-.my_footer>ul>li{
+.my_footer-R>ul>li{
     float: left;
     list-style: none;
     margin-left: 10px;
 
 }
-.my_footer>ul>li>a{
+.my_footer-R>ul>li>a{
     color: #333;
 }
 .beianhao{
