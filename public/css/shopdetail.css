@@ -144,7 +144,7 @@ body{
     left: 50%;
     margin-left: -150px;
 }
-.tab{
+.tab-D{
 	float:left;
 	margin-right:10px;
 	width:50px;
@@ -394,7 +394,6 @@ body{
  }
  
  .yanchang>li> .name{
-    font-size: 18px;
     margin-bottom: 10px;
  }
  .agreement{
@@ -416,7 +415,7 @@ body{
  .check-box-active{
      background: #f25807;
  }
- .yanchang>li .desc{
+ .yanchang>li .desc1{
     color: #b0b0b0;
  }
  .agreement .read{
@@ -435,7 +434,6 @@ body{
  }
  .pro-list{
     background: #f9f9fa;
-    padding: 30px;
     margin-bottom: 30px;
  }
 .pro-list>ul>li{
