@@ -24,30 +24,30 @@ body{
     color: #212121;
     float: left;
 }
-.title_rigth{
+.title_rigth-m8{
     width: 392px;
     height: 30px;
 
     float: right;
     margin-top: 15px;
 }
-.title_rigth>ul>li:not(.goumai){
+.title_rigth-m8>ul>li:not(.goumai){
     float: left;
     list-style: none;
     line-height: 2;
     margin-left: 8px;
 }
-.title_rigth>ul>li>a{
+.title_rigth-m8>ul>li>a{
     color: #333;
     font:14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
 }
-.title_rigth>ul>li>a:hover{
+.title_rigth-m8>ul>li>a:hover{
     color: #f25807;
 }
 .font_color{
     color: #f25807 !important;
 }
-.title_rigth>ul>li>a>span{
+.title_rigth-m8>ul>li>a>span{
     color: #a8a4a4
 }
 .goumai{
@@ -968,7 +968,6 @@ body{
 /*评论区*/
 .Reviewarea{
     width: 100%;
-    height: 6500px;
     background: #f5f5f5;
     margin: 0;
     padding-top: 40px;
