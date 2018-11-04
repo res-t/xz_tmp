@@ -6,11 +6,8 @@
         <xm-header></xm-header>
         <div class="my_swipe">
             <div id="container_img-index">
-                <a class="item-index" href="#"><img src="http://127.0.0.1:3000/img/baner.jpg"/></a>
-                <a class="item-index" href="#"><img src="http://127.0.0.1:3000/img/baner1.jpg"/></a>
-                <a class="item-index" href="#"><img src="http://127.0.0.1:3000/img/baner2.jpg"/></a>
-                <a class="item-index" href="#"><img src="http://127.0.0.1:3000/img/baner3.jpg"/></a>
-                <a class="item-index" href="#"><img src="http://127.0.0.1:3000/img/baner4.jpg"/></a>
+                <a class="item-index" href="#"  v-for="item in imgList" :key="item.id"><img :src="item"></a>
+               
         
                 <div class="btn-index prev-index">&lt;</div>
                 <div class="btn-index next-index">&gt;</div>
@@ -2126,7 +2123,15 @@
   import xmFooter from '@/components/footer.vue'
 export default {
     data(){
-        return{}
+        return{
+            imgList:[
+                "http://127.0.0.1:3000/img/baner.jpg",
+                "http://127.0.0.1:3000/img/baner1.jpg",
+                "http://127.0.0.1:3000/img/baner2.jpg",
+                "http://127.0.0.1:3000/img/baner3.jpg",
+                "http://127.0.0.1:3000/img/baner4.jpg",
+            ]
+        }
     },
     mounted(){
         this.swipe();
