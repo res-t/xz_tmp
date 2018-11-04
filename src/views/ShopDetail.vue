@@ -8,19 +8,19 @@
                         <div class="title_rigth">
                             <ul>
                                 <li data-target="#Summary">
-                                    <a href="http://127.0.0.1:3000/mi8_Youth.html" class="font_color">概述 <span> |</span></a>
+                                    <router-link  to="/mi8youth" class="">概述 <span> |</span></router-link>
                                 </li>
                                 <li data-target="#gallery">
-                                    <a href="http://127.0.0.1:3000/mi8_Youth.html">图集 <span>|</span></a>
+                                    <a href="javascript:">图集 <span>|</span></a>
                                 </li>
                                 <li data-target="#specs">
-                                    <a href="http://127.0.0.1:3000/mi8_Youth.html">参数 <span> |</span></a>
+                                    <a href="javascript:">参数 <span> |</span></a>
                                 </li>
                                 <li data-target="#F_code">
-                                    <a href="http://127.0.0.1:3000/mi8_Youth.html">F码通道 <span> | </span></a>
+                                    <a href="javascript:">F码通道 <span> | </span></a>
                                 </li>
                                 <li data-target="#Reviewarea">
-                                    <a href="http://127.0.0.1:3000/mi8_Youth.html">用户评价</a>
+                                    <a href="javascript:">用户评价</a>
                                 </li>
                             </ul>
                         </div>

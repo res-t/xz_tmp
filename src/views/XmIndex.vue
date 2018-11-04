@@ -5,22 +5,22 @@
         </div>
         <xm-header></xm-header>
         <div class="my_swipe">
-            <div id="container_img">
-                <a class="item" href="#"><img src="http://127.0.0.1:3000/img/baner.jpg"/></a>
-                <a class="item" href="#"><img src="http://127.0.0.1:3000/img/baner1.jpg"/></a>
-                <a class="item" href="#"><img src="http://127.0.0.1:3000/img/baner2.jpg"/></a>
-                <a class="item" href="#"><img src="http://127.0.0.1:3000/img/baner3.jpg"/></a>
-                <a class="item" href="#"><img src="http://127.0.0.1:3000/img/baner4.jpg"/></a>
+            <div id="container_img-index">
+                <a class="item-index" href="#"><img src="http://127.0.0.1:3000/img/baner.jpg"/></a>
+                <a class="item-index" href="#"><img src="http://127.0.0.1:3000/img/baner1.jpg"/></a>
+                <a class="item-index" href="#"><img src="http://127.0.0.1:3000/img/baner2.jpg"/></a>
+                <a class="item-index" href="#"><img src="http://127.0.0.1:3000/img/baner3.jpg"/></a>
+                <a class="item-index" href="#"><img src="http://127.0.0.1:3000/img/baner4.jpg"/></a>
         
-                <div class="btn prev">&lt;</div>
-                <div class="btn next">&gt;</div>
+                <div class="btn-index prev-index">&lt;</div>
+                <div class="btn-index next-index">&gt;</div>
         
-                <ul id="tabs">
-                <li class="tab active"></li>
-                <li class="tab"></li>
-                <li class="tab"></li>
-                <li class="tab"></li>
-                <li class="tab"></li>
+                <ul id="tabs-index">
+                <li class="tab-index active-index"></li>
+                <li class="tab-index"></li>
+                <li class="tab-index"></li>
+                <li class="tab-index"></li>
+                <li class="tab-index"></li>
                 </ul>
                 <div class="my_swipe_href">
                     <ul>
@@ -40,10 +40,10 @@
                         <div id="Mobilephonecard" class="my_display">
                             <ul>
                                 <li>
-                                    <a href="http://127.0.0.1:3000/mi8_Youth.html">
+                                    <router-link to="/mi8youth">
                                         <img src="http://127.0.0.1:3000/img/qingchun-80.png" alt="" class="my_swipe_href_img">
                                         小米8青春版
-                                    </a>
+                                    </router-link>
                                 </li>
                                 <li>
                                     <a href="#">
@@ -2149,13 +2149,13 @@ export default {
             var i = 0 ;
             var timer;
            //用jquery方法设置第一张图片显示，其余隐藏
-            $('.item').eq(0).show().siblings('.item').hide();
+            $('.item-index').eq(0).show().siblings('.item-index').hide();
 
             //调用showTime()函数（轮播函数）
             showTime();
 
             //当鼠标经过下面的数字时，触发两个事件（鼠标悬停和鼠标离开）
-            $('.tab').hover(function(){
+            $('.tab-index').hover(function(){
                 //获取当前i的值，并显示，同时还要清除定时器
                 i = $(this).index();
                 Show();
@@ -2166,7 +2166,7 @@ export default {
             });
 
             //鼠标点击左侧的箭头
-            $('.prev').click(function(){
+            $('.prev-index').click(function(){
                 clearInterval(timer);
                 if(i == 0){
                 i = 5;//注意此时i的值
@@ -2177,7 +2177,7 @@ export default {
             });
 
             //鼠标点击右侧的箭头
-            $('.next').click(function(){
+            $('.next-index').click(function(){
                 clearInterval(timer);
                 if(i == 4){
                 i = -1;//注意此时i的值
@@ -2206,10 +2206,10 @@ export default {
             //创建一个Show函数
             function Show(){
             //在这里可以用其他jquery的动画
-            $('.item').eq(i).fadeIn(300).siblings('.item').fadeOut(300);
+            $('.item-index').eq(i).fadeIn(300).siblings('.item-index').fadeOut(300);
 
             //给.tab创建一个新的Class为其添加一个新的样式，并且要在css代码中设置该样式
-            $('.tab').eq(i).addClass('active').siblings('.tab').removeClass('active');
+            $('.tab-index').eq(i).addClass('active-index').siblings('.tab-index').removeClass('active-index');
 
             }
    

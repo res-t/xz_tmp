@@ -4,7 +4,7 @@
         <div class="top_title">
             <div class="top_title_detail">
                 <h2 class="title_youth">小米8青春版</h2>
-                <div class="title_rigth">
+                <div class="title_rigth-m8">
                     <ul>
                         <li data-target="#Summary">
                             <a href="#" class="font_color">概述 <span> |</span></a>
@@ -22,7 +22,7 @@
                             <a href="#">用户评价</a>
                         </li>
                         <li class="goumai">
-                            <a href="http://127.0.0.1:3000/shopdetail.html"> 立即购买</a>
+                            <router-link to="/shopdetail"> 立即购买</router-link>
                         </li>
                     </ul>
                 </div>
@@ -622,6 +622,7 @@ export default({
          this.myVideoPlay();
          this.topTop();
          this.clickImg();
+         this.clickTileTop()
      },
      methods:{
         /**轮播*/
@@ -711,7 +712,7 @@ export default({
                 $(".gallery").removeClass("my_display").siblings().addClass("my_display");
                 var speed=100;//滑动的速度
                 $('body,html').animate({ scrollTop: 0 }, speed);
-                $(".title_rigth>ul>li:nth-child(2)").children("a").addClass("font_color").parent().prev().children("a").removeClass("font_color")   
+                $(".title_rigth-m8>ul>li:nth-child(2)").children("a").addClass("font_color").parent().prev().children("a").removeClass("font_color")   
             })
         },
         /**轮播noe */
@@ -733,9 +734,6 @@ export default({
                 $(`.Summary_ul>li:nth-child(${i+1})`).addClass("bg_color").siblings().removeClass("bg_color")   
                 };
             }
-        },
-        /**lunbo */
-        mySwipeTwo(){
             var n=0;
             setInterval(function(){
                 if(n>$(".index-boedy-img").length){
@@ -754,6 +752,10 @@ export default({
                 $(`#index_body_index>li:nth-child(${i+1})`).addClass("border_ff").siblings().removeClass("border_ff")  
                 };
             }
+        },
+        /**lunbo */
+        mySwipeTwo(){
+            
         },
         /**视频播放 */
         myVideoPlay(){
@@ -798,7 +800,7 @@ export default({
                 $(".specs").removeClass("my_display").siblings().addClass("my_display");
                     var speed=100;//滑动的速度
                     $('body,html').animate({ scrollTop: 0 }, speed);
-                    $(".title_rigth>ul>li:nth-child(3)").children("a").addClass("font_color").parent().prev().children("a").removeClass("font_color")   
+                    $(`.title_rigth-m8>ul>li:nth-child(3)`).children("a").addClass("font_color").parent().prev().children("a").removeClass("font_color")   
             })
         },
         /**点击切图 */
@@ -809,6 +811,15 @@ export default({
                 };
             }
         },
+        /**切换 */
+        clickTileTop(){
+            $(".title_rigth-m8>ul>li").click(function(){
+                var li = $(this)
+                li.children("a").addClass("font_color").parent().siblings().children().removeClass("font_color")
+                $(li.attr('data-target')).removeClass("my_display").siblings().addClass("my_display")
+  
+            })
+        }
     },
      components:{
        xmHeader,

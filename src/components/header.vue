@@ -19,8 +19,8 @@
                   </div>
                   <div class="posr topbar-nav_right" >
                       <ul class="clearfix">
-                          <li><a href="http://127.0.0.1:3000/login.html" id="name">登录</a><span>  |</span></li>
-                          <li><a href="http://127.0.0.1:3000/register.html">注册</a><span>  |</span></li>
+                          <li><router-link to="/login"  id="name">登录</router-link><span>  |</span></li>
+                          <li><router-link to="/register">注册</router-link><span>  |</span></li>
                           <li><a href="#">消息通知</a><span>  |</span></li>
                           <li id="l1">
                               <a href="#" class="car_mini" >购物车
@@ -37,7 +37,7 @@
               <div  class="shopp_title">
                   <div class="my_title">
                       <div class="my_logo">
-                          <a href="http://127.0.0.1:3000/"> <img src="http://127.0.0.1:3000/img/logo.png" alt=""></a>
+                          <router-link to="/index"> <img src="http://127.0.0.1:3000/img/logo.png" alt=""></router-link>
                       </div>
                       <div class="my_mini">
                           <a href="#"><img src="http://127.0.0.1:3000/img/mini.gif" alt=""></a>
@@ -82,8 +82,8 @@
                           <ul class="phone_pc clearfix">
                               <li>
                                   <div class="new_pcoducts">新品</div>
-                                  <a href="http://127.0.0.1:3000/mi8_Youth.html">
-                                      <img src="http://127.0.0.1:3000/img/qingchun1.png" alt=""></a>
+                                  <router-link to="/mi8youth">
+                                      <img src="http://127.0.0.1:3000/img/qingchun1.png" alt=""></router-link>
                                   <a href="http://127.0.0.1:3000/mi8_Youth.html" class="my_pcoducts_name">小米青春版</a> 
                                   <p class="my_price">1399元起</p>  
                               </li>
