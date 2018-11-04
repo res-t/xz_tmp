@@ -52,7 +52,7 @@
                 <div class="product-detail">
                     <div class="my-product-list">
                         <img src="http://127.0.0.1:3000/img/pms_jinshuiqi200x200.jpg" alt="">
-                        <p class="list-title"><a href="http://127.0.0.1:3000/listdetail.html">小米净水器滤芯 PP棉</a></p>
+                        <p class="list-title"><router-link to="/listdetail">小米净水器滤芯 PP棉</router-link></p>
                         <p class="list-price animated swing infinite">59元</p>
                         <p class="list-img"><a href="http://127.0.0.1:3000/listdetail.html"><img src="http://127.0.0.1:3000/img/pms_reshuqi!34x34.jpg" alt=""></a></p>
                         <div class="like-cart">
