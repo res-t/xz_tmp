@@ -196,7 +196,7 @@
                             <div class="btn-m8 prev-m8">&lt;</div>
                             <div class="btn-m8 next-m8">&gt;</div>
                         
-                            <ul id="tabs">
+                            <ul id="tabs-m8">
                                 <li class="tab-m8 active-m8"></li>
                                 <li class="tab-m8"></li>
                                 <li class="tab-m8"></li>
