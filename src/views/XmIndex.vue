@@ -401,10 +401,10 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="http://127.0.0.1:3000/shoplist.html">
+                                        <router-link to="/shoplist">
                                             <img src="http://127.0.0.1:3000/img/jingshuiqi80haha.jpg" alt="" class="my_swipe_href_img">
                                             净水器
-                                        </a>
+                                        </router-link>
                                     </li>
                                     <li>
                                         <a href="http://127.0.0.1:3000/shoplist.html">
