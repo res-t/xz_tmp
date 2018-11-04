@@ -1179,7 +1179,7 @@
     color: white;
 }
 /***/
-#container_img{
+#container_img-index{
 width:1226px;
 height:460px;
 position:relative;
@@ -1187,16 +1187,16 @@ overflow:hidden;
 /*border-radius:10px;*/
 margin: 0 auto;
 }
-.item{
+.item-index{
 position:absolute;
 }
 
-#tabs{
+#tabs-index{
 position:absolute;
 right:30px;
 bottom:20px;
 }
-.tab{
+.tab-index{
 float:left;
 margin-right:10px;
 width:4px;
@@ -1207,11 +1207,11 @@ background:#989196;
 cursor:pointer;
 list-style: none;
 }
-.active{
+.active-index{
 background:#fff;
 border-color:#999497;
 }
-.btn{
+.btn-index{
 position:absolute;
 top:50%;
 margin-top:-35px;
@@ -1223,15 +1223,15 @@ line-height:70px;
 text-align:center;
 cursor:pointer;
 }
-.btn:hover{
+.btn-index:hover{
 background:rgba(121, 118, 119, 0.274);
 }
-.prev{
+.prev-index{
 position:absolute;
 left:235px;
 border-radius:0 5px 5px 0;	
 }
-.next{
+.next-index{
 position:absolute;
 right:0;
 border-radius:5px 0 0 5px;
