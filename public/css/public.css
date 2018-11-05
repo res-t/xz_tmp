@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0,
 }
+del{
+    text-decoration: line-through;
+}
 a{
     text-decoration: none;
 }
