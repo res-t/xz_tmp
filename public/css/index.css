@@ -1243,7 +1243,7 @@ border-radius:5px 0 0 5px;
 .face{position:absolute;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;}
 .face h3{color:white;text-align:center;}
 .back{-webkit-transform:rotateY(180deg);-moz-transform:rotateY(180deg);background:#fff;width:234px;height:300px;}
-.foot{font-size: 14px;
+.foot-p{font-size: 14px;
 color: #333;}
 .xuanzhuan_img{
 width: 160px !important;
