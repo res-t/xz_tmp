@@ -1166,14 +1166,14 @@
                                     <a href="#" class="face front" style="display: block ;text-align:center;width:234px;height:300px">
                                         <div class="flg_new">新品</div>
                                         <img src="http://127.0.0.1:3000/img/phonemi8.jpg" class="xuanzhuan_img">
-                                        <p class="foot">小米8青春版4GB+64GB </p>
+                                        <p class="foot-p">小米8青春版4GB+64GB </p>
                                         <span class="xiaotitle">潮流镜面渐变色，2400万自拍旗舰</span>
                                         <div class="my_money">1299元</div>
                                     </a>
                                     <div class="face back">
                                         <a href="#" style="display: block ;text-align:center;width:234px;height:250px">
                                             <img src="http://127.0.0.1:3000/img/phonemi8.jpg" class="xuanzhuan_img">
-                                            <p class="foot">小米8青春版4GB+64GB </p>
+                                            <p class="foot-p">小米8青春版4GB+64GB </p>
                                             <span class="xiaotitle">潮流镜面渐变色，2400万自拍旗舰</span>
                                             <div class="my_money mt10">1299元</div>
                                         </a>
