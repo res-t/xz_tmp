@@ -1,9 +1,9 @@
 <template>
   <div class="app-login">
      <div class="header">
-        <a href="http://127.0.0.1:3000" class="logo">
+        <router-link to="/index" class="logo">
         <img src="http://127.0.0.1:3000/img/logo12.png" alt="">
-        </a>
+        </router-link>
     </div>
     <div class="bod">
         <div class="layout" id="layout">
