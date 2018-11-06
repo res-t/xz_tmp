@@ -21,140 +21,21 @@
                 </ul>
                 <div class="my_swipe_href">
                     <ul>
-                         <li data-target="#TVbox" v-for="title in shoptitle" :key="title.id" id="title">
+                         <li  v-for="title in shoptitle" :key="title.id" id="title" :data-target="'#product'+title.id">
                              <a href="#">{{title.name}} <span>&gt;</span></a>
                          </li>
                     </ul>
                     <div class="my_swipe_href_xq">
                         <!--phone_detail-->
-                        <div id="Mobilephonecard" class="my_display">
-                            <ul>
-                                <li>
+                        <div id="product1" class="my_display">
+                            <ul v-for="(item,i) in navlist" :key="i">
+                                <li v-for="(tmp,i) in item" :key="i">
                                     <router-link to="/mi8youth">
-                                        <img src="http://127.0.0.1:3000/img/qingchun-80.png" alt="" class="my_swipe_href_img">
-                                        小米8青春版
+                                        <img :src='tmp.image' alt="" class="my_swipe_href_img">
+                                        {{tmp.name}}
                                     </router-link>
                                 </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/pingmu-80.png" alt="" class="my_swipe_href_img">
-                                        小米8 屏幕指纹版
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/m8-80.png" alt="" class="my_swipe_href_img">
-                                        小米8
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/m8se-80.png" alt="" class="my_swipe_href_img">
-                                        小米MIX 2S
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://127.0.0.1:3000/mi8_Youth.html">
-                                        <img src="http://127.0.0.1:3000/img/mix2s80-80white.png" alt="" class="my_swipe_href_img">
-                                        小米8青春版
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/max3-80-80.png" alt="" class="my_swipe_href_img">
-                                        小米MAX3
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/8080.jpg" alt="" class="my_swipe_href_img">
-                                        小米6X
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/heisha-80.png" alt="" class="my_swipe_href_img">
-                                        小米黑鲨游戏手机
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/mix2-80.png" alt="" class="my_swipe_href_img">
-                                        小米MIX2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/666666.png" alt="" class="my_swipe_href_img">
-                                        红米6
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/max2_80.jpg" alt="" class="my_swipe_href_img">
-                                        小米Max2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/6pro140-140.png" alt="" class="my_swipe_href_img">
-                                    红米6 Pro
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/6AAAA.png" alt="" class="my_swipe_href_img">
-                                        红米6A
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/note5-80-80.png" alt="" class="my_swipe_href_img">
-                                        红米Note5
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/s2-80-80.png" alt="" class="my_swipe_href_img">
-                                        红米S2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/4g+.jpg" alt="" class="my_swipe_href_img">
-                                        移动4G+专区
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/compare.jpg" alt="" class="my_swipe_href_img">
-                                        对比手机
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/mifenka-1.jpg" alt="" class="my_swipe_href_img">
-                                        米粉卡 日租卡
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/mimobile.jpg" alt="" class="my_swipe_href_img">
-                                        小米移动 电话卡
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="http://127.0.0.1:3000/img/weixiu80-80.png" alt="" class="my_swipe_href_img">
-                                        手机上门维修
-                                    </a>
-                                </li>
+                               
                             </ul>
 
                         </div>
@@ -2124,15 +2005,15 @@ export default {
                 "http://127.0.0.1:3000/img/baner3.jpg",
                 "http://127.0.0.1:3000/img/baner4.jpg",
             ],
-             shoptitle:[]
+             shoptitle:[],
+             navlist:{}
         }
        
     },
     mounted(){ 
-        this.ShopTitle();
         this.swipe();
         this.purchas();
-         this.jump();
+        this.jump();
         this.clickImg();
         this.indexLength();
         this.leftRight();
@@ -2142,7 +2023,9 @@ export default {
         this.timeShop();
         this.phoneApp();
         this.Roll();
-       
+        /*请求*/ 
+       this.ShopTitle();
+       this.phone()
     },
     methods:{
        /**轮播 */
@@ -2308,10 +2191,8 @@ export default {
        },
        /**顶部swipe 轮播*/
        topSwipe(){
-           console.log($(".my_swipe_href>ul"))
            $(".my_swipe_href>ul").on('mouseenter','li',function(){
             var li = $(this)
-            console.log(this)
             if( $(li.attr('data-target')).is('.my_display')){
                 $(li.attr('data-target')).removeClass("my_display").siblings().addClass("my_display")
                 li.addClass('my_li_bg').siblings('').removeClass("my_li_bg")
@@ -2393,11 +2274,27 @@ export default {
    
             }
        },
+       /**请求*/
             ShopTitle(){
              this.$http.get("http://127.0.0.1:3000/shoptitle").then(result=>{
                     this.shoptitle = result.data;
-                   console.log(result.data);
+                   //console.log(result.data);
              })
+        },
+        phone(){
+            this.$http.get("http://127.0.0.1:3000/phone").then(result=>{
+                this.phoneDetail=result.data;
+                //console.log(result.data);
+                var arr=result.data
+                var index=0
+                var obj={}
+                for(var i=0;i<Math.ceil(arr.length/6);i++){
+                    obj[i]=arr.slice(index,index+6)
+                    index+=6
+                }
+               this.navlist=obj
+            console.log(this.navlist);
+            })
         }
     },
     components:{
