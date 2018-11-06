@@ -4,6 +4,8 @@ import router from './router'
 import store from './store'
 import '../public/css/public.css'
 import '../src/assets/jquery-3.2.1'
+import axios from 'axios'
+Vue.prototype.$http = axios;
 Vue.config.productionTip = false
 
 new Vue({
@@ -11,3 +13,4 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
