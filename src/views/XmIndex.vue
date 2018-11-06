@@ -21,16 +21,9 @@
                 </ul>
                 <div class="my_swipe_href">
                     <ul>
-                        <li class="mt20"  data-target="#Mobilephonecard"><a href="#">手机 电话卡 <span>&gt;</span></a></li>
-                        <li data-target="#TVbox"><a href="#">电视 盒子 <span>&gt;</span></a></li>
-                        <li data-target="#Notebooktablet"><a href="#">笔记本 平板 <span>&gt;</span></a></li>
-                        <li data-target="#Appliancewiringboard"><a href="#">家电 插线板 <span>&gt;</span></a></li>
-                        <li data-target="#Travelwear"><a href="#">出行 穿戴<span>&gt;</span></a></li>
-                        <li data-target="#Intelligentrouter"><a href="#">智能 路由器<span>&gt;</span></a></li>
-                        <li data-target="#Powersupplyaccessories"><a href="#">电源 配件<span>&gt;</span></a></li>
-                        <li data-target="#Healthychildren"><a href="#">健康儿童<span>&gt;</span></a></li>
-                        <li data-target="#Earphonesound"><a href="#">耳机 音响 <span>&gt;</span></a></li>
-                        <li data-target="#Lifebag"><a href="#">生活 箱包<span>&gt;</span></a></li>
+                         <li data-target="#TVbox" v-for="title in shoptitle" :key="title.id" id="title">
+                             <a href="#">{{title.name}} <span>&gt;</span></a>
+                         </li>
                     </ul>
                     <div class="my_swipe_href_xq">
                         <!--phone_detail-->
@@ -2130,13 +2123,16 @@ export default {
                 "http://127.0.0.1:3000/img/baner2.jpg",
                 "http://127.0.0.1:3000/img/baner3.jpg",
                 "http://127.0.0.1:3000/img/baner4.jpg",
-            ]
+            ],
+             shoptitle:[]
         }
+       
     },
-    mounted(){
+    mounted(){ 
+        this.ShopTitle();
         this.swipe();
         this.purchas();
-        this.jump();
+         this.jump();
         this.clickImg();
         this.indexLength();
         this.leftRight();
@@ -2146,6 +2142,7 @@ export default {
         this.timeShop();
         this.phoneApp();
         this.Roll();
+       
     },
     methods:{
        /**轮播 */
@@ -2311,8 +2308,10 @@ export default {
        },
        /**顶部swipe 轮播*/
        topSwipe(){
-           $(".my_swipe_href>ul>li").mouseenter(function(){
+           console.log($(".my_swipe_href>ul"))
+           $(".my_swipe_href>ul").on('mouseenter','li',function(){
             var li = $(this)
+            console.log(this)
             if( $(li.attr('data-target')).is('.my_display')){
                 $(li.attr('data-target')).removeClass("my_display").siblings().addClass("my_display")
                 li.addClass('my_li_bg').siblings('').removeClass("my_li_bg")
@@ -2323,6 +2322,7 @@ export default {
                 $(".my_swipe_href_xq").children("div").addClass("my_display");
                 $(".my_swipe_href>ul>li").removeClass('my_li_bg')
             })
+            
        },
        /**视频播放 */
        videoPlay(){
@@ -2385,27 +2385,33 @@ export default {
        Roll(){
            window.onscroll = function(){
                 var docScroll = document.documentElement.scrollTop;
-                 console.log(docScroll,window.innerHeight);
                 if(docScroll>window.innerHeight*2){
-                    console.log(12323);
                     toptop.classList.remove("my_display")
                 }else{
                 toptop.className="my_display bar-sort"
                 }
    
             }
-       }
+       },
+            ShopTitle(){
+             this.$http.get("http://127.0.0.1:3000/shoptitle").then(result=>{
+                    this.shoptitle = result.data;
+                   console.log(result.data);
+             })
+        }
     },
     components:{
        xmHeader,
        xmFooter
-     } 
+    }, 
    
    
 }  
 </script>
 <style>
-
+   .my_swipe_href>ul>li:first-child{
+       margin-top: 20px;
+   }
 </style>
 
 
