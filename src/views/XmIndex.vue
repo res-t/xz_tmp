@@ -29,346 +29,50 @@
                         <!--phone_detail-->
                         <div id="product1" class="my_display">
                             <ul v-for="(item,i) in navlist" :key="i">
-                                <li v-for="(tmp,i) in item" :key="i">
+                                <li v-for="(tmp) in item" :key="tmp.id">
                                     <router-link to="/mi8youth">
                                         <img :src='tmp.image' alt="" class="my_swipe_href_img">
                                         {{tmp.name}}
                                     </router-link>
                                 </li>
-                               
                             </ul>
-
                         </div>
                         <!--TV box-->
-                        <div id="TVbox" class="my_display">
-                                <ul>
-                                    <li>
+                        <div id="product2" class="my_display">
+                                <ul v-for="(tv,i) in boxlist" :key="i">
+                                    <li v-for="tvbox in tv" :key="tvbox.id">
                                         <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/tv1400.png" alt="" class="my_swipe_href_img">
-                                        米家激光投影电视
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/4c-40.jpg" alt="" class="my_swipe_href_img">
-                                            小米电视4C 40英寸
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/4s65.jpg" alt="" class="my_swipe_href_img">
-                                            小米电视4S 65英寸
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/TV4-75.png" alt="" class="my_swipe_href_img">
-                                            小米电视4 75英寸
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/TV4A-32.png" alt="" class="my_swipe_href_img">
-                                            小米电视4A 32英寸
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/TV4A-40.png" alt="" class="my_swipe_href_img">
-                                            小米电视4A 40英寸
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/TV4A-43QC.png" alt="" class="my_swipe_href_img">
-                                            小米电视4A 43英寸青春版
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/TV4A-49.png" alt="" class="my_swipe_href_img">
-                                            小米电视4A 49英寸
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/TV4A-50.png" alt="" class="my_swipe_href_img">
-                                            小米电视4A 50英寸
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/4a50.png" alt="" class="my_swipe_href_img">
-                                            小米电视4A 55英寸
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/4A65.png" alt="" class="my_swipe_href_img">
-                                            小米电视4A 65英寸
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/TV4X-55.png" alt="" class="my_swipe_href_img">
-                                        小米电视4X 55英寸
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/TV4C-32.png" alt="" class="my_swipe_href_img">
-                                        小米电视4C 32英寸
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/TV4C-43.png" alt="" class="my_swipe_href_img">
-                                            小米电视4C 43英寸
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/TV4C-50.png" alt="" class="my_swipe_href_img">
-                                            小米电视4C 50英寸
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/TV4C-55.png" alt="" class="my_swipe_href_img">
-                                        小米电视4C 55英寸
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/TVTYB.png" alt="" class="my_swipe_href_img">
-                                            小米电视 体育版
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/TV4-55.png" alt="" class="my_swipe_href_img">
-                                            小米电视4 55英寸
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/TV4-65.png" alt="" class="my_swipe_href_img">
-                                            小米电视4 65英寸
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/TV4S-55Q.png" alt="" class="my_swipe_href_img">
-                                            小米电视4S 55英寸曲面
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/TV4S-50.png" alt="" class="my_swipe_href_img">
-                                            小米电视4S 50英寸
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/TV4S-32.png" alt="" class="my_swipe_href_img">
-                                            小米电视4S 32英寸
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/hezibai480_80.jpg" alt="" class="my_swipe_href_img">
-                                            小米盒子
+                                            <img :src='tvbox.image' alt="" class="my_swipe_href_img">
+                                        {{tvbox.name}}
                                         </a>
                                     </li>
                                 </ul>
         
                         </div>
                         <!--Notebooktablet-->
-                        <div id="Notebooktablet" style="width: 510px" class="my_display">
-                                <ul>
-                                    <li>
+                        <div id="product3" style="width: 510px" class="my_display">
+                                <ul v-for="(computer,i) in  loptoplist" :key="i">
+                                    <li v-for="loptop in computer" :key="loptop.id">
                                         <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/bijiben80.jpg" alt="" class="my_swipe_href_img">
-                                            小米笔记本15.6
+                                            <img :src='loptop.image' alt="" class="my_swipe_href_img">
+                                           {{loptop.name}}
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/80x80.png" alt="" class="my_swipe_href_img">
-                                            小米笔记本 13.3
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/bijiben12.5.jpg" alt="" class="my_swipe_href_img">
-                                            小米笔记本 12.5
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/youxiben-80.jpg" alt="" class="my_swipe_href_img">
-                                            小米游戏本
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/pingban2.jpg" alt="" class="my_swipe_href_img">
-                                            小米平板4
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/yuemijianpan80.jpg" alt="" class="my_swipe_href_img">
-                                            键盘
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/wxsb80.png" alt="" class="my_swipe_href_img">
-                                            鼠标/鼠标垫
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/usbzjqggg80.jpg" alt="" class="my_swipe_href_img">
-                                            转接器
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/xiaomipingbanpeijian80.jpg" alt="" class="my_swipe_href_img">
-                                            平板配件
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/bijibenshuangjianbao80.jpg" alt="" class="my_swipe_href_img">
-                                            笔记本双肩背包
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/neidanbao80.jpg" alt="" class="my_swipe_href_img">
-                                            小米笔记本内胆包
-                                        </a>
-                                    </li>    
                                 </ul>
                         </div>
                         <!--Appliance wiring board-->
-                        <div id="Appliancewiringboard" style="width:758px" class="my_display">
-                                <ul>
-                                    <li>
+                        <div id="product4" style="width:758px" class="my_display">
+                                <ul v-for="(patch,i) in patchlist" :key="i">
+                                    <li v-for="pth in patch" :key="pth.id">
                                         <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/kongtiaoguan140.png" alt="" class="my_swipe_href_img">
-                                        米家互联网空调
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <router-link to="/shoplist">
-                                            <img src="http://127.0.0.1:3000/img/jingshuiqi80haha.jpg" alt="" class="my_swipe_href_img">
-                                            净水器
-                                        </router-link>
-                                    </li>
-                                    <li>
-                                        <a href="http://127.0.0.1:3000/shoplist.html">
-                                            <img src="http://127.0.0.1:3000/img/lvxinbashi.png" alt="" class="my_swipe_href_img">
-                                            净水器滤芯
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/jiqiren.jpg" alt="" class="my_swipe_href_img">
-                                            扫地机器人
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/saodipeijian-80.jpg" alt="" class="my_swipe_href_img">
-                                            扫地机配件
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/jinghuaqi2S-80.jpg" alt="" class="my_swipe_href_img">
-                                            空气净化器
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/yalidianfanbao-80.jpg" alt="" class="my_swipe_href_img">
-                                            电饭煲
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/diancilu-80.jpg" alt="" class="my_swipe_href_img">
-                                            电磁炉
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/tangguo-80.jpg" alt="" class="my_swipe_href_img">
-                                            厨房用具
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/dianshuihu-80.jpg" alt="" class="my_swipe_href_img">
-                                            电水壶
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/liaoliji80.jpg" alt="" class="my_swipe_href_img">
-                                            料理机
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/lvshuihu80.jpg" alt="" class="my_swipe_href_img">
-                                        滤水器
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/mijiadianfengshan80.png" alt="" class="my_swipe_href_img">
-                                            落地风扇
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/touyingyi80.jpg" alt="" class="my_swipe_href_img">
-                                            投影仪
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/xidingdeng-80.jpg" alt="" class="my_swipe_href_img">
-                                            灯具
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:3000/img/chaxianban80.jpg" alt="" class="my_swipe_href_img">
-                                        插线板
+                                            <img :src='pth.image' alt="" class="my_swipe_href_img">
+                                            {{pth.name}}
                                         </a>
                                     </li>
                                 </ul>
                         </div>
                         <!--Travel wear-->
-                        <div id="Travelwear" style="width: 510px" class="my_display">
+                        <div id="product5" style="width: 510px" class="my_display">
                                 <ul>
                                     <li>
                                         <a href="#">
@@ -429,7 +133,7 @@
                                 </ul>
                         </div>
                         <!--Intelligent router-->
-                        <div id="Intelligentrouter" style="width: 265px" class="my_display">
+                        <div id="product6" style="width: 265px" class="my_display">
                                 <ul>
                                     <li>
                                         <a href="#">
@@ -470,7 +174,7 @@
                                 </ul>
                         </div>
                         <!--Power supply accessories-->
-                        <div id="Powersupplyaccessories" style="width: 758px" class="my_display">
+                        <div id="product7" style="width: 758px" class="my_display">
                                 <ul>
                                     <li>
                                         <a href="#">
@@ -563,7 +267,7 @@
                                 </ul>
                         </div>
                         <!--Healthy children-->
-                        <div id="Healthychildren" style="width: 758px" class="my_display">
+                        <div id="product8" style="width: 758px" class="my_display">
                                 <ul>
                                     <li>
                                         <a href="#">
@@ -650,7 +354,7 @@
                                 </ul>
                         </div>
                         <!--Earphone sound-->
-                        <div id="Earphonesound" style="width: 265px" class="my_display">
+                        <div id="product9" style="width: 265px" class="my_display">
                                 <ul>
                                     <li>
                                         <a href="#">
@@ -685,7 +389,7 @@
                                 </ul>
                         </div>
                         <!--Life bag-->
-                        <div id="Lifebag" class="my_display">
+                        <div id="product10" class="my_display">
                                 <ul>
                                     <li>
                                         <a href="#">
@@ -1528,49 +1232,49 @@
                         <div class="">
                         <div class="my_white"></div>
                             <a href="#">
-                                    <img src="http://127.0.0.1:3000/img/chezai.png" alt="" class="my_Recommended_product">
-                                    <p>小米车载充电器快充班 银色</p>
-                                    <span>让爱车成为移动充电站</span>
-                                    <div class="kill_price">
-                                        <span>1 元</span> 
-                                        <del>69元</del>
-                                    </div>
+                                <img src="http://127.0.0.1:3000/img/chezai.png" alt="" class="my_Recommended_product">
+                                <p>小米车载充电器快充班 银色</p>
+                                <span>让爱车成为移动充电站</span>
+                                <div class="kill_price">
+                                    <span>1 元</span> 
+                                    <del>69元</del>
+                                </div>
                             </a>
                         </div>
                         <div class="">
                         <div class="my_white"></div>
                             <a href="#">
-                                    <img src="http://127.0.0.1:3000/img/chezai.png" alt="" class="my_Recommended_product">
-                                    <p>小米车载充电器快充班 银色</p>
-                                    <span>让爱车成为移动充电站</span>
-                                    <div class="kill_price">
-                                        <span>1 元</span> 
-                                        <del>69元</del>
-                                    </div>
+                                <img src="http://127.0.0.1:3000/img/chezai.png" alt="" class="my_Recommended_product">
+                                <p>小米车载充电器快充班 银色</p>
+                                <span>让爱车成为移动充电站</span>
+                                <div class="kill_price">
+                                    <span>1 元</span> 
+                                    <del>69元</del>
+                                </div>
                             </a>
                         </div> 
                         <div class="">
                         <div class="my_white"></div>
                             <a href="#">
-                                    <img src="http://127.0.0.1:3000/img/chezai.png" alt="" class="my_Recommended_product">
-                                    <p>小米车载充电器快充班 银色</p>
-                                    <span>让爱车成为移动充电站</span>
-                                    <div class="kill_price">
-                                        <span>1 元</span> 
-                                        <del>69元</del>
-                                    </div>
+                                <img src="http://127.0.0.1:3000/img/chezai.png" alt="" class="my_Recommended_product">
+                                <p>小米车载充电器快充班 银色</p>
+                                <span>让爱车成为移动充电站</span>
+                                <div class="kill_price">
+                                    <span>1 元</span> 
+                                    <del>69元</del>
+                                </div>
                             </a>
                         </div>
                         <div class="">
                         <div class="my_white"></div>
                             <a href="#">
-                                    <img src="http://127.0.0.1:3000/img/chezai.png" alt="" class="my_Recommended_product">
-                                    <p>小米车载充电器快充班 银色</p>
-                                    <span>让爱车成为移动充电站</span>
-                                    <div class="kill_price">
-                                        <span>1 元</span> 
-                                        <del>69元</del>
-                                    </div>
+                                <img src="http://127.0.0.1:3000/img/chezai.png" alt="" class="my_Recommended_product">
+                                <p>小米车载充电器快充班 银色</p>
+                                <span>让爱车成为移动充电站</span>
+                                <div class="kill_price">
+                                    <span>1 元</span> 
+                                    <del>69元</del>
+                                </div>
                             </a>
                         </div>       
                 </div>
@@ -2006,7 +1710,10 @@ export default {
                 "http://127.0.0.1:3000/img/baner4.jpg",
             ],
              shoptitle:[],
-             navlist:{}
+             navlist:{},
+             boxlist:{},
+             loptoplist:{},
+             patchlist:{}
         }
        
     },
@@ -2025,7 +1732,10 @@ export default {
         this.Roll();
         /*请求*/ 
        this.ShopTitle();
-       this.phone()
+       this.phone();
+       this.tvbox();
+       this.loptop();
+       this.patch();
     },
     methods:{
        /**轮播 */
@@ -2275,7 +1985,7 @@ export default {
             }
        },
        /**请求*/
-            ShopTitle(){
+        ShopTitle(){
              this.$http.get("http://127.0.0.1:3000/shoptitle").then(result=>{
                     this.shoptitle = result.data;
                    //console.log(result.data);
@@ -2283,7 +1993,6 @@ export default {
         },
         phone(){
             this.$http.get("http://127.0.0.1:3000/phone").then(result=>{
-                this.phoneDetail=result.data;
                 //console.log(result.data);
                 var arr=result.data
                 var index=0
@@ -2293,9 +2002,48 @@ export default {
                     index+=6
                 }
                this.navlist=obj
-            console.log(this.navlist);
+            })
+        },
+        tvbox(){
+            this.$http.get("http://127.0.0.1:3000/tvbox").then(result=>{
+                //console.log(result);
+                 var arr=result.data
+                var index=0
+                var obj={}
+                for(var i=0;i<Math.ceil(arr.length/6);i++){
+                    obj[i]=arr.slice(index,index+6)
+                    index+=6
+                }
+               this.boxlist=obj
+            })
+        },
+        loptop(){
+            this.$http.get('http://127.0.0.1:3000/loptop').then(result=>{
+                console.log(result)
+                 var arr=result.data
+                var index=0
+                var obj={}
+                for(var i=0;i<Math.ceil(arr.length/6);i++){
+                    obj[i]=arr.slice(index,index+6)
+                    index+=6
+                }
+               this. loptoplist=obj
+            })
+        },
+        patch(){
+            this.$http.get('http://127.0.0.1:3000/patch').then(result=>{
+                console.log(result)
+                 var arr=result.data
+                var index=0
+                var obj={}
+                for(var i=0;i<Math.ceil(arr.length/6);i++){
+                    obj[i]=arr.slice(index,index+6)
+                    index+=6
+                }
+               this. patchlist=obj
             })
         }
+
     },
     components:{
        xmHeader,
