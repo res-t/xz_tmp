@@ -19,17 +19,39 @@
                   </div>
                   <div class="posr topbar-nav_right" >
                       <ul class="clearfix">
-                          <li><router-link to="/login"  id="name">登录</router-link><span>  |</span></li>
-                          <li><router-link to="/register">注册</router-link><span>  |</span></li>
-                          <li><a href="#">消息通知</a><span>  |</span></li>
-                          <li id="l1">
-                              <a href="#" class="car_mini" >购物车
-                                  <img src="http://127.0.0.1:3000/img/car1.png" alt="" class="car_mini_img">
-                                  <img src="http://127.0.0.1:3000/img/car2.png" alt="" class="car_mini_img my_display" >(0)</a></li>
+                            <li id="login">
+                                <router-link to="/login" id="name">登录</router-link>
+                                <div class="islogin my_display">
+                                    <ul>
+                                        <li>
+                                            <a href="#">个人中心</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">评论晒单</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">我喜欢</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">小米账户</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">退出登录</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><span>  |</span><router-link  to="/register" class="zhuce">注册</router-link><span>  |</span></li>
+                            <li><a href="#" class="tongzhi">消息通知</a><span>  |</span></li>
+                            <li id="l1">
+                                <a href="#" class="car_mini" >
+                                    <img src="img/car1.png" alt="" class="car_mini_img">
+                                    <img src="img/car2.png" alt="" class="car_mini_img my_display" >购物车(0)</a>
+                                    <div class="my_shopp_car my_display">
+                                            <p>购物车中还没有商品，赶紧选购吧！</p>
+                                    </div>
+                            </li>
                       </ul>
-                      <div class="my_shopp_car my_display">
-                          <p>购物车中还没有商品，赶紧选购吧！</p>
-                      </div>
                   </div>
               </div>
           </div>
@@ -403,6 +425,7 @@ export default {
     this.product();
     this.shopCart();
     this.serchIco();
+    this.islogin();
     },
     methods:{
         /*商品*/
@@ -440,24 +463,19 @@ export default {
         },
         /**购物车 */
         shopCart(){
-              $('.topbar-nav_right>ul>li:last-child').mouseenter(function(){
-                    var a=$(this)
-                    $('.topbar-nav_right>ul>li:last-child>a').css('background','white')
-                    .css('color','orange')
-                    $('.my_shopp_car').removeClass('my_display')
-                    a.children().children().removeClass('my_display')
-                    $('.topbar-nav_right>ul>li:last-child>a>img:first-child').addClass('my_display')           
-              });
-
-                $('.topbar-nav_right>ul>li:last-child').parent().parent().mouseleave(function(){
-                    var a=$(this)
-                    $('.topbar-nav_right>ul>li:last-child>a>img:first-child').removeClass('my_display')
-                    $('.topbar-nav_right>ul>li:last-child>a>img:nth-child(2)').toggleClass('my_display')
-                    $('.my_shopp_car').toggleClass('my_display')
+              $(".car_mini").mouseenter(function(){
+                var li = $(this);
+                li.children().toggleClass("my_display")
+                $(".car_mini").addClass("my_wirte_a")
+                $(".my_shopp_car").removeClass("my_display");
+                $('.topbar-nav_right>ul>li:last-child>a').css('background','white')
+                }).parent().mouseleave(function(){
+                    $(".my_shopp_car").addClass("my_display");
+                    $(".car_mini").children().toggleClass("my_display");
+                    $(".car_mini").removeClass("my_wirte_a")
                     $('.topbar-nav_right>ul>li:last-child>a').css('background',' #424242')
-                    .css('color','#b0b0b0')
-                    console.log(1);
-                })
+                     .css('color','#b0b0b0')
+             })
         },  
         serchIco(){
             /*搜索图标*/
@@ -466,6 +484,19 @@ export default {
             }).mouseleave(function(){
                 $(".search.icon").css("color","#000")
             })
+        },
+        /**状态 */
+        islogin(){
+            $("#login").mouseenter(function(){
+                var li =$(this);
+                li.children("div").removeClass("my_display")
+                $("#login").addClass("my_wirte").children("a").addClass("my_wirte_a")
+                
+            }).mouseleave(function(){
+                var li =$(this);
+                $("#login").removeClass("my_wirte").children("a").removeClass("my_wirte_a")
+                $(".islogin").addClass("my_display")
+           })
         }
        
     },
