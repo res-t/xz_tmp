@@ -16,18 +16,23 @@
         </div>
         <!--账号登陆-->
         <div class="inpu" id="inpu">
-            <div>
-            <input type="text" placeholder="邮箱/手机号码/小米ID" id="uname">
-            </div>
-            <div>
-            <input type="password" placeholder="密码">
-            </div>
-            <div>
-            <button id="btn_login">登陆</button>
-            </div>
-            <div class="fle">
-            <a href="#">手机短信登陆/注册</a>
-            <div>
+             <form method="post">
+                <div>
+                    <input type="text" placeholder="邮箱/手机号码/小米ID" id="uphone" v-model="uphone">
+                </div>
+                <div>
+                <input type="password" autocomplete="ffo" placeholder="密码" name="upwd" v-model="upwd" class="myupwd">
+                </div>
+                <div>
+                    <input type="button" id="btn_login" @click="islog()" class="login" value="登陆">
+                </div>
+             </form>
+            <div class="fle mt10">
+                <router-link to='/register' v-show='codeStaic==400'>{{alertText}}</router-link>
+                <router-link to='/index' v-show='codeStaic==200'>{{alertText}}</router-link>
+                <router-link to='/index' v-show='codeStaic==401'>{{alertText}}</router-link>
+                <router-link to='/index' v-show='codeStaic==402'>{{alertText}}</router-link>
+            <div style="float:right">
                 <a href="#">立即注册</a>
                 <span>|</span>
                 <a href="#">忘记密码?</a>
@@ -105,7 +110,12 @@
 import '../../public/css/login.css'
 export default {
     data(){
-        return{}
+        return{
+            uphone:'',
+            upwd:'',
+            alertText:'',
+            codeStaic:""
+        }
     },
     mounted(){
         this.logIn()
@@ -128,6 +138,24 @@ export default {
             })
             $(".ico>a").click(function(e){
             e.preventDefault();
+            })
+        },
+        /**登录请求 */
+        islog(){
+            var url ="http://127.0.0.1:3000/login"
+             var params = new URLSearchParams();
+                params.append('uphone', this.uphone);       //你要传给后台的参数值 key/value
+                params.append('upwd',this.upwd);
+                console.log(this.uphone,this.upwd);
+            this.$http({
+                method:"post",
+                url:url,
+                data:params
+            }).then(result=>{
+                this.codeStaic=result.data.code;
+                console.log(this.codeStaic);
+                console.log(result.data.code)
+                this.alertText=result.data.msg;
             })
         }
     }
