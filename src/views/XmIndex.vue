@@ -1976,6 +1976,7 @@ export default {
        Roll(){
            window.onscroll = function(){
                 var docScroll = document.documentElement.scrollTop;
+                document.getElementById("toptop");
                 if(docScroll>window.innerHeight*2){
                     toptop.classList.remove("my_display")
                 }else{
@@ -1993,7 +1994,7 @@ export default {
         },
         phone(){
             this.$http.get("http://127.0.0.1:3000/phone").then(result=>{
-                //console.log(result.data);
+                console.log(result.data);
                 var arr=result.data
                 var index=0
                 var obj={}
