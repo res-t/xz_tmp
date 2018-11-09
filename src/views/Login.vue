@@ -32,6 +32,7 @@
                 <router-link to='/index' v-show='codeStaic==200'>{{alertText}}</router-link>
                 <router-link to='/index' v-show='codeStaic==401'>{{alertText}}</router-link>
                 <router-link to='/index' v-show='codeStaic==402'>{{alertText}}</router-link>
+                <router-link to='/index' v-show='codeStaic==403'>{{alertText}}</router-link>
             <div style="float:right">
                 <a href="#">立即注册</a>
                 <span>|</span>
@@ -119,6 +120,9 @@ export default {
     },
     mounted(){
         this.logIn()
+        console.log(this.$store.getters.getnum)
+        localStorage.setItem('num',123)
+        
     },
     methods:{
         logIn(){
@@ -146,18 +150,30 @@ export default {
              var params = new URLSearchParams();
                 params.append('uphone', this.uphone);       //你要传给后台的参数值 key/value
                 params.append('upwd',this.upwd);
-                console.log(this.uphone,this.upwd);
+               // console.log(this.uphone,this.upwd);
             this.$http({
                 method:"post",
                 url:url,
                 data:params
             }).then(result=>{
                 this.codeStaic=result.data.code;
-                console.log(this.codeStaic);
-                console.log(result.data.code)
+                //console.log(this.codeStaic);
+                //console.log(result.data.code)
                 this.alertText=result.data.msg;
+                console.log(result.data.data[0]);
+                if(result.data.code==200){
+                    var SaveData = result.data.data[0];
+                    for(var key in SaveData){
+                        SaveData[key] = this.encryptString(SaveData[key]);
+                    }
+                    this.$store.commit("setUser",SaveData);
+                    //console.log(JSON.parse( localStorage.getItem('user')));
+                    this.$router.push("/index");
+                }
             })
-        }
+        },
+        /**保存用户*/
+     
     }
 }
 </script>
