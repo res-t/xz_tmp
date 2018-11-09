@@ -89,7 +89,7 @@
                  <p> <span style="color:#ff6700">恭喜</span><br>
                      {{uname}} 注册成功，成为米粉</p>
                  <img src="http://127.0.0.1:3000/img/more-miui.jpg" alt="" class="mt10 animated zoomInUp"><br>
-                 <router-link to="/login" class="tiao_btn">跳转到登录页面</router-link>
+                 <router-link to="/login" class="tiao_btn">{{as}}秒后跳转到登录页面</router-link>
              </div>
         </div>
     </div>
@@ -103,6 +103,8 @@ export default {
             tele:'',
             upwd:'',
             alertText:'',
+            as:5,
+            timer:{},
         }
     },
     mounted(){
@@ -150,16 +152,24 @@ export default {
                 this.code=result.data.code;
                 console.log(this.code);
                 if(this.code==404){
-                   setTimeout(function(){
-                        $(".tiao_block").removeClass("my_display")
+                   setInterval(()=>{
+                       this.as--;
+                       if(this.as<0){this.as=0}
                    },1000)
+                   setTimeout(function(){
+                        $(".tiao_block").removeClass("my_display");
+                   },0)
+                   setTimeout(()=>{
+                       this.$router.push("/login")
+                   },5000)
                 }
-               setTimeout(() => {
-                     $(".tiao_block").addClass("my_display")
-               },5000);
+               
           })
         }
     },
+    beforeDestroy(){
+        clearInterval(timer);
+    }
 }
 </script>
 <style>
