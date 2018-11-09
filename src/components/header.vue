@@ -20,7 +20,7 @@
                   <div class="posr topbar-nav_right" >
                       <ul class="clearfix">
                             <li id="login">
-                                <router-link to="/login" id="name">登录</router-link>
+                                <span  id="name" >登录</span>
                                 <div class="islogin my_display">
                                     <ul>
                                         <li>
@@ -418,7 +418,9 @@
 
 export default {
     data(){
-        return{}
+        return{
+            uname:""
+        }
     },
      mounted(){
     this.serch();
@@ -426,6 +428,8 @@ export default {
     this.shopCart();
     this.serchIco();
     this.islogin();
+    this.getUname();
+     //this. getLogin();
     },
     methods:{
         /*商品*/
@@ -497,11 +501,33 @@ export default {
                 $("#login").removeClass("my_wirte").children("a").removeClass("my_wirte_a")
                 $(".islogin").addClass("my_display")
            })
+        },
+        getUname(){
+            var userinfo = JSON.parse( localStorage.getItem('user'));
+            if(userinfo){
+                for(var key in userinfo){
+                   userinfo[key]=this.decodeString(userinfo[key])
+                }
+                this.uname= userinfo.uname;
+                
+                $("#name").text(this.uname+"：你好");
+                 
+            }
+        },
+        getLogin(){
+            if(!this.uname){
+                $("#name").click(()=>{
+                   this.$router.push("/login")
+                })
+                $(".islogin").addClass('my_display')
+            }
         }
        
     },
    
 }
+
+
 </script>
 <style>
 
