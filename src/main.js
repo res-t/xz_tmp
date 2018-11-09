@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import '../public/css/public.css'
 import '../src/assets/jquery-3.2.1'
+import '../public/css/animate.css'
 import axios from 'axios'
 Vue.prototype.$http = axios;
 Vue.config.productionTip = false
