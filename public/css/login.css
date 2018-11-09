@@ -55,7 +55,7 @@
   margin:0 auto;
   font-size: 14px;
 }
-.inpu>div>input{
+#uphone,.myupwd{
   width:306px;
   margin:10px auto;
   height:22px;
@@ -63,11 +63,11 @@
   padding: 13px 16px 13px 14px;
   border:1px solid #e0e0e0;
 }
-.inpu>div:nth-child(3){
+form .inpu>div:nth-child(3){
   margin:0 auto;
   margin-bottom:14px;
 }
-.inpu>div>button{
+.login{
   width:100%;
   background-color: #ef5b00;
   height:50px;
