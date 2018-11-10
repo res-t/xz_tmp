@@ -20,7 +20,7 @@
                   <div class="posr topbar-nav_right" >
                       <ul class="clearfix">
                             <li id="login">
-                                <span  id="name" >登录</span>
+                                <span  id="name">登录</span>
                                 <div class="islogin my_display">
                                     <ul>
                                         <li>
@@ -36,7 +36,7 @@
                                             <a href="#">小米账户</a>
                                         </li>
                                         <li>
-                                            <a href="#">退出登录</a>
+                                            <a href="javascript:" class="Signout">退出登录</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -419,7 +419,7 @@
 export default {
     data(){
         return{
-            uname:""
+            uname:"",
         }
     },
      mounted(){
@@ -427,9 +427,9 @@ export default {
     this.product();
     this.shopCart();
     this.serchIco();
-    this.islogin();
+    //this.islogin();
     this.getUname();
-     //this. getLogin();
+    this.getLogin();
     },
     methods:{
         /*商品*/
@@ -510,17 +510,33 @@ export default {
                 }
                 this.uname= userinfo.uname;
                 
-                $("#name").text(this.uname+"：你好");
-                 
+                $("#name").text(this.uname+" V");
             }
+            var a = localStorage.key;
+            console.log(a);
         },
         getLogin(){
             if(!this.uname){
                 $("#name").click(()=>{
                    this.$router.push("/login")
                 })
-                $(".islogin").addClass('my_display')
+            }else{
+                 $("#login").mouseenter(function(){
+                    var li =$(this);
+                    li.children("div").removeClass("my_display")
+                    $("#login").addClass("my_wirte").children("a").addClass("my_wirte_a")
+                    
+                }).mouseleave(function(){
+                    var li =$(this);
+                    $("#login").removeClass("my_wirte").children("a").removeClass("my_wirte_a")
+                    $(".islogin").addClass("my_display")
+                })
+                $(".Signout").click(()=>{
+                    this.$store.commit("removeUser");
+                    window.location.reload();
+                })
             }
+
         }
        
     },
