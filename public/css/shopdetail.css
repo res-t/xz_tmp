@@ -284,6 +284,7 @@ body{
     width: 298px;
     border: 1px solid #989196;
     float: left;
+    margin-right: 5px;
 }
 .step-list>li>a{
     display: block;
