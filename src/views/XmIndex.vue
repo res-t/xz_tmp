@@ -30,7 +30,7 @@
                         <div id="product1" class="my_display">
                             <ul v-for="(item,i) in navlist" :key="i">
                                 <li v-for="(tmp) in item" :key="tmp.id">
-                                    <router-link to="/mi8youth">
+                                    <router-link :to="'/shopdetail/'+tmp.id">
                                         <img :src='tmp.image' alt="" class="my_swipe_href_img">
                                         {{tmp.name}}
                                     </router-link>
@@ -2003,6 +2003,7 @@ export default {
                     index+=6
                 }
                this.navlist=obj
+               console.log(this.navlist)
             })
         },
         tvbox(){
