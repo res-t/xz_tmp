@@ -8,7 +8,7 @@
                         <div class="title_rigth">
                             <ul>
                                 <li data-target="#Summary">
-                                    <router-link  to="/mi8youth" class="">概述 <span> |</span></router-link>
+                                    <router-link  to="/" class="">概述 <span> |</span></router-link>
                                 </li>
                                 <li data-target="#gallery">
                                     <a href="javascript:">图集 <span>|</span></a>
@@ -38,11 +38,11 @@
                         <!--轮播图-->
                     <div class="pro-view" id="lunbo">
                         <div class="" id="container_img">
-                            <a class="item" href="#"><img src="http://127.0.0.1:3000/img/pm-deatil2.jpg"/></a>
-                            <a class="item" href="#"><img src="http://127.0.0.1:3000/img/pm-deatil1.jpg"/></a>
+                            <a class="item" href="#" v-for="(Image,i) in imgUrl" :key=i><img :src="Image"></a>
+                            <!-- <a class="item" href="#"><img src="http://127.0.0.1:3000/img/pm-deatil1.jpg"/></a>
                             <a class="item" href="#"><img src="http://127.0.0.1:3000/img/pm-deatil2.jpg"/></a>
                             <a class="item" href="#"><img src="http://127.0.0.1:3000/img/pm-deatil3.jpg"/></a>
-                            <a class="item" href="#"><img src="http://127.0.0.1:3000/img/pms-detail4.jpg"/></a>
+                            <a class="item" href="#"><img src="http://127.0.0.1:3000/img/pms-detail4.jpg"/></a>-->
                         
                             <div class="btn prev">&lt;</div>
                             <div class="btn next">&gt;</div>
@@ -58,16 +58,16 @@
                     </div>
                     <!---规格参数信息-->
                     <div class="pro-info">
-                        <h3 class="pro-title">小米8 青春版</h3>
+                        <h3 class="pro-title">{{detaText.uname}}</h3>
                         <!--提示-->
                         <p class="sale-desc">
                             <span style="color: #f25807">「新品现货在售」</span>
-                            潮流镜面渐变色 / 2400万自拍旗舰 / 7.5mm超薄机身 / 6.26"小刘海全面屏 / AI裸妆美颜 / 骁龙660AIE处理器
+                            {{ detaText.sell_point}}
                         </p>
                         <p class="aftersale font_color">小米自营</p>
                         <!--价格-->
                         <div class="pro-price">
-                            <span>1399元</span>
+                            <span>{{detaText.price}}</span>
                         </div>
                         <!---赠品-->
                         <div class="flow-wrap">
@@ -96,54 +96,37 @@
                                     选择版本
                                 </div>
                                 <ul class="step-list clearfix">
-                                    <li class="ml0 step-list-border">
+                                    <li class="ml0 step-list-border" v-for="(item,i) in  Edition" :key=i>
                                         <a href="#">
-                                            <span class="name step-list-active">4GB+64GB 全网通</span>
+                                            <span class="name step-list-active">{{item[0]}}</span>
+                                            <span class="price">{{item[1]}}元</span>
+                                        </a>
+                                    </li>
+                                   <!-- <li>
+                                        <a href="#">
+                                            <span class="name">4GB+64GB 全网通</span>
                                             <span class="price">1399元</span>
                                         </a>
                                     </li>
-                                    <li>
-                                    <a href="#">
-                                        <span class="name">4GB+64GB 全网通</span>
-                                        <span class="price">1399元</span>
-                                    </a>
-                                </li>
-                                <li class="ml0">
-                                    <a href="#">
-                                        <span class="name">4GB+64GB 全网通</span>
-                                        <span class="price">1399元</span>
-                                    </a>
-                                </li>
+                                    <li class="ml0">
+                                        <a href="#">
+                                            <span class="name">4GB+64GB 全网通</span>
+                                            <span class="price">1399元</span>
+                                        </a>
+                                    </li>-->
                                 </ul>
                             </div>
                             <!--选择颜色-->
                             <div class="space-title">选择颜色</div>
                             <div class="step-color clearfix">
-                                <ul class="my_display">
-                                    <li class="ml0 step-list-border">
-                                        <a href="#" class="font_color">
-                                        <img src="http://127.0.0.1:3000/img/pm-deatil2.jpg" alt="" class="step-color-img">深灰版
-                                        </a>
-                                    </li> 
-                                </ul>
-                                <ul class="my_display">
-                                    <li class="ml0 step-list-border">
-                                        <a href="#" class="font_color">
-                                            <img src="http://127.0.0.1:3000/img/pm-deatil2.jpg" alt="" class="step-color-img">深灰版
-                                        </a>
-                                    </li> 
-                                    <li class="">
-                                        <a href="#" class="font_color">
-                                            <img src="http://127.0.0.1:3000/img/pm-deatil2.jpg" alt="" class="step-color-img">深灰版
-                                        </a>
-                                    </li>
-                                    <li class="ml0">
-                                        <a href="#" class="font_color">
-                                            <img src="http://127.0.0.1:3000/img/pm-deatil2.jpg" alt="" class="step-color-img">深灰版
-                                        </a>
-                                    </li>  
-                                </ul>
                                 <ul class="">
+                                    <li class="ml0 step-list-border" v-for="(tmp,i) in styleColor" :key=i>
+                                        <a href="#" class="font_color">
+                                        <img :src=tmp[0] alt="" class="step-color-img">{{tmp[1]}}
+                                        </a>
+                                    </li> 
+                                </ul>
+                               <!-- <ul class="">
                                     <li class="ml0 step-list-border">
                                         <a href="#" class="font_color">
                                             <img src="http://127.0.0.1:3000/img/pm-deatil2.jpg" alt="" class="step-color-img">深灰版
@@ -159,7 +142,24 @@
                                             <img src="http://127.0.0.1:3000/img/pm-deatil2.jpg" alt="" class="step-color-img">深灰版
                                         </a>
                                     </li>  
-                                </ul>
+                                </ul>-->
+                               <!-- <ul class="">
+                                    <li class="ml0 step-list-border">
+                                        <a href="#" class="font_color">
+                                            <img src="http://127.0.0.1:3000/img/pm-deatil2.jpg" alt="" class="step-color-img">深灰版
+                                        </a>
+                                    </li> 
+                                    <li class="">
+                                        <a href="#" class="font_color">
+                                            <img src="http://127.0.0.1:3000/img/pm-deatil2.jpg" alt="" class="step-color-img">深灰版
+                                        </a>
+                                    </li>
+                                    <li class="ml0">
+                                        <a href="#" class="font_color">
+                                            <img src="http://127.0.0.1:3000/img/pm-deatil2.jpg" alt="" class="step-color-img">深灰版
+                                        </a>
+                                    </li>  
+                                </ul>-->
                             </div>
                             <div class="space-title">
                                     选择小米提供的意外保护
@@ -296,11 +296,18 @@
   import xmFooter from '@/components/footer.vue'
 export default {
     data(){
-        return{}
+        return{
+             detaText:"",
+             Edition:"",
+             styleColor:"",
+             imgUrl:"",
+        }
     },
     mounted(){
         this.SwipImg();
         this.MouseG();
+        //console.log(this.$route.params)
+        this.getProduct();
     },
     methods:{
         SwipImg(){
@@ -404,12 +411,37 @@ export default {
                     var span = $(this);
                 $('.alert-login').addClass("my_display")
                 })
+        }, 
+        getProduct(){
+            var url ='http://127.0.0.1:3000/detail/?id='
+            url+=this.$route.params.id;
+            this.$http.get(url).then(result=>{
+                //console.log(result.data.detail[0]);
+                this.detaText = result.data.detail[0];
+                //console.log(this.detaText)
+                var banben = result.data.detail[0].versions;
+                banben = JSON.parse(banben)
+                //console.log(banben);
+                this.Edition = banben;
+                var color = result.data.detail[0].color;
+                color = JSON.parse(color);
+                //console.log(color);
+                this.styleColor = color;
+                console.log(result.data.img[0].img_url)
+                var str = result.data.img[0].img_url;
+                var arr = str.split(",")
+                console.log(arr);
+                this.imgUrl = arr
+                console.log( this.imgUrl)
+               })
         },
     },
     components:{
         xmHeader,
         xmFooter
-    }
+    },
+   
+    
 }
 </script>
 <style>
