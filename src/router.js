@@ -40,7 +40,7 @@ export default new Router({
       component:ShopList
     },
     {
-      path:'/shopdetail',
+      path:'/shopdetail/:id',
       component:ShopDetail
     },
     {
