@@ -115,7 +115,7 @@ export default {
             uphone:'',
             upwd:'',
             alertText:'',
-            codeStaic:""
+            codeStaic:"",
         }
     },
     mounted(){
@@ -160,7 +160,7 @@ export default {
                 //console.log(this.codeStaic);
                 //console.log(result.data.code)
                 this.alertText=result.data.msg;
-                console.log(result.data.data[0]);
+                //console.log(result.data.data[0]);
                 if(result.data.code==200){
                     var SaveData = result.data.data[0];
                     for(var key in SaveData){
