@@ -1713,7 +1713,8 @@ export default {
              navlist:{},
              boxlist:{},
              loptoplist:{},
-             patchlist:{}
+             patchlist:{},
+             clear:''
         }
        
     },
@@ -1796,7 +1797,7 @@ export default {
                 }
             },5000);
             }
-
+               this.clear = timer;
 
             //创建一个Show函数
             function Show(){
@@ -2050,7 +2051,10 @@ export default {
     components:{
        xmHeader,
        xmFooter
-    }, 
+    },
+    beforeDestroy(){
+        clearInterval(this.clear);
+    } 
    
    
 }  
