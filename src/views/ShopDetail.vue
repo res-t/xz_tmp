@@ -297,21 +297,25 @@ export default {
              Edition:"",
              styleColor:"",
              imgUrl:"",
+             arrIndex:0,
         }
     },
     mounted(){
-        this.SwipImg();
+      
         this.MouseG();
         //console.log(this.$route.params)
         this.getProduct();
         this.addactive()
+        this.SwipImg();
+        
     },
+    created(){ },
     methods:{
         SwipImg(){
             $(document).ready(function(){
+                var Index = $("#container_img").children("a").length;
                 var i = 0 ;
                 var timer;
-            
             //用jquery方法设置第一张图片显示，其余隐藏
             $('.item').eq(0).show().siblings('.item').hide();
                 
@@ -332,8 +336,8 @@ export default {
             //鼠标点击左侧的箭头
             $('.prev').click(function(){
                 clearInterval(timer);
-                if(i == 0){
-                i = 5;//注意此时i的值
+                if(i == Index){
+                i =0;//注意此时i的值
                 }
                 i--;
                 Show();
@@ -343,15 +347,16 @@ export default {
             //鼠标点击右侧的箭头
             $('.next').click(function(){
                 clearInterval(timer);
-                if(i == 4){
-                i = -1;//注意此时i的值
+                if(i == Index){
+                 i = -1;//注意此时i的值
                 }
                 i++;
                 Show();
                 showTime();
+               // console.log(ImgIndex);
             });
             
-                
+                 
             //创建一个showTime函数
             function showTime(){
             //定时器
@@ -360,8 +365,8 @@ export default {
                 Show();
                 i++;
                 //当图片是最后一张的后面时，设置图片为第一张
-                if(i==5){
-                i=0;
+                if(i==this.ImgIndex){
+                 i=0;
                 }
             },5000);
             }
@@ -432,7 +437,9 @@ export default {
                 var arr = str.split(",")
                 console.log(arr);
                 this.imgUrl = arr
-                console.log( this.imgUrl)
+                //console.log( this.imgUrl.length)
+                //console.log("hahah"+arr.length)
+                this.arrIndex = arr.length;
                })
         },
     },
