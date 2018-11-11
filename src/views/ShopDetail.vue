@@ -4,7 +4,7 @@
         <div class="content-detail">
                 <div class="title-top" id="titletop">
                     <div class="top_title_detail">
-                        <h2 class="title_youth">小米8青春版</h2>
+                        <h2 class="title_youth">{{detaText.uname}}</h2>
                         <div class="title_rigth">
                             <ul>
                                 <li data-target="#Summary">
@@ -48,11 +48,7 @@
                             <div class="btn next">&gt;</div>
                         
                             <ul id="tabs">
-                                <li class="tab-D active"></li>
-                                <li class="tab-D"></li>
-                                <li class="tab-D"></li>
-                                <li class="tab-D"></li>
-                                <li class="tab-D"></li>
+                                <li class="tab-D" v-for="(item,i) in imgUrl" :key="i"></li>
                             </ul>
                         </div> 
                     </div>
@@ -67,7 +63,7 @@
                         <p class="aftersale font_color">小米自营</p>
                         <!--价格-->
                         <div class="pro-price">
-                            <span>{{detaText.price}}</span>
+                            <span style="color:#ff6700">{{detaText.price}}</span>
                         </div>
                         <!---赠品-->
                         <div class="flow-wrap">
@@ -226,7 +222,7 @@
                                         小米8 青春版 4GB+64GB 深空灰  
                                         <span>1399元</span>
                                     </li>
-                                    <li class="totlePrice">   总计   ：1399元  </li>
+                                    <li class="totlePrice">   总计   ：{{detaText.price}}元  </li>
                                 </ul>
                             </div>
                             <!--购买按钮-->
@@ -308,6 +304,7 @@ export default {
         this.MouseG();
         //console.log(this.$route.params)
         this.getProduct();
+        this.addactive()
     },
     methods:{
         SwipImg(){
@@ -411,6 +408,9 @@ export default {
                     var span = $(this);
                 $('.alert-login').addClass("my_display")
                 })
+        },
+        addactive(){
+            $(" #tabs>li:first-child").addClass("active")
         }, 
         getProduct(){
             var url ='http://127.0.0.1:3000/detail/?id='
@@ -445,7 +445,9 @@ export default {
 }
 </script>
 <style>
+  #tabs>li:first{
 
+  }
 </style>
 
 
