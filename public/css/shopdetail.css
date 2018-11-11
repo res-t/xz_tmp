@@ -212,7 +212,7 @@ body{
 .pro-price,.flow-wrap{
     font-size: 18px;
     line-height: 1;
-    color: #ff6700;
+    color: #ff6700 !important;
     border-bottom: 1px solid #e0e0e0;
     padding: 12px 0 20px;
 }
@@ -333,6 +333,7 @@ body{
     border: 1px solid #989196;
     float: left;
     text-align: center;
+    margin-right: 5px;
  }
  .step-color-img{
      width: 20px;
