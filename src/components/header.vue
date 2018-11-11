@@ -45,8 +45,8 @@
                             <li><a href="#" class="tongzhi">消息通知</a><span>  |</span></li>
                             <li id="l1">
                                 <a href="#" class="car_mini" >
-                                    <img src="img/car1.png" alt="" class="car_mini_img">
-                                    <img src="img/car2.png" alt="" class="car_mini_img my_display" >购物车(0)</a>
+                                    <img src="http://127.0.0.1:3000/img/car1.png" alt="" class="car_mini_img">
+                                    <img src="http://127.0.0.1:3000/img/car2.png" alt="" class="car_mini_img my_display" >购物车(0)</a>
                                     <div class="my_shopp_car my_display">
                                             <p>购物车中还没有商品，赶紧选购吧！</p>
                                     </div>
