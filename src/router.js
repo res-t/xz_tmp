@@ -16,36 +16,60 @@ export default new Router({
     {
       path: '/index',
       name: 'index',
-      component: Index
+      component: Index,
+      meta: {
+        title: '小米商城'
+      }
     },
     {
       path:'/',
       name:'redirect',
-      redirect:'/index'
+      redirect:'/index',
+      meta: {
+        title: '小米商城'
+      }
     },
     {
       path:'/mi8youth',
-      component:Mi8Youth
+      component:Mi8Youth,
+      meta: {
+        title: '小米8--青春版'
+      }
     },
     {
       path:'/login',
-      component:Login
+      component:Login,
+      meta: {
+        title: '小米商城--登录'
+      }
     },
     {
       path:'/register',
-      component:Register
+      component:Register,
+      meta: {
+        title: '小米商城--注册'
+      }
     },
     {
-      path:'/shoplist',
-      component:ShopList
+      path:'/shoplist/:id',
+      component:ShopList,
+      meta: {
+        title: '商品列表'
+      }
     },
     {
       path:'/shopdetail/:id',
-      component:ShopDetail
+      component:ShopDetail,
+      meta: {
+        title: '商品详情'
+      }
     },
     {
-      path:'/listdetail',
-      component:ListDetail
+      path:'/listdetail/:id',
+      component:ListDetail,
+      meta: {
+        title: '小米商城--列表详情'
+      }
     }
   ]
 })
