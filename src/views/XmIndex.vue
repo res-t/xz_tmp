@@ -41,10 +41,10 @@
                         <div id="product2" class="my_display">
                                 <ul v-for="(tv,i) in boxlist" :key="i">
                                     <li v-for="tvbox in tv" :key="tvbox.id">
-                                        <a href="#">
+                                        <router-link :to="'/shopdetail/'+tvbox.id">
                                             <img :src='tvbox.image' alt="" class="my_swipe_href_img">
                                         {{tvbox.name}}
-                                        </a>
+                                        </router-link>
                                     </li>
                                 </ul>
         
