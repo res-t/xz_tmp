@@ -98,6 +98,11 @@
                                             <span class="price">{{item[1]}}元</span>
                                         </a>
                                     </li>
+                                     <!--<li class="ml0 step-list-border" v-show="Edition=['']">
+                                        <a href="#">
+                                           <span class="name step-list-active">没有更多版本了</span>
+                                        </a>
+                                    </li>-->
                                    <!-- <li>
                                         <a href="#">
                                             <span class="name">4GB+64GB 全网通</span>
@@ -168,7 +173,7 @@
                                 </i>
                                 <img src="http://127.0.0.1:3000/img/pms_baoxian.jpg" alt="" class="baoxian-img">
                                 <span class="name">意外保障服务</span>
-                                <p class="desc1">手机意外摔落/进水/碾压等损坏</p>
+                                <p class="desc1">>{{detaText.uname}}意外摔落/进水/碾压等损坏</p>
                                 <p class="agreement">
                                     <i class="check-box-active"> <em>√</em></i>
                                         <span class="read">我已阅读</span>
@@ -183,7 +188,7 @@
                                     </i>
                                     <img src="http://127.0.0.1:3000/img/pms_baoxian.jpg" alt="" class="baoxian-img">
                                     <span class="name">意外保障服务</span>
-                                    <p class="desc1">手机意外摔落/进水/碾压等损坏</p>
+                                    <p class="desc1">>{{detaText.uname}}意外摔落/进水/碾压等损坏</p>
                                     <p class="agreement">
                                         <i class="check-box-active"> <em>√</em></i>
                                         <span class="read">我已阅读</span>
@@ -205,7 +210,7 @@
                                     </i>
                                     <img src="http://127.0.0.1:3000/img/pms_baoxian.jpg" alt="" class="baoxian-img">
                                     <span class="name">意外保障服务</span>
-                                    <p class="desc1">手机意外摔落/进水/碾压等损坏</p>
+                                    <p class="desc1">>{{detaText.uname}}意外摔落/进水/碾压等损坏</p>
                                     <p class="agreement">
                                         <i class="check-box-active"> <em>√</em></i>
                                             <span class="read">我已阅读</span>
@@ -219,8 +224,8 @@
                             <div class="pro-list">
                                 <ul>
                                     <li>
-                                        小米8 青春版 4GB+64GB 深空灰  
-                                        <span>1399元</span>
+                                        {{detaText.uname}}  
+                                        <span>{{detaText.price}}元</span>
                                     </li>
                                     <li class="totlePrice">   总计   ：{{detaText.price}}元  </li>
                                 </ul>
