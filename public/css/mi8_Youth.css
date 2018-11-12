@@ -1014,7 +1014,6 @@ body{
 .evaluation{
     width: 1236px;
     height: 4204px;
-    border: 1px solid red;
     margin: 0 auto;
     margin-top: 20px;
 }
@@ -1028,14 +1027,12 @@ body{
 .Satisfaction{
     width: 420px;
     height: 2388px;
-    border: 1px solid red;
     float: left;
     margin-left: 10px;
 }
 .comment-top{
     width: 792px;
     height: 40px;
-    border: 1px solid red;
 }
 .comment-top>h2{
     font-size: 22px;
@@ -1192,7 +1189,6 @@ body{
     width: 649px;
     height: 80px;
     margin-top: 40px;
-    border: 1px solid red;
     position: relative;
 }
 .answer-img{
@@ -1225,7 +1221,6 @@ body{
 .manyidu{
     width: 420px;
     height:184px;
-    border: 1px solid red;
     background: #fff;
 }
 .mai_number{
