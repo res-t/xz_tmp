@@ -436,7 +436,7 @@
                                             </a>
                                         </div>
                                         <input type="text" placeholder="回复楼主" class="comment_input"><a href="#" class="huifu" >回复</a>
-                                        <div style="width:649px;height:407px;border:1px solid red">
+                                        <div style="width:649px;height:407px;">
                                             <div class="comment-anwser">
                                                     <img src="http://127.0.0.1:3000/img/logo.png" alt="" class="answer-img">
                                                     <h3 class="official-name">官方回复</h3>
@@ -497,7 +497,7 @@
                                                 </a>
                                             </div>
                                             <input type="text" placeholder="回复楼主" class="comment_input"><a href="#" class="huifu" >回复</a>
-                                            <div style="width:649px;height:407px;border:1px solid red">
+                                            <div style="width:649px;height:407px;">
                                                 <div class="comment-anwser">
                                                         <img src="http://127.0.0.1:3000/img/logo.png" alt="" class="answer-img">
                                                         <h3 class="official-name">官方回复</h3>
