@@ -3,9 +3,9 @@
          <xm-header></xm-header>
         <div class="">
             <div class="container_title">
-                <a href="#">首页 &gt;</a>
+                <router-link to="/index">首页 &gt;</router-link>
                 <a href="#">全部结果 &gt;</a>
-                <span>净水器</span>
+                <span></span>
             </div>
             <!--fenlei-->
             <div class="filter-box ">
@@ -49,47 +49,25 @@
                     </li>
                 </ul>
                 </div>
-                <div class="product-detail">
-                    <div class="my-product-list">
-                        <img src="http://127.0.0.1:3000/img/pms_jinshuiqi200x200.jpg" alt="">
-                        <p class="list-title"><router-link to="/listdetail">小米净水器滤芯 PP棉</router-link></p>
-                        <p class="list-price animated swing infinite">59元</p>
-                        <p class="list-img"><a href="http://127.0.0.1:3000/listdetail.html"><img src="http://127.0.0.1:3000/img/pms_reshuqi!34x34.jpg" alt=""></a></p>
+                <div class="product-detail-list clearfix">
+                    <div class="my-product-list"  v-for="(products,i) in productlist" :key="products.id" @mouseenter="xuanting(i)" @mouseleave='yichu(i)'>
+                        <img :src="products.big_img" alt="">
+                        <p class="list-title"><router-link :to="'/listdetail/'+products.id">{{products.title}}</router-link></p>
+                        <p class="list-price animated swing infinite">{{products.price}}元</p>
+                        <p class="list-img">
+                            <a href="http://127.0.0.1:3000/listdetail.html">
+                                <img :src="products.small_img" alt="">
+                            </a>
+                        </p>
                         <div class="like-cart">
-                            <a href="#" style="float:left" class="my_a_color my_display">
+                            <a href="#" style="float:left" :class="[{'my_a_color':true},{'animated':true},{'swing':true}, {'my_display':index!=i }]">
                                 <img src="http://127.0.0.1:3000/img/like.png" alt="" class="like-cart_img"> 喜欢
                             </a>
-                            <a href="#" style="float:right" class="my_a_color  my_display ">详情
+                            <router-link :to="'/listdetail/'+products.id" style="float:right" :class="[{'my_a_color':true},{'animated':true},{'swing':true}, {'my_display':index!=i }]">详情
                                 <img src="http://127.0.0.1:3000/img/shopcar.png" alt="" class="mr20 like-cart_img">
-                            </a>
+                            </router-link>
                         </div>
                     </div>
-                    <div class="my-product-list">
-                            <img src="http://127.0.0.1:3000/img/pms_jinshuiqi200x200.jpg" alt="">
-                            <p class="list-title"><a href="#">小米净水器滤芯 PP棉</a></p>
-                            <p class="list-price">59元</p>
-                            <p class="list-img"><a href="#"><img src="http://127.0.0.1:3000/img/pms_reshuqi!34x34.jpg" alt=""></a></p>
-                            <div class="like-cart">
-                                <a href="#" style="float:left" class="my_a_color my_display">
-                                    <img src="http://127.0.0.1:3000/img/like.png" alt="" class="like-cart_img"> 喜欢
-                                </a>
-                                <a href="#" style="float:right" class="my_a_color  my_display ">详情
-                                    <img src="http://127.0.0.1:3000/img/shopcar.png" alt="" class="mr20 like-cart_img">
-                                </a>
-                            </div>
-                    </div>
-                    <div class="my-product-list"></div>
-                    <div class="my-product-list"></div>
-                    <div class="my-product-list"></div>
-                    <div class="my-product-list"></div>
-                    <div class="my-product-list"></div>
-                    <div class="my-product-list"></div>
-                    <div class="my-product-list"></div>
-                    <div class="my-product-list"></div>
-                    <div class="my-product-list"></div>
-                    <div class="my-product-list"></div>
-                    <div class="my-product-list"></div>
-                    <div class="my-product-list"></div>
                 </div>
             </div>
         </div>
@@ -103,19 +81,40 @@
   import xmFooter from '@/components/footer.vue'
 export default {
     data(){
-        return{}
+        return{
+            productlist:'',
+            index: -1,
+        }
     },
     mounted(){
-        this.product();
+      // this.product();
+       this.getProduct();
+   
     },
     methods:{
-        product(){
+        xuanting(i){
+            this.index=i       
+        },
+        yichu(i){
+            this.index=-1
+        },
+       /* product(){
              $('.my-product-list').mouseenter(function(){
                 var li = $(this);
                 li.children('.like-cart').children().addClass("animated swing infinite").removeClass("my_display")
+                console.log(123456);
               }).mouseleave(function(){
                 var li = $(this);
                 li.children('.like-cart').children().removeClass("animated swing infinite").addClass("my_display")
+            })
+        },*/
+        /**请求 */
+        getProduct(){
+            var url = "http://127.0.0.1:3000/shoplist?id=";
+                url+=this.$route.params.id;
+            this.$http.get(url).then(result=>{
+                 console.log(result.data)
+                 this.productlist=result.data;
             })
         }
     },
@@ -126,7 +125,11 @@ export default {
 }
 </script>
 <style>
-
+    .my-product-list:hover{
+         box-shadow: 0 6px 20px rgba(0,0,0,.25);
+         transform: scale(1.01);
+         transition: .2s all linear;
+    }
 </style>
 
 
