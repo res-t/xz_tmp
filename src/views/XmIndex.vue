@@ -64,10 +64,10 @@
                         <div id="product4" style="width:758px" class="my_display">
                                 <ul v-for="(patch,i) in patchlist" :key="i">
                                     <li v-for="pth in patch" :key="pth.id">
-                                        <a href="#">
+                                        <router-link :to="'/shoplist/'+pth.id">
                                             <img :src='pth.image' alt="" class="my_swipe_href_img">
                                             {{pth.name}}
-                                        </a>
+                                        </router-link>
                                     </li>
                                 </ul>
                         </div>
@@ -738,93 +738,31 @@
                 </div>
                 <div class="phone_Model">
                     <ul>
-                        <li style="overflow: hidden;">
+                        <li style="overflow: hidden;" class="mb15" v-for="phone in Onefloor" :key="phone.id">
                             <div class="qcontainer">
                                 <div class="film">
-                                    <a href="#" class="face front" style="display: block ;text-align:center;width:234px;height:300px">
-                                        <div class="flg_new">新品</div>
-                                        <img src="http://127.0.0.1:3000/img/phonemi8.jpg" class="xuanzhuan_img">
-                                        <p class="foot-p">小米8青春版4GB+64GB </p>
-                                        <span class="xiaotitle">潮流镜面渐变色，2400万自拍旗舰</span>
-                                        <div class="my_money">1299元</div>
-                                    </a>
+                                    <router-link :to="'/shopdetail/'+phone.parent_id" class="face front" style="display: block ;text-align:center;width:234px;   height:300px">
+                                          <div :class="[{'flg_new':true},{'my_display':phone.sale}]">新品</div>
+                                          <div class="my_kill" v-show="phone.sale">减{{phone.old_price-phone.price}}元</div>
+                                        <img :src="phone.img_url" class="xuanzhuan_img">
+                                        <p class="foot-p">{{phone.title}}</p>
+                                        <span class="xiaotitle">{{phone.point_d}}</span>
+                                         <div class="my_money">{{phone.price}}元<del> {{phone.old_price}}</del></div>
+                                    </router-link>
                                     <div class="face back">
-                                        <a href="#" style="display: block ;text-align:center;width:234px;height:250px">
-                                            <img src="http://127.0.0.1:3000/img/phonemi8.jpg" class="xuanzhuan_img">
-                                            <p class="foot-p">小米8青春版4GB+64GB </p>
-                                            <span class="xiaotitle">潮流镜面渐变色，2400万自拍旗舰</span>
-                                            <div class="my_money mt10">1299元</div>
-                                        </a>
+                                        <router-link :to="'/shopdetail/'+phone.parent_id" style="display: block ;text-align:center;width:234px;height:250px">
+                                            <img :src="phone.img_url" class="xuanzhuan_img">
+                                            <p class="foot-p">{{phone.title}}</p>
+                                            <span class="xiaotitle">{{phone.point_d}}</span>
+                                            <div class="my_money mt10">{{phone.price}}元</div>
+                                        </router-link>
                                         <a href="#" class="evaluate">
-                                            <p style=" white-space:nowrap; text-overflow:ellipsis;overflow:hidden;">评价: 电视效果不错，给家里老爸老妈买的，不换这个电视上一个还是29寸的老电视，等过段时间换了网也可以通过语音选择节目，简单方便。</p>
-                                            <p  class="mt10">来自某某的评价</p>
+                                            <p style=" white-space:nowrap; text-overflow:ellipsis;overflow:hidden;">评价:{{phone.comment}}</p>
+                                            <p  class="mt10">来自：{{phone.user_name}}的评价</p>
                                         </a>
                                     </div>
                                 </div>
                             </div> 
-                        </li>
-                        <li>
-                                <div class="flg_new">新品</div>
-                                <a href="#">
-                                    <img src="http://127.0.0.1:3000/img/mihong8.png" alt="">
-                                    <p>小米8屏幕指纹版 8GB+128GB</p>
-                                </a>
-                                <span class="xiaotitle">全球首款压感屏幕指纹，双频GPS超精...</span>
-                                <div class="my_money">3599元</div>
-                        </li>
-                        <li>
-                                <div class="flg_new">减150元</div>
-                                <a href="#">
-                                    <img src="http://127.0.0.1:3000/img/mise.jpg" alt="">
-                                    <p>小米8SE 4GB+64GB </p>
-                                </a>
-                                <span class="xiaotitle">AI 超感光双摄，三星 AMOLED 屏幕</span>
-                                <div class="my_money">1649元  <del> 1799元</del></div>
-                        </li>
-                        <li>
-                                <div class="flg_new">减400元</div>
-                                <a href="#">
-                                    <img src="http://127.0.0.1:3000/img/mimx.jpg" alt="">
-                                    <p>小米MX 2S 8GB+64GB </p>
-                                </a>
-                                <span class="xiaotitle">骁龙845 年度旗舰处理器，艺术品般陶</span>
-                                <div class="my_money">3599元 <del> 3999元</del></div>
-                        </li>
-                        <li class="mt15">
-                                <div class="flg_new">减200元</div>
-                                <a href="#">
-                                    <img src="http://127.0.0.1:3000/img/xiaomi6s.jpg" alt="">
-                                    <p>小米6X 4GB+3GB</p>
-                                </a>
-                                <span class="xiaotitle">全索尼相机，骁龙660 AIE处理器</span>
-                                <div class="my_money">1299元 <del>1499元</del></div>
-                        </li>
-                        <li  class="mt15">
-                                <div class="flg_new">新品</div>
-                                <a href="#">
-                                    <img src="http://127.0.0.1:3000/img/xiaomimax2.jpg" alt="">
-                                    <p>小米Max2 4GB+64GB</p>
-                                </a>
-                                <span class="xiaotitle">6.44''大屏，5300mAh 充电宝级的大电...</span>
-                                <div class="my_money">1699元</div>
-                        </li>
-                        <li  class="mt15">
-                                <div class="flg_new">享6折</div>
-                                <a href="#">
-                                    <img src="http://127.0.0.1:3000/img/max2taoci.jpg" alt="">
-                                    <p>小米MIX2 全陶瓷尊享版 </p>
-                                </a>
-                                <span class="xiaotitle">全面屏2.0，Unibody 全陶瓷</span>
-                                <div class="my_money">2699元 <del> 4699元</del></div>
-                        </li>
-                        <li  class="mt15">
-                                <div class="flg_new">新品</div>
-                                <a href="#">
-                                    <img src="http://127.0.0.1:3000/img/hongmis2.jpg" alt="">
-                                    <p>红米S2 3GB+32GB</p>
-                                </a>
-                                <span class="xiaotitle">前置1600万超大像素智能美拍</span>
-                                <div class="my_money">999元</div>
                         </li>
                     </ul>
                 </div>
@@ -1714,7 +1652,9 @@ export default {
              boxlist:{},
              loptoplist:{},
              patchlist:{},
-             clear:''
+             clear:'',
+             Onefloor:"",
+             banduan:true,
         }
        
     },
@@ -1737,6 +1677,7 @@ export default {
        this.tvbox();
        this.loptop();
        this.patch();
+       this.firstFloor();
     },
     methods:{
        /**轮播 */
@@ -1995,7 +1936,7 @@ export default {
         },
         phone(){
             this.$http.get("http://127.0.0.1:3000/phone").then(result=>{
-                console.log(result.data);
+                //console.log(result.data);
                 var arr=result.data
                 var index=0
                 var obj={}
@@ -2004,7 +1945,7 @@ export default {
                     index+=6
                 }
                this.navlist=obj
-               console.log(this.navlist)
+              // console.log(this.navlist)
             })
         },
         tvbox(){
@@ -2022,7 +1963,7 @@ export default {
         },
         loptop(){
             this.$http.get('http://127.0.0.1:3000/loptop').then(result=>{
-                console.log(result)
+               // console.log(result)
                  var arr=result.data
                 var index=0
                 var obj={}
@@ -2035,7 +1976,7 @@ export default {
         },
         patch(){
             this.$http.get('http://127.0.0.1:3000/patch').then(result=>{
-                console.log(result)
+               // console.log(result)
                  var arr=result.data
                 var index=0
                 var obj={}
@@ -2044,6 +1985,14 @@ export default {
                     index+=6
                 }
                this. patchlist=obj
+            })
+        },
+        firstFloor(){
+            var url ="http://127.0.0.1:3000/phonefloor";
+            this.$http.get(url).then(result=>{
+                console.log(result);
+                this.Onefloor = result.data;
+                console.log(this.Onefloor);
             })
         }
 
@@ -2066,3 +2015,70 @@ export default {
 </style>
 
 
+<!--
+
+  <li>
+                                <div class="flg_new">新品</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/mihong8.png" alt="">
+                                    <p>小米8屏幕指纹版 8GB+128GB</p>
+                                </a>
+                                <span class="xiaotitle">全球首款压感屏幕指纹，双频GPS超精...</span>
+                                <div class="my_money">3599元</div>
+                        </li>
+                        <li>
+                                <div class="flg_new">减150元</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/mise.jpg" alt="">
+                                    <p>小米8SE 4GB+64GB </p>
+                                </a>
+                                <span class="xiaotitle">AI 超感光双摄，三星 AMOLED 屏幕</span>
+                                <div class="my_money">1649元  <del> 1799元</del></div>
+                        </li>
+                        <li>
+                                <div class="flg_new">减400元</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/mimx.jpg" alt="">
+                                    <p>小米MX 2S 8GB+64GB </p>
+                                </a>
+                                <span class="xiaotitle">骁龙845 年度旗舰处理器，艺术品般陶</span>
+                                <div class="my_money">3599元 <del> 3999元</del></div>
+                        </li>
+                        <li class="mt15">
+                                <div class="flg_new">减200元</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/xiaomi6s.jpg" alt="">
+                                    <p>小米6X 4GB+3GB</p>
+                                </a>
+                                <span class="xiaotitle">全索尼相机，骁龙660 AIE处理器</span>
+                                <div class="my_money">1299元 <del>1499元</del></div>
+                        </li>
+                        <li  class="mt15">
+                                <div class="flg_new">新品</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/xiaomimax2.jpg" alt="">
+                                    <p>小米Max2 4GB+64GB</p>
+                                </a>
+                                <span class="xiaotitle">6.44''大屏，5300mAh 充电宝级的大电...</span>
+                                <div class="my_money">1699元</div>
+                        </li>
+                        <li  class="mt15">
+                                <div class="flg_new">享6折</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/max2taoci.jpg" alt="">
+                                    <p>小米MIX2 全陶瓷尊享版 </p>
+                                </a>
+                                <span class="xiaotitle">全面屏2.0，Unibody 全陶瓷</span>
+                                <div class="my_money">2699元 <del> 4699元</del></div>
+                        </li>
+                        <li  class="mt15">
+                                <div class="flg_new">新品</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/hongmis2.jpg" alt="">
+                                    <p>红米S2 3GB+32GB</p>
+                                </a>
+                                <span class="xiaotitle">前置1600万超大像素智能美拍</span>
+                                <div class="my_money">999元</div>
+                        </li>
+
+-->
