@@ -38,6 +38,9 @@ ul{
 body{
     min-width: 1226px;
 }
+input{
+    outline:none;
+}
 
 
 
