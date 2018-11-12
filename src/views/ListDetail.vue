@@ -12,26 +12,23 @@
                 <div class="goods-pic-box">
                     <!--goods-big-pic-->
                     <div class="goods-big-pic">
-                        <img src="http://127.0.0.1:3000/img/pms_RESHUIQI.jpg" alt="">
+                        <img :src="detatext.big_img" alt="">
                     </div>
                     <!---goods-small-pic clearfix-->
                     <div class="goods-small-pic clearfix">
                         <ul class="goodsPicList">
                             <li class="current">
-                                <img src="http://127.0.0.1:3000/img/pms_RESHUIQI.jpg" alt="">
-                            </li>
-                            <li class="current">
-                                <img src="http://127.0.0.1:3000/img/pms_RESHUIQI.jpg" alt="">
+                                <img :src="detatext.small_img" alt="">
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="goods-info-box">
                     <div class="goodsInfoBlock">
-                    <p class="goods-name">小米净水器滤芯 PP棉</p>
+                    <p class="goods-name">{{detatext.title}}</p>
                     <p class="gods-subtitle">
                         <span style="color:#ff6700">【小米11.11狂欢节，11月1日立减4元】</span>
-                        拦截5微米以上大颗粒 ／ 有效滤除泥沙颗粒、混浊物、铁锈等
+                        {{detatext.point_d}}
                     </p>
                     <p class="goods-info-head-tip">
                         <ul>
@@ -53,8 +50,8 @@
                         </div>
                     </div>
                     <div class="goods-info-head-price clearfix">
-                            <b class="mi_goodsPrice">55</b><i class="yuan"> 元</i>
-                            <span class="mi_marketPrice">59元</span>
+                            <b class="mi_goodsPrice">{{detatext.price}}</b><i class="yuan"> 元</i>
+                        
                     </div>
                     <div class="goods-info-head-cart">
                             <ul class="btn-mai">
@@ -174,7 +171,7 @@
                                 </a>
                             </div>
                             <input type="text" placeholder="回复楼主" class="comment_input"><a href="#" class="huifu" >回复</a>
-                            <div style="width:649px;height:407px;border:1px solid red">
+                            <div style="width:649px;height:407px;">
                                 <div class="comment-anwser">
                                     <img src="http://127.0.0.1:3000/img/logo.png" alt="" class="answer-img">
                                     <h3 class="official-name">官方回复</h3>
@@ -235,7 +232,7 @@
                                 </a>
                             </div>
                             <input type="text" placeholder="回复楼主" class="comment_input"><a href="#" class="huifu" >回复</a>
-                            <div style="width:649px;height:407px;border:1px solid red">
+                            <div style="width:649px;height:407px;">
                                 <div class="comment-anwser">
                                     <img src="http://127.0.0.1:3000/img/logo.png" alt="" class="answer-img">
                                     <h3 class="official-name">官方回复</h3>
@@ -326,10 +323,26 @@ import xmHeader from '@/components/header.vue'
 import xmFooter from '@/components/footer.vue'
 export default {
     data(){
-        return{}
+        return{
+            detatext:"",
+        }
     },
-    mounted(){},
-    methods:{},
+    mounted(){
+        this.getList();
+    },
+    methods:{
+        getList(){
+            var url = "http://127.0.0.1:3000/listdetail?id=";
+                url+=this.$route.params.id;
+            this.$http.get(url).then(result=>{
+                console.log(result);
+                this.detatext=result.data[0];
+             
+                console.log(this.detatext);
+                console.log(typeof(result.data))
+            })
+        }
+    },
     components:{
         xmHeader,
         xmFooter
