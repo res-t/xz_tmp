@@ -1,0 +1,144 @@
+<template>
+    <div class="app-Settlement">
+        <div class="Settlement">
+            <div class="set-hander">
+                <div class="set-container">
+                    <!--logo-->
+                    <div class="set-logo">
+                        <router-link to="/index">
+                            <img src="http://127.0.0.1:3000/img/zclogo.png" alt="">
+                        </router-link>
+                    </div>
+                    <div class="set-title">
+                        <h3>我的购物车</h3>
+                    </div>
+                    <!--没有用过登录-->
+                    <div class="set-topbar-info my_display">
+                        <a href="#">登录</a>
+                        <span class="sep">|</span>
+                        <a href="#">注册</a>
+                    </div>
+                    <!--用户已登录-->
+                    <div class="set-topbar-info">
+                        <a href="#">用户名</a>
+                        <span class="sep ml10">|</span>
+                        <a href="#">我的订单</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <!--无购物-->
+                <div class="cart-empty my_display">
+                    <div class="cart-img">
+                            <h2>您的购物车还是空的！</h2>
+                            <p class="loginDesc">登录后将显示您之前加入的商品</p>
+                            <a href="#" class="loginGO">立即登录</a>
+                            <a href="#" class="go-shop">马上去购物</a>
+                    </div>
+                </div>
+                <!--有物品-->
+                <div class="cart-Commodity">
+                    <div class="list-head clearfix">
+                        <div class="col-check">
+                            <i class="icon-quan">✔</i> 全选
+                        </div>
+                        <div class="col col-img">&nbsp;</div>
+                        <div class="col col-name">商品名称</div>
+                        <div class="col col-price">单价</div>
+                        <div class="col col-num">数量</div>
+                        <div class="col col-total">小计</div>
+                        <div class="col col-action">操作</div>
+                    </div>
+                    <div class="list-body">
+                        <div class="body-item">
+                            <div class="item-table">
+                                <div class="item-row clearfix">
+                                    <div class="col col-check">
+                                        <i class=" i_icon-i">✔</i>
+                                    </div>
+                                    <div class="col col-img">
+                                        <a href="#">
+                                            <img src="//i1.mifile.cn/a1/pms_1513822496.31335198!80x80.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col col-name">
+                                        <h3 class="product-name">
+                                            <a href="#">米家电磁炉</a>
+                                        </h3>
+                                    </div>
+                                    <div class="col col-price mt30"> 299元 </div>
+                                    <div class="col col-num">
+                                        <div class="change-goods-num clearfix mt20">
+                                            <a href="#">-</a>
+                                            <input type="text" value="1">
+                                            <a href="#">+</a>
+                                        </div>
+                                    </div>
+                                    <div class="col col-total mt30 zongjia"> 299元 <p class="pre-info">  </p> 
+                                    </div>
+                                    <div class="col col-action shanchu-p">
+                                        <div class="shanchu">✖</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-bar clearfix mt20">
+                        <div class="section-left">
+                            <a href="#" class="back-shopping">继续购物</a>
+                            <span class="cart-total">共 
+                                <span class="numbuter-cart">1</span> 件商品，已选择 
+                                    <span class="numbuter-cart">1</span>  件</span>
+                        </div>
+                        <span class="total-price-cart">
+                            合计： <em >299</em>元
+                        </span>
+                        <a href="#" class="jiesuan-price">去结算</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tuijian">
+                    <h2 class="xm-recommend-title"><span>为您推荐</span></h2>
+            </div>
+            <div class="tuijian-product">
+                <ul class="clearfix t-product">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <xm-footer></xm-footer>
+        </div>
+    </div>
+</template>
+<script>
+ import xmFooter from '@/components/footer.vue'
+import '../../public/css/Settlement.css'
+export default {
+    data(){
+        return{}
+    },
+    methods(){},
+    mounted:{},
+    components:{
+        xmFooter
+    }
+}
+</script>
+<style>
+
+</style>
+
+
