@@ -1610,15 +1610,15 @@
                         </a>
                     </li>
                     <li class="bar-sort">
-                        <a href="#" class="bar-link">
+                        <router-link to="/cart" class="bar-link">
                             <div class="bar-img">
                                 <img src="http://127.0.0.1:3000/img/cart-ico.png" alt="" >
                                 <img src="http://127.0.0.1:3000/img/cart-ico-active.png" alt="" class="my_display">
                             </div>
                             <p class="bar-text">购物车</p>
-                        </a>
+                        </router-link>
                     </li>
-                    <li class="bar-sort my_display" id="toptop">
+                    <li :class="[{'bar-sort':true},{'my_display':!scroll0}]" id="toptop">
                         <a href="#" class="bar-link">
                             <div class="bar-img">
                                 <img src="http://127.0.0.1:3000/img/totop.png" alt="" >
@@ -1655,6 +1655,7 @@ export default {
              clear:'',
              Onefloor:"",
              banduan:true,
+             scroll0:true,
         }
        
     },
@@ -1678,6 +1679,7 @@ export default {
        this.loptop();
        this.patch();
        this.firstFloor();
+       window.addEventListener('scroll',this.Roll)
     },
     methods:{
        /**轮播 */
@@ -1916,16 +1918,19 @@ export default {
        },
        /**返回顶部显示隐藏 滚动条事件*/
        Roll(){
-           window.onscroll = function(){
-                var docScroll = document.documentElement.scrollTop;
-                document.getElementById("toptop");
-                if(docScroll>window.innerHeight*2){
-                    toptop.classList.remove("my_display")
-                }else{
-                toptop.className="my_display bar-sort"
-                }
-   
+           var docScroll = document.documentElement.scrollTop;
+           // console.log(docScroll,window.innerHeight*2)
+            if(docScroll>window.innerHeight*2){
+                this.scroll0=true;
+                //console.log(this.scroll0)
+            } 
+            if(docScroll<window.innerHeight*2){
+                
+                this.scroll0 = false;
+               // console.log(this.scroll0)
             }
+
+            
        },
        /**请求*/
         ShopTitle(){
