@@ -47,9 +47,6 @@
                             <div class="btn prev">&lt;</div>
                             <div class="btn next">&gt;</div>
                         
-                            <ul id="tabs">
-                                <li class="tab-D" v-for="(item,i) in imgUrl" :key="i"></li>
-                            </ul>
                         </div> 
                     </div>
                     <!---规格参数信息-->
@@ -63,7 +60,8 @@
                         <p class="aftersale font_color">小米自营</p>
                         <!--价格-->
                         <div class="pro-price">
-                            <span style="color:#ff6700">{{detaText.price}}</span>
+                            <span style="color:#ff6700" v-show="price==''">{{detaText.price}}</span>
+                            <span style="color:#ff6700" v-show="!price==''">{{price}}</span>
                         </div>
                         <!---赠品-->
                         <div class="flow-wrap">
@@ -92,110 +90,59 @@
                                     选择版本
                                 </div>
                                 <ul class="step-list clearfix">
-                                    <li class="ml0 step-list-border" v-for="(item,i) in  Edition" :key=i>
-                                        <a href="#">
-                                            <span class="name step-list-active">{{item[0]}}</span>
+                                    <li  v-for="(item,i) in  Edition" :key=i :class="[{'ml0':true },{'step-list-border':jihuo==i}]" @click="say(i, $event)">
+                                        <a href="javascript:">
+                                            <span :class="[{'name':true},{'step-list-active':jihuo==i}]">{{item[0]}}</span>
                                             <span class="price">{{item[1]}}元</span>
                                         </a>
                                     </li>
-                                     <!--<li class="ml0 step-list-border" v-show="Edition=['']">
-                                        <a href="#">
-                                           <span class="name step-list-active">没有更多版本了</span>
-                                        </a>
-                                    </li>-->
-                                   <!-- <li>
-                                        <a href="#">
-                                            <span class="name">4GB+64GB 全网通</span>
-                                            <span class="price">1399元</span>
-                                        </a>
-                                    </li>
-                                    <li class="ml0">
-                                        <a href="#">
-                                            <span class="name">4GB+64GB 全网通</span>
-                                            <span class="price">1399元</span>
-                                        </a>
-                                    </li>-->
                                 </ul>
                             </div>
                             <!--选择颜色-->
                             <div class="space-title">选择颜色</div>
                             <div class="step-color clearfix">
                                 <ul class="">
-                                    <li class="ml0 step-list-border" v-for="(tmp,i) in styleColor" :key=i>
-                                        <a href="#" class="font_color">
+                                    <li v-for="(tmp,i) in styleColor" :key=i :class="[{'ml0':true},{'step-list-border':color==i}]" @click=" handeClick(i),massage4('',$event)">
+                                        <a href="javascript:" class="font_color">
                                         <img :src=tmp[0] alt="" class="step-color-img">{{tmp[1]}}
                                         </a>
                                     </li> 
                                 </ul>
-                               <!-- <ul class="">
-                                    <li class="ml0 step-list-border">
-                                        <a href="#" class="font_color">
-                                            <img src="http://127.0.0.1:3000/img/pm-deatil2.jpg" alt="" class="step-color-img">深灰版
-                                        </a>
-                                    </li> 
-                                    <li class="">
-                                        <a href="#" class="font_color">
-                                            <img src="http://127.0.0.1:3000/img/pm-deatil2.jpg" alt="" class="step-color-img">深灰版
-                                        </a>
-                                    </li>
-                                    <li class="ml0">
-                                        <a href="#" class="font_color">
-                                            <img src="http://127.0.0.1:3000/img/pm-deatil2.jpg" alt="" class="step-color-img">深灰版
-                                        </a>
-                                    </li>  
-                                </ul>-->
-                               <!-- <ul class="">
-                                    <li class="ml0 step-list-border">
-                                        <a href="#" class="font_color">
-                                            <img src="http://127.0.0.1:3000/img/pm-deatil2.jpg" alt="" class="step-color-img">深灰版
-                                        </a>
-                                    </li> 
-                                    <li class="">
-                                        <a href="#" class="font_color">
-                                            <img src="http://127.0.0.1:3000/img/pm-deatil2.jpg" alt="" class="step-color-img">深灰版
-                                        </a>
-                                    </li>
-                                    <li class="ml0">
-                                        <a href="#" class="font_color">
-                                            <img src="http://127.0.0.1:3000/img/pm-deatil2.jpg" alt="" class="step-color-img">深灰版
-                                        </a>
-                                    </li>  
-                                </ul>-->
                             </div>
                             <div class="space-title">
                                     选择小米提供的意外保护
                                 <a href="#" class="liaojie">了解意外保护 &gt;</a>
                             </div>
                             <ul class="yanchang">
-                            <li class="ul-active">
-                                <i class="check-box check-box-active">
+                            <li :class="{'ul-active':active}" @click="activClick(),massage3('',$event)">
+                                <i :class="[{'check-box':true},{ 'check-box-active':active}]">
                                     <em>√</em>
                                 </i>
                                 <img src="http://127.0.0.1:3000/img/pms_baoxian.jpg" alt="" class="baoxian-img">
-                                <span class="name">意外保障服务</span>
-                                <p class="desc1">>{{detaText.uname}}意外摔落/进水/碾压等损坏</p>
+                                <span class="name">碎屏保障服务</span>
+                                <p class="desc1">{{detaText.uname}}意外摔落/进水/碾压等损坏</p>
                                 <p class="agreement">
-                                    <i class="check-box-active"> <em>√</em></i>
+                                    <i :class="{'check-box-active':active}"> <em>√</em></i>
                                         <span class="read">我已阅读</span>
                                         <a href="#" class="font_color">服务条款 |</a>
                                         <a href="#" class="font_color">  常见问题</a>
                                     </p>
                                     <span class="baoxian_price">99元</span>
                             </li>
-                            <li>
-                                    <i class="check-box check-box-active">
-                                        <em>√</em>
-                                    </i>
-                                    <img src="http://127.0.0.1:3000/img/pms_baoxian.jpg" alt="" class="baoxian-img">
-                                    <span class="name">意外保障服务</span>
-                                    <p class="desc1">>{{detaText.uname}}意外摔落/进水/碾压等损坏</p>
-                                    <p class="agreement">
-                                        <i class="check-box-active"> <em>√</em></i>
-                                        <span class="read">我已阅读</span>
-                                        <a href="#" class="font_color">服务条款 |</a>
-                                        <a href="#" class="font_color">  常见问题</a>
-                                    </p>
-                                    <span class="baoxian_price">99元</span>
+                            <li :class="{'ul-active':setActive}" @click="setClick(),massage2('',$event)">
+                                <i :class="[{'check-box':true},{'check-box-active':setActive}]">
+                                    <em>√</em>
+                                </i>
+                                <img src="http://127.0.0.1:3000/img/pms_baoxian.jpg" alt="" class="baoxian-img">
+                                <span class="name">意外保障服务</span>
+                                <p class="desc1">{{detaText.uname}}意外摔落/进水/碾压等损坏</p>
+                                <p class="agreement">
+                                    <i :class="{'check-box-active':setActive}"> <em>√</em></i>
+                                    <span class="read">我已阅读</span>
+                                    <a href="#" class="font_color">服务条款 |</a>
+                                    <a href="#" class="font_color">  常见问题</a>
+                                </p>
+                                <span class="baoxian_price">199元</span>
                             </li>
                             </ul>
                             <!--延长保修-->
@@ -204,30 +151,47 @@
                                 <a href="#" class="liaojie">了解延长保修 &gt;</a>
                             </div>
                             <ul class="yanchang">
-                                <li class="ul-active">
-                                    <i class="check-box check-box-active">
+                                <li :class="{'ul-active':dataClick}" @click="clickMe(),massage('',$event)">
+                                    <i :class="[{'check-box':true},{'check-box-active':dataClick}]">
                                         <em>√</em>
                                     </i>
                                     <img src="http://127.0.0.1:3000/img/pms_baoxian.jpg" alt="" class="baoxian-img">
-                                    <span class="name">意外保障服务</span>
-                                    <p class="desc1">>{{detaText.uname}}意外摔落/进水/碾压等损坏</p>
+                                    <span class="name">延长保修服务</span>
+                                    <p class="desc1">{{detaText.uname}}意外摔落/进水/碾压等损坏</p>
                                     <p class="agreement">
-                                        <i class="check-box-active"> <em>√</em></i>
+                                        <i :class="{'check-box-active':dataClick}"> <em>√</em></i>
                                             <span class="read">我已阅读</span>
                                             <a href="#" class="font_color">服务条款 |</a>
                                             <a href="#" class="font_color">  常见问题</a>
                                         </p>
-                                        <span class="baoxian_price">99元</span>
+                                        <span class="baoxian_price">49元</span>
                                 </li>
                             </ul>
                             <!--已选择产品-->
                             <div class="pro-list">
-                                <ul>
+                                <ul style="height:150px;">
                                     <li>
-                                        {{detaText.uname}}  
-                                        <span>{{detaText.price}}元</span>
+                                        {{detaText.uname}} {{banben}}
+                                        <span style="color:#ff6700" v-show="price==''">{{detaText.price}}</span>
+                                        <span style="color:#ff6700" v-show="!price==''">{{price}}</span>
                                     </li>
-                                    <li class="totlePrice">   总计   ：{{detaText.price}}元  </li>
+                                     <li>
+                                        颜色:
+                                        <span style="color:#ff6700">{{colorText}}</span>
+                                    </li>
+                                    <li v-show="dataClick">
+                                        {{service}}
+                                        <span style="color:#ff6700">{{servicePrice}}</span>
+                                    </li>
+                                     <li v-show="setActive">
+                                        {{protection}}
+                                        <span style="color:#ff6700">{{protectionPrice}}</span>
+                                    </li>
+                                     <li v-show="active">
+                                        {{guarantee}}
+                                        <span style="color:#ff6700">{{guaranteePrice}}</span>
+                                    </li>
+                                    <li class="totlePrice">   总计   ：{{ parseInt(total)+parseInt(detaText.price)}}元  </li>
                                 </ul>
                             </div>
                             <!--购买按钮-->
@@ -303,12 +267,27 @@ export default {
              styleColor:"",
              imgUrl:"",
              arrIndex:0,
+             banben:"",
+             price:0,
+             active:false,
+             jihuo:1,
+             color:0,
+             setActive:false,
+             dataClick:false,
+
+             service:'',
+             servicePrice:0,
+
+             protection:'',
+             protectionPrice:0,
+
+             guarantee:'',
+             guaranteePrice:0,
+             colorText:'',
         }
     },
     mounted(){
-      
         this.MouseG();
-        //console.log(this.$route.params)
         this.getProduct();
         this.addactive()
         this.SwipImg();
@@ -447,19 +426,92 @@ export default {
                 this.arrIndex = arr.length;
                })
         },
+        /**点击事件 */
+        say: function(msg, event) {
+           //获取点击对象      
+           var el = event.currentTarget;
+           this.banben = el.innerText.slice(0,-6);
+           console.log(el.innerText.slice(12))
+           this.price =el.innerText.slice(-6);
+           this.jihuo=msg
+           this.detaText.price=this.price
+        },
+         massage: function(msg, event) {
+           //获取点击对象      
+           var el = event.currentTarget;
+          // console.log(el.innerText);
+           this.service =(el.innerText).slice(1,7);
+           this.servicePrice = (el.innerText).slice(-5)
+           //console.log(this.servicePrice);
+        },
+         massage2: function(msg, event) {
+           //获取点击对象      
+           var el = event.currentTarget;
+           //alert("当前对象的内容："+el.innerText);
+          // console.log(el.innerText);
+           this.protection =(el.innerText).slice(1,7);
+           this.protectionPrice= (el.innerText).slice(-5)
+          // console.log(this.protectionPrice);
+        },
+         massage3: function(msg, event) {
+           //获取点击对象      
+           var el = event.currentTarget;
+           this. guarantee=(el.innerText).slice(1,7);
+           this. guaranteePrice= (el.innerText).slice(-5)
+        },
+        /**颜色 */
+           massage4: function(msg, event) {
+           //获取点击对象      
+           var el = event.currentTarget;
+           this.colorText = el.innerText;
+        },
+        handeClick:function(i){
+           this.color=i
+        },
+        activClick:function(){
+            if( this.active){
+                this.active=false;
+            }else{
+                this.active=true
+            }
+   
+        },
+        setClick:function(){
+            if( this.setActive){
+                this.setActive=false;
+            }else{
+                this.setActive=true
+            }
+        },
+        clickMe:function(){
+             if( this.dataClick){
+                this.dataClick=false;
+                console.log(this.servicePrice);
+            }else{
+                this.dataClick=true
+            }
+        }
     },
     components:{
         xmHeader,
         xmFooter
     },
+    computed:{
+        total:function(){
+            
+          //this. price=parseInt(this. price)
+          this.servicePrice=parseInt(this.servicePrice)
+          this.protectionPrice=parseInt(this.protectionPrice)
+          this.guaranteePrice=parseInt(this.guaranteePrice);
+
+          return   this.servicePrice+this.protectionPrice+this.guaranteePrice
+        }
+    }
    
     
 }
 </script>
 <style>
-  #tabs>li:first{
-
-  }
 </style>
 
 
