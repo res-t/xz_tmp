@@ -7,6 +7,7 @@ import Register from './views/Register.vue'
 import ShopList from './views/ShopList.vue'
 import ShopDetail from './views/ShopDetail.vue'
 import ListDetail from './views/ListDetail.vue'
+import Settlement from './views/Settlement.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -70,6 +71,11 @@ export default new Router({
       meta: {
         title: '小米商城--列表详情'
       }
+    },
+    {
+      path:'/cart',
+      component:Settlement
+
     }
   ]
 })
