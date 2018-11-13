@@ -22,7 +22,7 @@
                             <a href="#">用户评价</a>
                         </li>
                         <li class="goumai">
-                            <router-link to="/shopdetail"> 立即购买</router-link>
+                            <router-link :to="'/shopdetail/'+97"> 立即购买</router-link>
                         </li>
                     </ul>
                 </div>
