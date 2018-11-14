@@ -512,8 +512,8 @@ export default {
                 
                 $("#name").text(this.uname+" V");
             }
-            var a = localStorage.key;
-            console.log(a);
+            //var a = localStorage.key;
+            //console.log(a);
         },
         getLogin(){
             if(!this.uname){
