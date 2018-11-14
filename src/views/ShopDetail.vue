@@ -46,7 +46,9 @@
                         
                             <div class="btn prev">&lt;</div>
                             <div class="btn next">&gt;</div>
-                        
+                             <ul id="tabs">
+                                <li class="tab-D" v-for="(tab,i) in imgUrl " :key="i"></li>
+                            </ul>
                         </div> 
                     </div>
                     <!---规格参数信息-->
@@ -67,7 +69,7 @@
                         <div class="flow-wrap">
                             <ul>  
                                 <li>
-                                    <span class="flow-tag">赠品</span> <span class="flow-name">赠米粉卡，内含100元话费</span> 
+                                    <span class="flow-tag mr10">赠品</span> <span class="flow-name">赠米粉卡，内含100元话费</span> 
                                 </li> 
                             </ul>
                         </div>
@@ -196,8 +198,8 @@
                             </div>
                             <!--购买按钮-->
                             <ul class="btn-mai">
-                                <li>
-                                    <a href="#">立即购买</a>
+                                <li  @click="addCart()">
+                                    <a href="javascripr:">立即购买</a>
                                 </li>
                                 <li>
                                     <a href="#">
@@ -262,6 +264,7 @@
 export default {
     data(){
         return{
+             uname:"",
              detaText:"",
              Edition:"",
              styleColor:"",
@@ -287,11 +290,11 @@ export default {
         }
     },
     mounted(){
-        this.MouseG();
         this.getProduct();
         this.addactive()
         this.SwipImg();
-        
+        this.getUname();
+        window.addEventListener('scroll',this.MouseG)
     },
     created(){ },
     methods:{
@@ -369,14 +372,14 @@ export default {
             });
         },
         MouseG(){
-            /**鼠标事件 */
-                window.onscroll = function(){
                 // console.log(window.scrollTop);
                 var docScroll = document.documentElement.scrollTop;
+                var lunbo = document.getElementById("lunbo");
+                var box = document.getElementById("box");
                 //console.log(docScroll);
-                var lunboOffset = lunbo.offsetTop+560;
+                var lunboOffset =lunbo.offsetTop+560;
                 var boxOffset =box.offsetTop+1200;
-                //console.log(window.innerHeight)
+                 //console.log(window.innerHeight)
                 //console.log(docScroll,lunboOffset)
                 if(docScroll>=lunboOffset/2){
                     container_img.className="container_img";
@@ -390,7 +393,6 @@ export default {
                     //box.className="my_display" 、
                     container_img.classList.remove("container_img")
                     container_img.className="container_img2"
-                }
                 }
                 /***alert-close */
                 $('.alert-close').click(function(){
@@ -424,6 +426,7 @@ export default {
                 //console.log( this.imgUrl.length)
                 //console.log("hahah"+arr.length)
                 this.arrIndex = arr.length;
+                 //console.log(this.imgUrl[0])
                })
         },
         /**点击事件 */
@@ -431,12 +434,12 @@ export default {
            //获取点击对象      
            var el = event.currentTarget;
            this.banben = el.innerText.slice(0,-6);
-           console.log(el.innerText.slice(12))
+           //console.log(el.innerText.slice(12))
            this.price =el.innerText.slice(-6);
            this.jihuo=msg
            this.detaText.price=this.price
         },
-         massage: function(msg, event) {
+        massage: function(msg, event) {
            //获取点击对象      
            var el = event.currentTarget;
           // console.log(el.innerText);
@@ -444,7 +447,7 @@ export default {
            this.servicePrice = (el.innerText).slice(-5)
            //console.log(this.servicePrice);
         },
-         massage2: function(msg, event) {
+        massage2: function(msg, event) {
            //获取点击对象      
            var el = event.currentTarget;
            //alert("当前对象的内容："+el.innerText);
@@ -453,14 +456,14 @@ export default {
            this.protectionPrice= (el.innerText).slice(-5)
           // console.log(this.protectionPrice);
         },
-         massage3: function(msg, event) {
+        massage3: function(msg, event) {
            //获取点击对象      
            var el = event.currentTarget;
            this. guarantee=(el.innerText).slice(1,7);
            this. guaranteePrice= (el.innerText).slice(-5)
         },
         /**颜色 */
-           massage4: function(msg, event) {
+        massage4: function(msg, event) {
            //获取点击对象      
            var el = event.currentTarget;
            this.colorText = el.innerText;
@@ -490,6 +493,32 @@ export default {
             }else{
                 this.dataClick=true
             }
+        },
+        getUname(){
+            var userinfo = JSON.parse( localStorage.getItem('user'));
+            if(userinfo){
+                for(var key in userinfo){
+                   userinfo[key]=this.decodeString(userinfo[key])
+                }
+                this.uname= userinfo.uname;
+                console.log(this.uname);
+            }
+        },
+        addCart(){
+           var url = "http://127.0.0.1:3000/addcart"
+             var params = new URLSearchParams();
+              params.append('name',this.uname);
+              params.append('title',(this.detaText.uname+this.banben));
+              params.append('price',(parseInt(this.total)+parseInt(this.detaText.price)));
+              params.append('img',this.imgUrl[0]);
+              console.log(this.uname,(this.detaText.uname+this.banben),(parseInt(this.total)+parseInt(this.detaText.price)),this.imgUrl[0])
+              this.$http({
+                method:'post',
+                url:url,
+                data:params
+            }).then(result=>{
+                console.log(result);
+            })
         }
     },
     components:{
@@ -515,3 +544,9 @@ export default {
 </style>
 
 
+<!--
+   url+="name="+this.uname
+               url+="title="+this.detaText.uname;
+               url+="price="+(parseInt(this.total)+parseInt(this.detaText.price))
+               console.log(url);
+-->
