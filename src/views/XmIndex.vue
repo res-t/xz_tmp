@@ -13,11 +13,11 @@
                 <div class="btn-index next-index">&gt;</div>
         
                 <ul id="tabs-index">
-                <li class="tab-index active-index"></li>
-                <li class="tab-index"></li>
-                <li class="tab-index"></li>
-                <li class="tab-index"></li>
-                <li class="tab-index"></li>
+                    <li class="tab-index active-index"></li>
+                    <li class="tab-index"></li>
+                    <li class="tab-index"></li>
+                    <li class="tab-index"></li>
+                    <li class="tab-index"></li>
                 </ul>
                 <div class="my_swipe_href">
                     <ul>
@@ -1995,9 +1995,9 @@ export default {
         firstFloor(){
             var url ="http://127.0.0.1:3000/phonefloor";
             this.$http.get(url).then(result=>{
-                console.log(result);
+                //console.log(result);
                 this.Onefloor = result.data;
-                console.log(this.Onefloor);
+                //console.log(this.Onefloor);
             })
         }
 
