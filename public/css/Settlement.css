@@ -45,8 +45,6 @@
 .cart-empty{
     height: 273px;
     width: 1226px;
-   
-    border: 1px solid red;
     padding: 20px 0;
     margin: 0 auto;
 }
@@ -124,14 +122,14 @@
 .t-product>li{
     width: 234px;
     height: 300px;
-    border: 1px solid red;
     list-style: none;
     float: left;
+    background: #fff;
+    margin-right: 10px !important;
 }
 /* 有购物**/
 .cart-Commodity{
     width: 1226px;
-    border: 1px solid red;
     margin: 0 auto;
 }
 .list-head{
@@ -302,6 +300,7 @@
     float: right;
     margin-right: 30px;
     margin-top: 30px;
+    cursor: pointer;
 }
 .shanchu:hover{
     background: red;
