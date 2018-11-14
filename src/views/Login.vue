@@ -120,14 +120,14 @@ export default {
     },
     mounted(){
         this.logIn()
-        console.log(this.$store.getters.getnum)
-        localStorage.setItem('num',123)
+        //console.log(this.$store.getters.getnum)
+        //localStorage.setItem('num',123)
         
     },
     methods:{
         logIn(){
             $("#zh").click(function(e){
-            e.preventDefault();
+               e.preventDefault();
             $("#inpu").removeClass("dis");
             $("#sma").addClass("dis")
             $(this).addClass("now");
@@ -168,7 +168,8 @@ export default {
                     }
                     this.$store.commit("setUser",SaveData);
                     //console.log(JSON.parse( localStorage.getItem('user')));
-                    this.$router.push("/index");
+                    this.$router.go(-1);
+                    //this.$router.push("/index");
                 }
             })
         },
