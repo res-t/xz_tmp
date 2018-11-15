@@ -8,6 +8,8 @@ import ShopList from './views/ShopList.vue'
 import ShopDetail from './views/ShopDetail.vue'
 import ListDetail from './views/ListDetail.vue'
 import Settlement from './views/Settlement.vue'
+import noFound from './views/404.vue'
+import search from './views/search.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -76,6 +78,18 @@ export default new Router({
       path:'/cart',
       component:Settlement
 
+    },
+    {
+      path:'/search/:id',
+      component:search,
+      meta: {
+        title: '小米商城--搜索'
+      }
+    },
+    {
+      path:'/404',
+      component:noFound
     }
+
   ]
 })
