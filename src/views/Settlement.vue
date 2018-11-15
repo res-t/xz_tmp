@@ -51,7 +51,7 @@
                     </div>
                     <div :class="[{'list-body':true},{'my_display':cart}]">
                         <div class="body-item">
-                            <div class="item-table" v-for="(item,i) in products" :key="item.id" @click="massage3(i)">
+                            <div class="item-table" v-for="(item,i) in products" :key="item.id">
                                 <div class="item-row clearfix">
                                     <div class="col col-check">
                                         <i :class=" [{'i_icon-i':true},{'icon_color':ceshi.indexOf(i)>=0}]" @click="setClick(i)" >✔</i>
@@ -70,11 +70,11 @@
                                     <div class="col col-num">
                                         <div class="change-goods-num clearfix mt20">
                                             <a href="javascript:" @click="numsub(i)">-</a>
-                                            <input type="text"  v-model="item.num">
+                                            <input type="text" readonly v-model="item.num">
                                             <a href="javascript:" @click="numSum(i)" >+</a>
                                         </div>
                                     </div>
-                                    <div class="col col-total mt30 zongjia">{{danjia}}元<p class="pre-info">  </p> 
+                                    <div class="col col-total mt30 zongjia">{{item.product_price*item.num}}元<p class="pre-info">  </p> 
                                     </div>
                                     <div class="col col-action shanchu-p">
                                         <div class="shanchu" @click=" shanchu(item.id)">✖</div>
@@ -85,10 +85,10 @@
                     </div>
                     <div class="cart-bar clearfix mt20">
                         <div class="section-left">
-                            <a href="#" class="back-shopping">继续购物</a>
+                            <router-link to="/index" class="back-shopping">继续购物</router-link>
                             <span class="cart-total">共 
-                                <span class="numbuter-cart">1</span> 件商品，已选择 
-                                    <span class="numbuter-cart">1</span>  件</span>
+                                <span class="numbuter-cart">{{totalnum}}</span> 件商品，已选择 
+                                    <span class="numbuter-cart">{{jianshu}}</span>  件</span>
                         </div>
                         <span class="total-price-cart">
                             合计： <em >{{total}}</em>元
@@ -147,7 +147,7 @@ export default {
             setActive:[],
             cart: false,
             ceshi:[],
-            number:0
+          
             
         }
     },
@@ -180,7 +180,7 @@ export default {
             var url ="http://127.0.0.1:3000/shopcart?name=";
                 url+=this.uname;
             this.$http.get(url).then(result=>{
-                console.log(result.data);
+                //console.log(result.data);
                 this.products=result.data;
                 if(this.products.length!=0){
                       this.cart=false;
@@ -188,17 +188,8 @@ export default {
                 }else{
                     this.cart=true
                 }
-                console.log("cart",this.cart)
+                //console.log("cart",this.cart)
              })
-        },
-        
-        massage3: function(i) {
-           //获取点击对象      
-           //var el = event.currentTarget;
-         //  console.log(el.innerText);
-        
-       //   this.ceshi2.push(this.products[i].product_price);
-          
         },
         
         setClick:function(i){
@@ -244,15 +235,19 @@ export default {
                   this.$http.get(url).then(result=>{
                  // console.log(result);
                 })
+                 //location.reload()
             }
         },  
         numSum:function(i){
             this.products[i].num++;
         },
         numsub(i){
-             this.products[i].num--;
-             if(this.products[i].num==0){
-                 this.products[i].num==1;
+            
+             if(this.products[i].num>1){
+                  this.products[i].num--;
+                
+             }else{
+                this.products[i].num==1;
              }
         }
     },
@@ -267,15 +262,22 @@ export default {
               }
               return sum;        
           },
-          danjia:function(){
-               var xiaoji =0
-                for(var i= 0;i<this.ceshi.length;i++){
-                xiaoji+=this.products[i].product_price *this.products[i].num;
-                }
-            return xiaoji; 
-            //return this.products[1].product_price *this.products[1].num;
+          jianshu:function(){
+              var Sum = 0;
+              for(var i=0;i<this.ceshi.length;i++){
+                  Sum+=this.products[this.ceshi[i]].num
+              }
+              return Sum;
+          },
+          totalnum:function(){
+              var sum = 0;
+              for(var i =0;i<this.products.length;i++){
+                  sum+=this.products[i].num
+              } 
+              return sum;
           }
-        
+
+    
     }
 }
 </script>
