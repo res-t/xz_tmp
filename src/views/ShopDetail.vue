@@ -2,7 +2,7 @@
     <div class="app-shopdetail">
         <xm-header></xm-header>
         <div class="content-detail">
-                <div class="title-top" id="titletop">
+                <div class="title-top" id="titletop" :class="{'title-top2':Rooll}">
                     <div class="top_title_detail">
                         <h2 class="title_youth">{{detaText.uname}}</h2>
                         <div class="title_rigth">
@@ -27,9 +27,9 @@
                     </div>
                 </div>
                 <!--未登录提示-->
-                <div class="alert-login">
+                <div :class="[{'alert-login':true},{'my_display':dengstate}]" >
                     为方便您购买，请提前登录
-                    <a href="http://127.0.0.1:3000/login.html">立即登录</a>
+                    <router-link to="/login">立即登录</router-link>
                     <span class="alert-close">X</span>
                 </div>
                 <!--商品详情-->
@@ -37,7 +37,7 @@
                     <div class="pro-choose-main">
                         <!--轮播图-->
                     <div class="pro-view" id="lunbo">
-                        <div class="" id="container_img">
+                        <div class="" id="container_img" :class="[{'container_img':Rooll2},{'container_img2':Rooll3}]">
                             <a class="item" href="#" v-for="(Image,i) in imgUrl" :key=i><img :src="Image"></a>
                             <!-- <a class="item" href="#"><img src="http://127.0.0.1:3000/img/pm-deatil1.jpg"/></a>
                             <a class="item" href="#"><img src="http://127.0.0.1:3000/img/pm-deatil2.jpg"/></a>
@@ -287,6 +287,10 @@ export default {
              guarantee:'',
              guaranteePrice:0,
              colorText:'',
+             Rooll:false,
+             Rooll2:false,
+             Rooll3:false,
+             dengstate:false
         }
     },
     mounted(){
@@ -294,7 +298,7 @@ export default {
         this.addactive()
         this.SwipImg();
         this.getUname();
-        window.addEventListener('scroll',this.MouseG)
+        window.addEventListener('scroll',this.Roll)
     },
     created(){ },
     methods:{
@@ -371,38 +375,37 @@ export default {
             
             });
         },
-        MouseG(){
-                // console.log(window.scrollTop);
-                var docScroll = document.documentElement.scrollTop;
-                var lunbo = document.getElementById("lunbo");
-                var box = document.getElementById("box");
-                //console.log(docScroll);
-                var lunboOffset =lunbo.offsetTop+560;
-                var boxOffset =box.offsetTop+1200;
-                 //console.log(window.innerHeight)
-                //console.log(docScroll,lunboOffset)
-                if(docScroll>=lunboOffset/2){
-                    container_img.className="container_img";
-                    titletop.className = "title-top2"
-                }else{
-                    container_img.classList.remove("container_img")
-                    titletop.classList.remove("title-top2")
-                    titletop.className = "title-top"
-                }
-                if(docScroll>=boxOffset*2-1580){
-                    //box.className="my_display" 、
-                    container_img.classList.remove("container_img")
-                    container_img.className="container_img2"
-                }
-                /***alert-close */
-                $('.alert-close').click(function(){
+    
+        addactive(){
+            $(" #tabs>li:first-child").addClass("active")
+             $('.alert-close').click(function(){
                     var span = $(this);
                 $('.alert-login').addClass("my_display")
                 })
-        },
-        addactive(){
-            $(" #tabs>li:first-child").addClass("active")
         }, 
+         Roll(){
+           var docScroll = document.documentElement.scrollTop;
+           //console.log(docScroll,window.innerHeight/2)
+           if(docScroll>window.innerHeight/2){
+               this.Rooll=true
+               this.Rooll2=true
+           }else{
+               this.Rooll2=false
+           }
+           if(docScroll<window.innerHeight/2){
+               this.Rooll=false
+              
+              // console.log(this.Rooll2);
+           }
+           if(docScroll>window.innerHeight/2+600){
+               this.Rooll2=false;
+               this.Rooll3=true;
+           }else{
+               this.Rooll3=false;
+           }
+
+            
+       },
         getProduct(){
             var url ='http://127.0.0.1:3000/detail/?id='
             url+=this.$route.params.id;
@@ -418,10 +421,10 @@ export default {
                 color = JSON.parse(color);
                 //console.log(color);
                 this.styleColor = color;
-                console.log(result.data.img[0].img_url)
+               // console.log(result.data.img[0].img_url)
                 var str = result.data.img[0].img_url;
                 var arr = str.split(",")
-                console.log(arr);
+               // console.log(arr);
                 this.imgUrl = arr
                 //console.log( this.imgUrl.length)
                 //console.log("hahah"+arr.length)
@@ -489,7 +492,7 @@ export default {
         clickMe:function(){
              if( this.dataClick){
                 this.dataClick=false;
-                console.log(this.servicePrice);
+                //console.log(this.servicePrice);
             }else{
                 this.dataClick=true
             }
@@ -501,7 +504,12 @@ export default {
                    userinfo[key]=this.decodeString(userinfo[key])
                 }
                 this.uname= userinfo.uname;
-                console.log(this.uname);
+                //console.log(this.uname);
+                if(this.uname==""){
+                    this.dengstate=false;
+                }else{
+                    this.dengstate=true;
+                }
             }
         },
         addCart(){
@@ -511,13 +519,13 @@ export default {
               params.append('title',(this.detaText.uname+this.banben));
               params.append('price',(parseInt(this.total)+parseInt(this.detaText.price)));
               params.append('img',this.imgUrl[0]);
-              console.log(this.uname,(this.detaText.uname+this.banben),(parseInt(this.total)+parseInt(this.detaText.price)),this.imgUrl[0])
+             // console.log(this.uname,(this.detaText.uname+this.banben),(parseInt(this.total)+parseInt(this.detaText.price)),this.imgUrl[0])
               this.$http({
                 method:'post',
                 url:url,
                 data:params
             }).then(result=>{
-                console.log(result);
+                alert("添加成功");
             })
         }
     },
@@ -549,4 +557,35 @@ export default {
                url+="title="+this.detaText.uname;
                url+="price="+(parseInt(this.total)+parseInt(this.detaText.price))
                console.log(url);
+
+
+
+                  MouseG(){
+                // console.log(window.scrollTop);
+                var docScroll = document.documentElement.scrollTop;
+                var lunbo = document.getElementById("lunbo");
+                //var box = document.getElementById("box");
+                //console.log(docScroll);
+                //var lunboOffset =lunbo.offsetTop+560;
+               // var boxOffset =box.offsetTop+1200;
+                 //console.log(window.innerHeight)
+                //console.log(docScroll,lunboOffset)
+                if(docScroll>=window.Height/2){
+                   // container_img.className="container_img";
+                    //titletop.className = "title-top2"
+                    this.Rooll=true;
+                    console.log(window.Height/2)
+                }else{
+                    container_img.classList.remove("container_img")
+                    titletop.classList.remove("title-top2")
+                    titletop.className = "title-top"
+                }
+                if(docScroll>=boxOffset*2-1580){
+                    //box.className="my_display" 、
+                    container_img.classList.remove("container_img")
+                    container_img.className="container_img2"
+                }
+                /***alert-close */
+               
+    },
 -->
