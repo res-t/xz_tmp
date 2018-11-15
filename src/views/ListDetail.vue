@@ -56,7 +56,7 @@
                     <div class="goods-info-head-cart">
                             <ul class="btn-mai">
                                 <li>
-                                    <a href="#">立即购买</a>
+                                    <a href="javascript:" @click="addCart()">立即购买</a>
                                 </li>
                                 <li>
                                     <a href="#">
@@ -325,10 +325,12 @@ export default {
     data(){
         return{
             detatext:"",
+            uname:""
         }
     },
     mounted(){
         this.getList();
+         this.getUname();
     },
     methods:{
         getList(){
@@ -338,9 +340,36 @@ export default {
                 console.log(result);
                 this.detatext=result.data[0];
              
-                console.log(this.detatext);
-                console.log(typeof(result.data))
+                //console.log(this.detatext.title);
+
+               // console.log(result.data[0].title)
             })
+        },
+        getUname(){
+            var userinfo = JSON.parse( localStorage.getItem('user'));
+            if(userinfo){
+                for(var key in userinfo){
+                   userinfo[key]=this.decodeString(userinfo[key])
+                }
+                this.uname= userinfo.uname;
+                //console.log(this.uname);
+            }
+        },
+        addCart(){
+                var url = "http://127.0.0.1:3000/addcart"
+                    var params = new URLSearchParams();
+                    params.append('name',this.uname);
+                    params.append('title',this.detatext.title);
+                    params.append('price',this.detatext.price);
+                    params.append('img',this.detatext.big_img);
+                    //console.log(this.uname,(this.detaText.uname+this.banben),(parseInt(this.total)+parseInt(this.detaText.price)),this.imgUrl[0])
+                    this.$http({
+                    method:'post',
+                    url:url,
+                    data:params
+                }).then(result=>{
+                     console.log(result);
+                })
         }
     },
     components:{
@@ -354,3 +383,7 @@ export default {
 </style>
 
 
+<!--
+
+
+-->
