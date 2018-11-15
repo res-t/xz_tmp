@@ -46,9 +46,12 @@
                             <li id="l1">
                                 <router-link to="/cart" class="car_mini" >
                                     <img src="http://127.0.0.1:3000/img/car1.png" alt="" class="car_mini_img">
-                                    <img src="http://127.0.0.1:3000/img/car2.png" alt="" class="car_mini_img my_display" >购物车(0)</router-link>
-                                    <div class="my_shopp_car my_display">
+                                    <img src="http://127.0.0.1:3000/img/car2.png" alt="" class="car_mini_img my_display" >购物车({{products.length}})</router-link>
+                                    <div class="my_shopp_car my_display" v-show="products.length==0">
                                             <p>购物车中还没有商品，赶紧选购吧！</p>
+                                    </div>
+                                     <div class="my_shopp_car my_display" v-show="products.length>0">
+                                            <p>购物车中已经有 <span style="color:#ef5b00">{{products.length}}</span> 件商品</p>
                                     </div>
                             </li>
                       </ul>
@@ -77,9 +80,10 @@
                           </ul>
                       </div>
                       <div class="my_serch">
-                          <input type="text" value=""><button class="d1">
+                          <input type="text" value=""  v-model="title">
+                          <router-link :to="'/search/'+title" class="d1" @click="handerClick()">
                               <div class="search icon"></div>
-                          </button>
+                          </router-link>
                       </div>
                       <a href="#" class="my_resou1 my_resou">小米8</a>
                       <a href="#" class="myresou2 my_resou">小米MIX 2S</a>
@@ -420,6 +424,8 @@ export default {
     data(){
         return{
             uname:"",
+            products:[],
+            title:"",
         }
     },
      mounted(){
@@ -430,6 +436,7 @@ export default {
     //this.islogin();
     this.getUname();
     this.getLogin();
+    this.shopnum()
     },
     methods:{
         /*商品*/
@@ -537,7 +544,18 @@ export default {
                 })
             }
 
-        }
+        },
+        shopnum(){
+            var url ="http://127.0.0.1:3000/shopcart?name=";
+                url+=this.uname;
+            this.$http.get(url).then(result=>{
+               // console.log(result.data);
+                this.products=result.data;
+                
+                //console.log("cart",this.cart)
+             })
+        },
+        
        
     },
    
