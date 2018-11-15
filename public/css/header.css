@@ -214,7 +214,9 @@
     color: #FF6B00;
 }
 /*搜索小图标*/
-.search.icon{color:#000;margin:0 auto;width:12px;height:12px;border:solid 1px currentColor;border-radius:100%;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
+.search.icon{color:#000;margin:0 auto;width:12px;height:12px;border:solid 1px currentColor;border-radius:100%;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);
+    margin-top: 15px;
+}
     .search.icon:before {
   content: '';
   position: absolute;
@@ -225,8 +227,9 @@
   background-color: currentColor;
 }
 .d1{
+      display: inline-block;
       width: 48px;
-      height: 50px;
+      height: 48px;
       margin-bottom:10px;
       position: absolute;
       top: 20px;
