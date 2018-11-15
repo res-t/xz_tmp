@@ -797,19 +797,19 @@
                     <ul>
                         <li>
                             <div class="my_kill">满减300</div>
-                            <a href="#">
+                            <router-link :to="'/shopdetail/'+122">
                                 <img src="http://127.0.0.1:3000/img/dianshi4a.jpg" alt="">
                                 <p>小米电视4A 43英寸青春版</p>
-                            </a>
+                            </router-link>
                             <span>全高清屏幕/人工智能语音</span>
                             <p>1399元 <del>1699元</del></p>
                         </li>
                         <li>
                             <div class="my_kill">满减300</div>
-                            <a href="#">
+                            <router-link :to="'/shopdetail/'+132" >
                                 <img src="http://127.0.0.1:3000/img/dianshi4c.jpg" alt="">
                                 <p>小米电视4C 50英寸</p>
-                            </a>
+                            </router-link>
                             <span>4K HDR/人工智能语音</span>
                             <p>1899元 <del>2199元</del></p>
                         </li>
@@ -1146,6 +1146,853 @@
                         </ul>
                 </div>
             </div>
+        </div>
+        <!--智能-->
+        <div class="appliances">
+                <div class="appliances_img">
+                    <a href="#"> <img src="http://127.0.0.1:3000/img/young.jpg" alt="" class="mt30"></a>
+                </div>
+                <div class="appliances_detail mt40">
+                    <div class="appliances_title">
+                        <h3>智能</h3>
+                        <div>
+                            <ul>
+                                <li data-target="#HotIntelligence" class="my_mouse"><a href="javascript:">热门</a></li>
+                                <li data-target="#Travel"><a href="javascript:">出行</a></li>
+                                <li data-target="#Healthy"><a href="javascript:">健康</a></li>
+                                <li data-target="#coldplay"><a href="javascript:">酷玩</a></li>
+                                <li data-target="#Router" class="appliances_title_font"><a href="javascript:">路由器</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="appliances_detail_img">
+                        <div>
+                            <a href="#"> <img src="http://127.0.0.1:3000/img/mijiashexiang.jpg" alt=""></a>
+                        </div>
+                        <div class="mt15">
+                            <a href="#"><img src="http://127.0.0.1:3000/img/pingxingche.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div id="HotIntelligence" class="my_appliances_product ">
+                        <ul>
+                            <li>
+                                <div class="my_white"></div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/feilipu.png" alt="">
+                                    <p>米家飞利浦智睿台灯2代</p>
+                                </a>
+                                <span>感知环境光，主动优化场景照明</span>
+                                <p>199元 <del></del></p>
+                            </li>
+                            <li>
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/zhinengshoubiao.jpg" alt="">
+                                <p>小米手环3</p>
+                            </a>
+                            <span>&nbsp;</span>
+                            <p>169元 <del></del></p>
+                            </li>
+                            <li>
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/cheng.jpg" alt="">
+                                <p>小米体重秤</p>
+                            </a>
+                            <span>&nbsp;</span>
+                            <p>99元 <del></del></p>
+                            </li>
+                            <li>
+                            <div class="flg_new">新品</div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/dianfanbao4L.png" alt="">
+                                <p>米家IH电饭煲4L</p>
+                            </a>
+                            <span>IH电磁环绕加热</span>
+                            <p>599元 <del></del></p>
+                            </li>
+                            <li class="mt15">
+                            <div class="my_kill">减60元</div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_chezaijinghuaqi.jpg" alt="">
+                                <p>车载空气净化器(USB车充版)</p>
+                            </a>
+                            <span>高效净化车内空气</span>
+                            <p>389元 <del>499</del></p>
+                            </li>
+                            <li class="mt15">
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_jitao.jpg" alt="">
+                                <p>米家行车记录仪</p>
+                            </a>
+                            <span>晚上能拍清车牌的行车记录仪</span>
+                            <p>349元 <del></del></p> 
+                            </li>
+                            <li class="mt15">
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_diandongyashua.jpg" alt="">
+                                <p>米家声波电动牙刷</p>
+                            </a>
+                            <span>磁悬声波马达，定制多种刷牙模式</span>
+                            <p>179元 <del>199元</del></p>
+                            </li>
+                            <li class="mt15 my_two_block">
+                                <div class="">
+                                    <a href="#">
+                                    <p>小米插线板<br>
+                                            <span class="price_money">49元</span>
+                                    </p>
+                                    
+                                    <img src="http://127.0.0.1:3000/img/pms_chaxianban.jpg" alt="" class="my_two_block_img">
+                                    </a>
+                                </div>
+                                <div class="mt10">
+                                    <a href="#">
+                                    <div class="my_More">
+                                        <p>浏览更多 <br>
+                                            <span>热门</span>
+                                        </p>
+                                    </div>
+                                    <img src="http://127.0.0.1:3000/img/more.png" alt="" class="my_two_block_img">
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="Travel" class="my_appliances_product my_display">
+                        <ul>
+                            <li>
+                                <div class="my_white"></div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/pms_huabanche.jpg" alt="">
+                                    <p>小米米家电动滑板车</p>
+                                </a>
+                                <span>极简几何设计，1分钟轻松上手</span>
+                                <p>1999元 <del></del></p>
+                            </li>
+                            <li>
+                                <div class="my_white"></div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/zixingche.jpg" alt="">
+                                    <p>电助力折叠自行车</p>
+                                </a>
+                                <span>力矩传感电助力，折叠便携设计</span>
+                                <p>2999元 <del></del></p>
+                            </li>
+                            <li>
+                                <div class="my_white"></div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/pms_wrenji.jpg" alt="">
+                                    <p>米兔遥控小飞机</p>
+                                </a>
+                                <span>米兔遥控小飞机</span>
+                                <p>389元 <del>399元</del></p>
+                            </li>
+                            <li>
+                                <div class="my_kill">减60元</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/pms_chezaijinghuaqi.jpg" alt="">
+                                    <p>车载空气净化器(USB车充版)</p>
+                                </a>
+                                <span>高效净化车内空气</span>
+                                <p>389元 <del>499</del></p>
+                            </li>
+                            <li class="mt10">
+                                <div class="my_white"></div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/pms_shoubiao.jpg" alt="">
+                                    <p>Amazfit运动手表</p>
+                                </a>
+                                <span>蓝牙听歌，运动心率，智能通知提醒</span>
+                                <p>799元 <del></del></p>
+                            </li>
+                            <li class="mt10">
+                                <div class="my_white"></div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/pms_xiangji.jpg" alt="">
+                                    <p>小米微单相机M1双镜头套机</p>
+                                </a>
+                                <span>2016万像素，4K视频录制</span>
+                                <p>2999元 <del></del></p> 
+                            </li>
+                            <li class="mt10">
+                                <div class="my_kill">减100元</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/quanjing.jpg" alt="">
+                                    <p>米家全景相机套装</p>
+                                </a>
+                                <span>2388万像素、3.5K视频录制</span>
+                                <p>1599元 <del>1699</del></p>
+                            </li>
+                            <li class="mt10 my_two_block">
+                                <div class="">
+                                    <a href="#">
+                                        <p>米家车载空气净化器<br>
+                                                <span class="price_money">69元</span>
+                                        </p>
+                                        
+                                        <img src="http://127.0.0.1:3000/img/pms_jinghuaqi2.jpg" alt="" class="my_two_block_img">
+                                    </a>
+                                </div>
+                                <div class="mt10">
+                                    <a href="#">
+                                        <div class="my_More">
+                                            <p>浏览更多 <br>
+                                                <span>出行</span>
+                                            </p>
+                                        </div>
+                                        <img src="http://127.0.0.1:3000/img/more.png" alt="" class="my_two_block_img">
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="Healthy" class="my_appliances_product my_display">
+                        <ul>
+                            <li>
+                                    <div class="my_white"></div>
+                                    <a href="#">
+                                        <img src="http://127.0.0.1:3000/img/pms_diandongyashua.jpg" alt="">
+                                        <p>米家声波电动牙刷</p>
+                                    </a>
+                                    <span>磁悬声波马达，定制多种刷牙模式</span>
+                                    <p>179元 <del>199元</del></p>
+                            </li>
+                            <li>
+                                <div class="my_white"></div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/pms_guahudao.jpg" alt="">
+                                    <p>米家电动剃须刀</p>
+                                </a>
+                                <span>&nbsp;</span>
+                                <p>189元 <del>199元</del></p>
+                            </li>
+                            <li>
+                                <div class="my_white"></div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/cheng.jpg" alt="">
+                                    <p>小米体重秤</p>
+                                </a>
+                                <span>100克，喝杯水都可感知的精准</span>
+                                <p>99元 <del></del></p>
+                            </li> 
+                            <li>
+                                <div class="my_white"></div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/zhinengshexiangtou.jpg" alt="">
+                                    <p>米家智能摄像头 1080P</p>
+                                </a>
+                                <span>10米红外夜视范围，双向语音沟通</span>
+                                <p>199元 <del></del></p>
+                            </li>
+                            <li class="mt10">
+                                <div class="my_kill">满减5元</div>
+                                <a href="http://127.0.0.1:3000/shoplist.html">
+                                    <img src="http://127.0.0.1:3000/img/pms_jingshuiqi.jpg" alt="">
+                                    <p>小米净水器(厨上式)增强版</p>
+                                </a>
+                                <span>400 加仑大流量，纯水更多，废水更少</span>
+                                <p>1499元 <del></del></p>
+                            </li>
+                            <li class="mt10">
+                                <div class="my_kill">满减50元</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/pms_pm25.jpg" alt="">
+                                    <p>米家PM2.5检测仪</p>
+                                </a>
+                                <span>一体黑OLED屏，智能联动</span>
+                                <p>349元 <del>399元</del></p> 
+                            </li>
+                            <li class="mt10">
+                                <div class="my_kill">减20元</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/kongqilvxin.jpg" alt="">
+                                    <p>空气净化器滤芯</p>
+                                </a>
+                                <span>高效净化，可吸入颗粒物，甲醛</span>
+                                <p>149元 <del></del></p>
+                            </li>
+                            <li class="mt10 my_two_block">
+                                <div class="">
+                                    <a href="#">
+                                        <p>小米水质TD..<br>
+                                                <span class="price_money">29元</span>
+                                        </p>
+                                        
+                                        <img src="http://127.0.0.1:3000/img/huizhihd.jpg" alt="" class="my_two_block_img">
+                                    </a>
+                                </div>
+                                <div class="mt10">
+                                    <a href="#">
+                                        <div class="my_More">
+                                            <p>浏览更多 <br>
+                                                <span>健康</span>
+                                            </p>
+                                        </div>
+                                        <img src="http://127.0.0.1:3000/img/more.png" alt="" class="my_two_block_img">
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="coldplay" class="my_appliances_product my_display">
+                        <ul>
+                            <li>
+                                <div class="my_kill">减20元</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/pms_kuwanche.jpg" alt="">
+                                    <p>米兔积木机器人 履带机甲</p>
+                                </a>
+                                <span>履带地盘，智能操控，百变拼插</span>
+                                <p>479元 <del>499元</del></p>
+                            </li>
+                            <li>
+                                <div class="my_kill">减10元</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/pms_zhinenggushi.jpg" alt="">
+                                    <p>米兔智能故事机</p>
+                                </a>
+                                <span>微信远程互动，智能语音交互</span>
+                                <p>189元 <del>199元</del></p>
+                            </li>
+                            <li>
+                                <div class="my_white"></div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/zixingche.jpg" alt="">
+                                    <p>米家骑记电助力折叠自行车</p>
+                                </a>
+                                <span>力矩传感电助力，折叠便携设计</span>
+                                <p>2999元 <del></del></p>
+                            </li>
+                            <li>
+                                <div class="my_kill">减10元</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/pms_wangguan.jpg" alt="">
+                                    <p>米家多功能网关</p>
+                                </a>
+                                <span>米家智能配件控制中心</span>
+                                <p>139元 <del>149元</del></p>
+                            </li>
+                            <li class="mt10">
+                                <div class="flg_new">新品</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/pms_jimukache.jpg" alt="">
+                                    <p>米兔积木矿山卡车</p>
+                                </a>
+                                <span>方向盘控制系统，翻斗升降系统</span>
+                                <p>94元 <del>99元</del></p>
+                            </li>
+                            <li class="mt10">
+                                <div class="my_kill">减20元</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/pms_ertongshoubiao.jpg" alt="">
+                                    <p>米兔儿童电话手表</p>
+                                </a>
+                                <span>AMOLED高清彩屏，6天超长续航</span>
+                                <p>379元 <del>399元</del></p> 
+                            </li>
+                            <li class="mt10">
+                                <div class="my_kill">减20元</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/pms_jimuji.jpg" alt="">
+                                    <p>米兔智能积木</p>
+                                </a>
+                                <span>动手动脑，启发孩子的创造力</span>
+                                <p>179元 <del>199元</del></p>
+                            </li>
+                            <li class="mt10 my_two_block">
+                                <div class="">
+                                    <a href="#">
+                                        <p>YeelightLE...<br>
+                                                <span class="price_money">399元</span>
+                                        </p>
+                                        
+                                        <img src="http://127.0.0.1:3000/img/pms_xiaobaishexiang.jpg" alt="" class="my_two_block_img">
+                                    </a>
+                                </div>
+                                <div class="mt10">
+                                    <a href="#">
+                                        <div class="my_More">
+                                            <p>浏览更多 <br>
+                                                <span>酷玩</span>
+                                            </p>
+                                        </div>
+                                        <img src="http://127.0.0.1:3000/img/more.png" alt="" class="my_two_block_img">
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="Router" class="my_appliances_product my_display ">
+                        <ul>
+                            <li>
+                                <div class="my_yellow">免邮费</div>
+                                <a href="#">
+                                    <img src="http://127.0.0.1:3000/img/wuxianluyou.jpg" alt="">
+                                    <p>小米路由器3</p>
+                                </a>
+                                <span>四天线设计，更快更强</span>
+                                <p>149元 <del></del></p>
+                            </li>
+                            <li>
+                            <div class="my_yellow">免邮费</div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_luyouqi3c.jpg.png" alt="">
+                                <p>小米路由器3C</p>
+                            </a>
+                            <span>APP智能控制，安全防蹭网</span>
+                            <p>99元 <del></del></p>
+                            </li>
+                            <li>
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_fangdaqiw.jpg" alt="">
+                                <p>小米WIF放大器2</p>
+                            </a>
+                            <span>适配主流路由器，两步完成设置</span>
+                            <p>49元 <del></del></p>
+                            </li>
+                            <li>
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_HDwuxian.jpg" alt="">
+                                <p>小米路由器HD</p>
+                            </a>
+                            <span>4X4全向性天线，802.11ac wave2</span>
+                            <p>1299元 <del></del></p>
+                            </li>
+                            <li class="mt10">
+                            <div class="my_kill">享八折</div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_dianlimao.jpg" alt="">
+                                <p>小米WIFI电力猫</p>
+                            </a>
+                            <span>有插座的地方就有wifi</span>
+                            <p>199元 <del>249元</del></p>
+                            </li>
+                            <li class="mt10">
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_PROwuxian.jpg" alt="">
+                                <p>小米路由器Pro</p>
+                            </a>
+                            <span>全新金属机身设计，AC2600双频</span>
+                            <p>499元 <del></del></p> 
+                            </li>
+                            <li class="mt10">
+                            <div class="flg_new">新品</div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_G3wuxian.jpg" alt="">
+                                <p>小米路由器3G</p>
+                            </a>
+                            <span>双核全千兆，USB3.0</span>
+                            <p>199元 <del>249元</del></p>
+                            </li>
+                            <li class="mt10 my_two_block">
+                                <div class="">
+                                    <a href="#">
+                                    <p>小米千兆网线<br>
+                                            <span class="price_money">14.9元</span>
+                                    </p>
+                                    
+                                    <img src="http://127.0.0.1:3000/img/wangxianqianzhao.jpg" alt="" class="my_two_block_img">
+                                    </a>
+                                </div>
+                                <div class="mt10">
+                                    <a href="#">
+                                    <div class="my_More">
+                                        <p>浏览更多 <br>
+                                            <span>家居</span>
+                                        </p>
+                                    </div>
+                                    <img src="http://127.0.0.1:3000/img/more.png" alt="" class="my_two_block_img">
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        <!--搭配-->
+        <div class="appliances">
+            <div class="appliances_img">
+                <a href="#"> <img src="http://127.0.0.1:3000/img/xmad_qingkaui.jpg" alt="" class="mt30"></a>
+            </div>
+            <div class="appliances_detail">
+                <div class="appliances_title mt40">
+                    <h3>搭配</h3>
+                    <div>
+                        <ul>
+                            <li data-target="#Hotcollocation" class="my_mouse"><a href="javascript:">热门</a></li>
+                            <li data-target="#Earphone" class="appliances_title_font"><a href="javascript:">耳机音响</a></li>
+                            <li data-target="#PowerSupply"><a href="javascript:">电源</a></li>
+                            <li data-target="#Battery" class="appliances_title_font"><a href="javascript:">电池存储</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="appliances_detail_img">
+                    <div>
+                        <a href="#"> <img src="http://127.0.0.1:3000/img/xmad_erji.jpg" alt=""></a>
+                    </div>
+                    <div class="mt15">
+                        <a href="#"><img src="http://127.0.0.1:3000/img/xmad_shiyingshoubiao.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div id="Hotcollocation" class="my_appliances_product my_display">
+                    <ul>
+                        <li>
+                            <div class="flg_new">新品</div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_wixianchongdianqi.jpg" alt="">
+                                <p>小米无线充电器(通用快充版)</p>
+                            </a>
+                            <span>548人评论</span>
+                            <p>69元<del></del></p>
+                        </li>
+                        <li>
+                        <div class="my_white"></div>
+                        <a href="#">
+                            <img src="http://127.0.0.1:3000/img/pms_xiaoaitongxue.jpg" alt="">
+                            <p>小米AI音响</p>
+                        </a>
+                        <span>5.7万评论</span>
+                        <p>299元 <del></del></p>
+                        </li>
+                        <li>
+                        <div class="my_white"></div>
+                        <a href="#">
+                            <img src="http://127.0.0.1:3000/img/pms_michongdianbao.jpg" alt="">
+                            <p>新小米移动电源2(10000mAh)</p>
+                        </a>
+                        <span>1.4万评论</span>
+                        <p>79元 <del></del></p>
+                        </li>
+                        <li>
+                        <div class="my_kill">享9.3折</div>
+                        <a href="#">
+                            <img src="http://127.0.0.1:3000/img/pms_2Cchongdianbao.jpg" alt="">
+                            <p>小米移动电源2C(20000mAh)</p>
+                        </a>
+                        <span>2.4万人评论</span>
+                        <p>119元 <del>129元</del></p>
+                        </li>
+                        <li class="mt10">
+                        <div class="my_kill">享9.4折</div>
+                        <a href="#">
+                            <img src="http://127.0.0.1:3000/img/pms_usbkuaichong.jpg" alt="">
+                            <p>小米USB充电器快充版（18w）</p>
+                        </a>
+                        <span>7803人评价</span>
+                        <p>29.9元 <del></del></p>
+                        </li>
+                        <li class="mt10">
+                            <div class="my_kill">享9.4折</div>
+                        <a href="#">
+                            <img src="http://127.0.0.1:3000/img/pms_chongdianbao4000.jpg" alt="">
+                            <p>小米移动电源高配版(10000mAh)</p>
+                        </a>
+                        <span>2.6万人评价</span>
+                        <p>139元 <del>149元</del></p>
+                        </li>
+                        <li class="mt10">
+                        <div class="flg_new">新品</div>
+                        <a href="#">
+                            <img src="http://127.0.0.1:3000/img/pms_erjiheise.jpg" alt="">
+                            <p>1MORE四单元圈铁耳机</p>
+                        </a>
+                        <span>109人评论</span>
+                        <p>1299元 <del></del></p>
+                        </li>
+                        <li class="mt10 my_two_block">
+                            <div class="">
+                                <a href="#">
+                                <p>小米随身音响<br>
+                                        <span class="price_money">79元</span>
+                                </p>
+                                
+                                <img src="http://127.0.0.1:3000/img/pms_shoudiandeng.jpg" alt="" class="my_two_block_img">
+                                </a>
+                            </div>
+                            <div class="mt10">
+                                <a href="#">
+                                <div class="my_More">
+                                    <p>浏览更多 <br>
+                                        <span>热门</span>
+                                    </p>
+                                </div>
+                                <img src="http://127.0.0.1:3000/img/more.png" alt="" class="my_two_block_img">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="Earphone" class="my_appliances_product my_display">
+                    <ul>
+                        <li>
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_shuangdanyuanerji.jpg" alt="">
+                                <p>小米双单元半入耳机</p>
+                            </a>
+                            <span>4033人评论</span>
+                            <p>65元 <del>69元</del></p>
+                        </li>
+                        <li>
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_bozierji.jpg" alt="">
+                                <p>小米蓝牙项圈耳机 黑色</p>
+                            </a>
+                                <span>3040人评论</span>
+                                <p>285元 <del>299元</del></p>
+                        </li>
+                        <li>
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_teiquanerji.jpg" alt="">
+                                <p>小米圈铁耳机2</p>
+                            </a>
+                            <span>1008人评论</span>
+                            <p>99元 <del></del></p>
+                        </li>
+                        <li>
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/suishenlianyayinxiang.jpg" alt="">
+                                <p>小米随身蓝牙音箱</p>
+                            </a>
+                            <span>3万人评论</span>
+                            <p>63元 <del>69元</del></p>
+                        </li>
+                        <li class="mt10">
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_lianyaerjiqingchun.jpg" alt="">
+                                <p>小米蓝牙耳机青春版</p>
+                            </a>
+                            <span>5.2万人评论</span>
+                            <p>55元 <del>59元</del></p>
+                        </li>
+                        <li class="mt10">
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_yundongerji.jpg" alt="">
+                                <p>小米运动蓝牙耳机mini</p>
+                            </a>
+                            <span>1.2万人评价</span>
+                            <p>149元 <del>169元</del></p> 
+                        </li>
+                        <li class="mt10">
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_yinpinjieshouqi.jpg" alt="">
+                                <p>小米蓝牙音频接收器</p>
+                            </a>
+                            <span>8643人评论</span>
+                            <p>99元 <del></del></p>
+                        </li>
+                        <li class="mt10 my_two_block">
+                            <div class="">
+                                <a href="#">
+                                    <p>小米小钢炮<br>
+                                            <span class="price_money">119元</span>
+                                    </p>
+                                    
+                                    <img src="http://127.0.0.1:3000/img/xiaoganpaoyinxiang.jpg" alt="" class="my_two_block_img">
+                                </a>
+                            </div>
+                            <div class="mt10">
+                                <a href="#">
+                                    <div class="my_More">
+                                        <p>浏览更多 <br>
+                                            <span>耳机音响</span>
+                                        </p>
+                                    </div>
+                                    <img src="http://127.0.0.1:3000/img/more.png" alt="" class="my_two_block_img">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="PowerSupply" class="my_appliances_product my_display">
+                    <ul>
+                        <li>
+                            <div class="my_kill">减10元</div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_chongdianba0.jpg" alt="">
+                                <p>小米移动电源10000mAh高配版</p>
+                            </a>
+                            <span>2.6万人评论</span>
+                            <p>139元 <del>149元</del></p>
+                        </li>
+                        <li>
+                            <div class="flg_new">新品</div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_chongdianbao5000.jpg" alt="">
+                                <p>小米移动电源2C 20000mAh</p>
+                            </a>
+                            <span>2.3万人评论</span>
+                            <p>119元 <del>129</del></p>
+                        </li>
+                        <li>
+                            <div class="flg_new">新品</div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_2ccdianbao.jpg" alt="">
+                                <p>小米移动电源5000mAh</p>
+                            </a>
+                            <span>10.9万人评论</span>
+                            <p>49元 <del></del></p>
+                        </li>
+                        <li>
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/xianheshounai.jpg" alt="">
+                                <p>小米电源线收纳盒</p>
+                            </a>
+                            <span>&nbsp;</span>
+                            <p>49元 <del></del></p>
+                        </li>
+                        <li class="mt10">
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_heisechongdianbao.jpg" alt="">
+                                <p>10000mAh小米移动电源2</p>
+                            </a>
+                            <span>耐脏亲肤/人体工学设计</span>
+                            <p>64元 <del>69元</del></p>
+                        </li>
+                        <li class="mt10">
+                            <div class="my_kill">满减5元</div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_erheyixian.jpg" alt="">
+                                <p>小米二合一数据线</p>
+                            </a>
+                            <span>1.9万人评论</span>
+                            <p>16.9元 <del>19.9元</del></p>
+                        </li>
+                        <li class="mt10">
+                            <div class="my_kill">减3元</div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_Type.jpg" alt="">
+                                <p>USB Type-C充电套装</p>
+                            </a>
+                            <span>&nbsp;</span>
+                            <p>15元 <del></del></p>
+                        </li>
+                        <li class="mt10 my_two_block">
+                            <div class="">
+                                <a href="#">
+                                    <p>小米智能插座<br>
+                                            <span class="price_money">69元</span>
+                                    </p>
+                                    
+                                    <img src="http://127.0.0.1:3000/img/T13xianban.jpg" alt="" class="my_two_block_img">
+                                </a>
+                            </div>
+                            <div class="mt10">
+                                <a href="#">
+                                    <div class="my_More">
+                                        <p>浏览更多 <br>
+                                            <span>电源</span>
+                                        </p>
+                                    </div>
+                                    <img src="http://127.0.0.1:3000/img/more.png" alt="" class="my_two_block_img">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="Battery" class="my_appliances_product ">
+                    <ul>
+                        <li>
+                            <div class="my_kill">减10元</div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_32gneicunka.jpg" alt="">
+                                <p>SanDisk 32GB存储卡(u3,100..</p>
+                            </a>
+                            <span>999人评论</span>
+                            <p>119元 <del>129元</del></p>
+                        </li>
+                        <li>
+                            <div class="my_kill">享6折</div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_langkouusb.jpg" alt="">
+                                <p>小米USB充电器（2口）</p>
+                            </a>
+                            <span>2.2万人评论</span>
+                            <p>29元 <del>49元</del></p>
+                        </li>
+                        <li>
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/T1wuhaodianchi.jpg" alt="">
+                                <p>彩虹5号电池（十粒装）</p>
+                            </a>
+                            <span>12.7万人评价</span>
+                            <p>9.9元 <del></del></p>
+                        </li>
+                        <li>
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/dianyanqiusb.jpg" alt="">
+                                <p>睿米一分二点烟器</p>
+                            </a>
+                            <span>2300人评论</span>
+                            <p>79元 <del></del></p>
+                        </li>
+                        <li class="mt15">
+                            <div class="my_kill">享8折</div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/T1sikouchongdianqi.jpg" alt="">
+                                <p>小米USB充电器（4口）</p>
+                            </a>
+                            <span>1.7万人评价</span>
+                            <p>53元 <del>69元</del></p>
+                        </li>
+                        <li class="mt15">
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/pms_18wchongdiantou.jpg" alt="">
+                                <p>小米USB充电器快充版（18w）</p>
+                            </a>
+                            <span>7797人评论</span>
+                            <p>29.9元 <del></del></p> 
+                        </li>
+                        <li class="mt15">
+                            <div class="my_white"></div>
+                            <a href="#">
+                                <img src="http://127.0.0.1:3000/img/zhuanjiekouchezai.jpg" alt="">
+                                <p>小米车载充电器</p>
+                            </a>
+                            <span>5.7万人评论</span>
+                            <p>39元 <del>49元</del></p>
+                        </li>
+                        <li class="mt15 my_two_block">
+                            <div class="">
+                                <a href="#">
+                                    <p>SanDisk 16GB<br>
+                                            <span class="price_money">49.9元</span>
+                                    </p>
+                                    
+                                    <img src="http://127.0.0.1:3000/img/pms_neicunka.jpg" alt="" class="my_two_block_img">
+                                </a>
+                            </div>
+                            <div class="mt10">
+                                <a href="#">
+                                    <div class="my_More">
+                                        <p>浏览更多 <br>
+                                            <span>电池存储卡</span>
+                                        </p>
+                                    </div>
+                                    <img src="http://127.0.0.1:3000/img/more.png" alt="" class="my_two_block_img">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+        </div>
         </div>
         <!--为你推荐-->
         <div class="Recommended">
