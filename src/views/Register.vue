@@ -99,7 +99,7 @@ import '../../public/css/register.css'
 export default {
     data(){
         return{
-            uname:'哈哈哈',
+            uname:'',
             tele:'',
             upwd:'',
             alertText:'',
