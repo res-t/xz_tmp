@@ -93,7 +93,7 @@
                         <span class="total-price-cart">
                             合计： <em >{{total}}</em>元
                         </span>
-                        <a href="#" class="jiesuan-price">去结算</a>
+                        <router-link to="/404" class="jiesuan-price">去结算</router-link>
                     </div>
                 </div>
             </div>
