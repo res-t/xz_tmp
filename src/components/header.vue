@@ -6,15 +6,15 @@
               <div  class="clearfix my_top_title">
                   <div class="topbar-nav">
                       <ul class="clearfix pl0">
-                          <li><a href="#">小米商城</a><span>  |</span></li>
-                          <li><a href="#">MIUI</a><span>  |</span></li>
-                          <li><a href="#">lOT</a><span>  |</span></li>
-                          <li><a href="#">云服务</a><span>  |</span></li>
-                          <li><a href="#">金融</a><span>  |</span></li>
-                          <li><a href="#">有品</a><span>  |</span></li>
-                          <li><a href="#">小爱开放平台</a><span>  |</span></li>
-                          <li><a href="#">政企服务</a><span>  |</span></li>
-                          <li><a href="#">Select Region</a></li>
+                          <li><a href="javascript:">小米商城</a><span>  |</span></li>
+                          <li><a href="javascript:">MIUI</a><span>  |</span></li>
+                          <li><a href="javascript:">lOT</a><span>  |</span></li>
+                          <li><a href="javascript:">云服务</a><span>  |</span></li>
+                          <li><a href="javascript:">金融</a><span>  |</span></li>
+                          <li><a href="javascript:">有品</a><span>  |</span></li>
+                          <li><a href="javascript:">小爱开放平台</a><span>  |</span></li>
+                          <li><a href="javascript:">政企服务</a><span>  |</span></li>
+                          <li><a href="javascript:">Select Region</a></li>
                       </ul>
                   </div>
                   <div class="posr topbar-nav_right" >
@@ -24,16 +24,16 @@
                                 <div class="islogin my_display">
                                     <ul>
                                         <li>
-                                            <a href="#">个人中心</a>
+                                            <a href="javascript:">个人中心</a>
                                         </li>
                                         <li>
-                                            <a href="#">评论晒单</a>
+                                            <a href="javascript:">评论晒单</a>
                                         </li>
                                         <li>
-                                            <a href="#">我喜欢</a>
+                                            <a href="javascript:">我喜欢</a>
                                         </li>
                                         <li>
-                                            <a href="#">小米账户</a>
+                                            <a href="javascript:">小米账户</a>
                                         </li>
                                         <li>
                                             <a href="javascript:" class="Signout">退出登录</a>
@@ -42,7 +42,7 @@
                                 </div>
                             </li>
                             <li><span>  |</span><router-link  to="/register" class="zhuce">注册</router-link><span>  |</span></li>
-                            <li><a href="#" class="tongzhi">消息通知</a><span>  |</span></li>
+                            <li><a href="javascript:" class="tongzhi">消息通知</a><span>  |</span></li>
                             <li id="l1">
                                 <router-link to="/cart" class="car_mini" >
                                     <img src="http://127.0.0.1:3000/img/car1.png" alt="" class="car_mini_img">
@@ -65,18 +65,18 @@
                           <router-link to="/index"> <img src="http://127.0.0.1:3000/img/logo.png" alt=""></router-link>
                       </div>
                       <div class="my_mini">
-                          <a href="#"><img src="http://127.0.0.1:3000/img/mini.gif" alt=""></a>
+                          <a href="javascript:"><img src="http://127.0.0.1:3000/img/mini.gif" alt=""></a>
                           <ul class="my_top_nav ">
-                              <li data-target="#phone"><a href="#">小米手机</a></li>
-                              <li data-target="#redphone"><a href="#">红米</a></li>
-                              <li data-target="#tv"><a href="#">电视</a></li>
-                              <li data-target="#loptop"><a href="#">笔记本</a></li>
-                              <li data-target="#kongtiao"><a href="#">空调</a></li>
-                              <li data-target="#newpcoducts"><a href="#">新品</a></li>
-                              <li data-target="#luyouqi"><a href="#">路由器</a></li>
-                              <li data-target="#yingjian"><a href="#">智能硬件</a></li>
-                              <li><a href="#">社区</a></li>
-                              <li><a href="#">服务</a></li>
+                              <li data-target="#phone"><a href="javascript:">小米手机</a></li>
+                              <li data-target="#redphone"><a href="javascript:">红米</a></li>
+                              <li data-target="#tv"><a href="javascript:">电视</a></li>
+                              <li data-target="#loptop"><a href="javascript:">笔记本</a></li>
+                              <li data-target="#kongtiao"><a href="javascript:">空调</a></li>
+                              <li data-target="#newpcoducts"><a href="javascript:">新品</a></li>
+                              <li data-target="#luyouqi"><a href="javascript:">路由器</a></li>
+                              <li data-target="#yingjian"><a href="javascript:">智能硬件</a></li>
+                              <li><a href="javascript:">社区</a></li>
+                              <li><a href="javascript:">服务</a></li>
                           </ul>
                       </div>
                       <div class="my_serch">
@@ -85,20 +85,20 @@
                               <div class="search icon"></div>
                           </router-link>
                       </div>
-                      <a href="#" class="my_resou1 my_resou">小米8</a>
-                      <a href="#" class="myresou2 my_resou">小米MIX 2S</a>
+                      <router-link :to="'/shopdetail/'+97" class="my_resou1 my_resou">小米8</router-link>
+                      <router-link :to="'/shopdetail/'+107" class="myresou2 my_resou">小米MIX 2S</router-link>
                       <div class="my_p_input my_display">
                           <ul>
-                              <li id="xiaomi6"><a href="#">小米6x <span>约有6件</span></a></li>
-                              <li><a href="#">小米6x <span>约有6件</span></a></li>
-                              <li><a href="#">小米MIX2 <span>约有5件</span></a></li>
-                              <li><a href="#">黑鲨游戏手机 <span>约有3件</span></a></li>
-                              <li><a href="#">红米note 5 <span>约有6件</span></a></li>
-                              <li><a href="#">红米5A <span>约有6件</span></a></li>
-                              <li><a href="#">小米电视4c <span>约有6件</span></a></li>
-                              <li><a href="#">电视32寸 <span>约有6件</span></a></li>
-              <li><a href="#">小米电视4c <span>约有6件</span></a></li>
-                              <li><a href="#">电视32寸 <span>约有6件</span></a></li>
+                              <li id="xiaomi6"><router-link router-link :to="'/shopdetail/'+103">小米6x <span>约有6件</span></router-link></li>
+                              <li><router-link :to="'/shopdetail/'+103">小米6x <span>约有6件</span></router-link></li>
+                              <li><router-link :to="'/shopdetail/'+107">小米MIX2 <span>约有5件</span></router-link></li>
+                              <li><router-link :to="'/shopdetail/'+104">黑鲨游戏手机<span>约有3件</span></router-link></li>
+                              <li><router-link :to="'/shopdetail/'+110">红米note 5 <span>约有6件</span></router-link></li>
+                              <li><a href="javascript:">红米5A <span>约有6件</span></a></li>
+                              <li><router-link :to="'/shopdetail/'+119">小米电视4c <span>约有6件</span></router-link></li>
+                              <li><router-link :to="'/shopdetail/'+122">小米电视4A32寸 <span>约有6件</span></router-link></li>
+                              <li><router-link :to="'/shopdetail/'+133">小米电视4c <span>约有6件</span></router-link></li>
+                              <li><a href="javascript:">小米电视32寸 <span>约有6件</span></a></li>
                           </ul>
                       </div>
                   </div>                
@@ -116,7 +116,7 @@
                               <li>
                                   <div class="new_pcoducts">新品</div>
                                   <router-link :to="'/shopdetail/'+98"><img src="http://127.0.0.1:3000/img/pingmu2.png" alt=""></router-link>
-                                  <a href="#" class="my_pcoducts_name">小米8 屏幕指纹版</a> 
+                                  <a href="javascript:" class="my_pcoducts_name">小米8 屏幕指纹版</a> 
                                   <p class="my_price">3199元起</p>  
                               </li>
                               <li>
@@ -127,20 +127,20 @@
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/1qingchun4.png" alt="" class=""></a>
-                                  <a href="#" class="my_pcoducts_name">小米8SE</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/1qingchun4.png" alt="" class=""></a>
+                                  <a href="javascript:" class="my_pcoducts_name">小米8SE</a> 
                                   <p class="my_price">1899元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/qingchun5.png" alt="" class=""></a>
-                                  <a href="#" class="my_pcoducts_name">小米Max 3</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/qingchun5.png" alt="" class=""></a>
+                                  <a href="javascript:" class="my_pcoducts_name">小米Max 3</a> 
                                   <p class="my_price">1699元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/qingchun6.png" alt="" class="my_none"></a>
-                                  <a href="#" class="my_pcoducts_name">小米MIX 2S</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/qingchun6.png" alt="" class="my_none"></a>
+                                  <a href="javascript:" class="my_pcoducts_name">小米MIX 2S</a> 
                                   <p class="my_price">3299元起</p>  
                               </li>
                               
@@ -153,39 +153,39 @@
                               <ul class="phone_pc clearfix">
                                   <li>
                                       <div class="new_pcoducts">新品</div>
-                                      <a href="#">
+                                      <a href="javascript:">
                                           <img src="http://127.0.0.1:3000/img/hongmi1.png" alt=""></a>
-                                      <a href="#" class="my_pcoducts_name">红米6 Pro</a> 
+                                      <a href="javascript:" class="my_pcoducts_name">红米6 Pro</a> 
                                       <p class="my_price">999元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts">新品</div>
                                       <router-link :to="'/shopdetail/'+106"><img src="http://127.0.0.1:3000/img/homgmi2.png" alt=""></router-link>
-                                      <a href="#" class="my_pcoducts_name">红米6</a> 
+                                      <a href="javascript:" class="my_pcoducts_name">红米6</a> 
                                       <p class="my_price">799元起</p>  
                                   </li>
                                   <li>
                                           <div class="new_pcoducts">新品</div>
-                                      <a href="#"><img src="http://127.0.0.1:3000/img/homgmi3.png" alt="" class=""></a>
-                                      <a href="#" class="my_pcoducts_name">红米6A</a> 
+                                      <a href="javascript:"><img src="http://127.0.0.1:3000/img/homgmi3.png" alt="" class=""></a>
+                                      <a href="javascript:" class="my_pcoducts_name">红米6A</a> 
                                       <p class="my_price">599元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts new_pcoducts_bor"></div>
-                                      <a href="#"><img src="http://127.0.0.1:3000/img/hongmi4-220.png" alt="" class=""></a>
-                                      <a href="#" class="my_pcoducts_name">红米Note 5</a> 
+                                      <a href="javascript:"><img src="http://127.0.0.1:3000/img/hongmi4-220.png" alt="" class=""></a>
+                                      <a href="javascript:" class="my_pcoducts_name">红米Note 5</a> 
                                       <p class="my_price">1099元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts new_pcoducts_bor"></div>
-                                      <a href="#"><img src="http://127.0.0.1:3000/img/hongmi5.png" alt="" class=""></a>
-                                      <a href="#" class="my_pcoducts_name">红米S2</a> 
+                                      <a href="javascript:"><img src="http://127.0.0.1:3000/img/hongmi5.png" alt="" class=""></a>
+                                      <a href="javascript:" class="my_pcoducts_name">红米S2</a> 
                                       <p class="my_price">999元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts new_pcoducts_bor"></div>
-                                      <a href="#"><img src="http://127.0.0.1:3000/img/hongmi6.png" alt="" class="my_none"></a>
-                                      <a href="#" class="my_pcoducts_name">红米5 Plus</a> 
+                                      <a href="javascript:"><img src="http://127.0.0.1:3000/img/hongmi6.png" alt="" class="my_none"></a>
+                                      <a href="javascript:" class="my_pcoducts_name">红米5 Plus</a> 
                                       <p class="my_price">999元起</p>  
                                   </li>
                               </ul>
@@ -197,39 +197,39 @@
                               <ul class="phone_pc clearfix">
                                   <li>
                                       <div class="new_pcoducts">新品</div>
-                                      <a href="#">
+                                      <a href="javascript:">
                                           <img src="http://127.0.0.1:3000/img/tv1.png" alt=""></a>
-                                      <a href="#" class="my_pcoducts_name">小米电视4 75英寸</a> 
+                                      <a href="javascript:" class="my_pcoducts_name">小米电视4 75英寸</a> 
                                       <p class="my_price">8999元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts">新品</div>
-                                      <a href="#"><img src="http://127.0.0.1:3000/img/tv2.png" alt=""></a>
-                                      <a href="#" class="my_pcoducts_name">小米电视4A 32英寸</a> 
+                                      <a href="javascript:"><img src="http://127.0.0.1:3000/img/tv2.png" alt=""></a>
+                                      <a href="javascript:" class="my_pcoducts_name">小米电视4A 32英寸</a> 
                                       <p class="my_price">899元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts">新品</div>
-                                      <a href="#"><img src="http://127.0.0.1:3000/img/tv3.png" alt="" class=""></a>
-                                      <a href="#" class="my_pcoducts_name">小米电视4A 43英寸青春版</a> 
+                                      <a href="javascript:"><img src="http://127.0.0.1:3000/img/tv3.png" alt="" class=""></a>
+                                      <a href="javascript:" class="my_pcoducts_name">小米电视4A 43英寸青春版</a> 
                                       <p class="my_price">1499元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts">新品</div>
-                                      <a href="#"><img src="http://127.0.0.1:3000/img/tv4.png" alt="" class=""></a>
-                                      <a href="#" class="my_pcoducts_name">小米电视4A 50英寸</a> 
+                                      <a href="javascript:"><img src="http://127.0.0.1:3000/img/tv4.png" alt="" class=""></a>
+                                      <a href="javascript:" class="my_pcoducts_name">小米电视4A 50英寸</a> 
                                       <p class="my_price">1999元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts">新品</div>
-                                      <a href="#"><img src="http://127.0.0.1:3000/img/tv5.png" alt="" class="mr-10"></a>
-                                      <a href="#" class="my_pcoducts_name">小米电视4A 55英寸</a> 
+                                      <a href="javascript:"><img src="http://127.0.0.1:3000/img/tv5.png" alt="" class="mr-10"></a>
+                                      <a href="javascript:" class="my_pcoducts_name">小米电视4A 55英寸</a> 
                                       <p class="my_price">2499元起</p>  
                                   </li>
                                   <li>
                                       <div class="new_pcoducts new_pcoducts_bor"></div>
-                                      <a href="#"><img src="http://127.0.0.1:3000/img/tv6.png" alt="" class="my_none"></a>
-                                      <a href="#" class="my_pcoducts_name">查看全部</a> 
+                                      <a href="javascript:"><img src="http://127.0.0.1:3000/img/tv6.png" alt="" class="my_none"></a>
+                                      <a href="javascript:" class="my_pcoducts_name">查看全部</a> 
                                       <p class="my_price">小米电视</p>  
                                   </li>
                               </ul>
@@ -241,39 +241,39 @@
                           <ul class="phone_pc clearfix">
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#">
+                                  <a href="javascript:">
                                       <img src="http://127.0.0.1:3000/img/computer1.png" alt=""></a>
-                                  <a href="#" class="my_pcoducts_name">小米平板</a> 
+                                  <a href="javascript:" class="my_pcoducts_name">小米平板</a> 
                                   <p class="my_price">1099元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts">新品</div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/computer2.png" alt=""></a>
-                                  <a href="#" class="my_pcoducts_name">小米笔记本 15.6"</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/computer2.png" alt=""></a>
+                                  <a href="javascript:" class="my_pcoducts_name">小米笔记本 15.6"</a> 
                                   <p class="my_price">4199元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts">新品</div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/computer3.png" alt="" class=""></a>
-                                  <a href="#" class="my_pcoducts_name">小米游戏本 8代</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/computer3.png" alt="" class=""></a>
+                                  <a href="javascript:" class="my_pcoducts_name">小米游戏本 8代</a> 
                                   <p class="my_price">6699元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts">新品</div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/computer4.png" alt="" class=""></a>
-                                  <a href="#" class="my_pcoducts_name">小米笔记本Pro 15.6" GTX版</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/computer4.png" alt="" class=""></a>
+                                  <a href="javascript:" class="my_pcoducts_name">小米笔记本Pro 15.6" GTX版</a> 
                                   <p class="my_price">6299元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/computer5.png" alt="" class="mr-10"></a>
-                                  <a href="#" class="my_pcoducts_name">小米笔记本 Pro</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/computer5.png" alt="" class="mr-10"></a>
+                                  <a href="javascript:" class="my_pcoducts_name">小米笔记本 Pro</a> 
                                   <p class="my_price">5599元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/computer6.5.jpg" alt="" class="my_none"></a>
-                                  <a href="#" class="my_pcoducts_name">小米笔记本 Air 系列</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/computer6.5.jpg" alt="" class="my_none"></a>
+                                  <a href="javascript:" class="my_pcoducts_name">小米笔记本 Air 系列</a> 
                                   <p class="my_price">3599元起</p>  
                               </li>
                           </ul>
@@ -285,8 +285,8 @@
                           <ul class="phone_pc clearfix">
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/kongtiao.jpg" alt="" class="my_none"></a>
-                                  <a href="#" class="my_pcoducts_name">米家互联网空调</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/kongtiao.jpg" alt="" class="my_none"></a>
+                                  <a href="javascript:" class="my_pcoducts_name">米家互联网空调</a> 
                                   <p class="my_price">1999元起</p>  
                               </li>
                           </ul>
@@ -298,33 +298,33 @@
                           <ul class="phone_pc clearfix">
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#">
+                                  <a href="javascript:">
                                       <img src="http://127.0.0.1:3000/img/new1.png" alt=""></a>
-                                  <a href="#" class="my_pcoducts_name">小米手环3</a> 
+                                  <a href="javascript:" class="my_pcoducts_name">小米手环3</a> 
                                   <p class="my_price">169元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/luyouqi.png" alt=""></a>
-                                  <a href="#" class="my_pcoducts_name">小米路由器4</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/luyouqi.png" alt=""></a>
+                                  <a href="javascript:" class="my_pcoducts_name">小米路由器4</a> 
                                   <p class="my_price">199元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/toiuyingyi.png" alt="" class=""></a>
-                                  <a href="#" class="my_pcoducts_name">米家投影仪</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/toiuyingyi.png" alt="" class=""></a>
+                                  <a href="javascript:" class="my_pcoducts_name">米家投影仪</a> 
                                   <p class="my_price">3399元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/VR.png" alt="" class=""></a>
-                                  <a href="#" class="my_pcoducts_name">小米VR 一体机</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/VR.png" alt="" class=""></a>
+                                  <a href="javascript:" class="my_pcoducts_name">小米VR 一体机</a> 
                                   <p class="my_price">1499元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/shexiangji.png" alt="" class="my_none"></a>
-                                  <a href="#" class="my_pcoducts_name">小米米家智能摄像机 云台版</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/shexiangji.png" alt="" class="my_none"></a>
+                                  <a href="javascript:" class="my_pcoducts_name">小米米家智能摄像机 云台版</a> 
                                   <p class="my_price">199元起</p>  
                               </li>
                           </ul>
@@ -336,39 +336,39 @@
                           <ul class="phone_pc clearfix">
                               <li>
                                   <div class="new_pcoducts">双频双核</div>
-                                  <a href="#">
+                                  <a href="javascript:">
                                       <img src="http://127.0.0.1:3000/img/A4.png" alt=""></a>
-                                  <a href="#" class="my_pcoducts_name">小米路由器 4</a> 
+                                  <a href="javascript:" class="my_pcoducts_name">小米路由器 4</a> 
                                   <p class="my_price">199元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/4Q.png" alt=""></a>
-                                  <a href="#" class="my_pcoducts_name">小米路由器 4Q</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/4Q.png" alt=""></a>
+                                  <a href="javascript:" class="my_pcoducts_name">小米路由器 4Q</a> 
                                   <p class="my_price">99元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/3A.png" alt="" class=""></a>
-                                  <a href="#" class="my_pcoducts_name">小米路由器 3A</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/3A.png" alt="" class=""></a>
+                                  <a href="javascript:" class="my_pcoducts_name">小米路由器 3A</a> 
                                   <p class="my_price">129元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts">双千兆</div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/3G.png" alt="" class=""></a>
-                                  <a href="#" class="my_pcoducts_name">小米路由器 3G</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/3G.png" alt="" class=""></a>
+                                  <a href="javascript:" class="my_pcoducts_name">小米路由器 3G</a> 
                                   <p class="my_price">299元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts">大容量</div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/PRO.png" alt="" class=""></a>
-                                  <a href="#" class="my_pcoducts_name">小米路由器 HD/Pro</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/PRO.png" alt="" class=""></a>
+                                  <a href="javascript:" class="my_pcoducts_name">小米路由器 HD/Pro</a> 
                                   <p class="my_price">499元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/quanbu.png" alt="" class="my_none"></a>
-                                  <a href="#" class="my_pcoducts_name">查看全部小米路由器</a>  
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/quanbu.png" alt="" class="my_none"></a>
+                                  <a href="javascript:" class="my_pcoducts_name">查看全部小米路由器</a>  
                               </li>
                           </ul>
                       </div> 
@@ -379,33 +379,33 @@
                           <ul class="phone_pc clearfix">
                               <li>
                                   <div class="new_pcoducts">新品</div>
-                                  <a href="#">
+                                  <a href="javascript:">
                                       <img src="http://127.0.0.1:3000/img/plane.jpg" alt=""></a>
-                                  <a href="#" class="my_pcoducts_name">小米无人机</a> 
+                                  <a href="javascript:" class="my_pcoducts_name">小米无人机</a> 
                                   <p class="my_price">2999元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts">新品</div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/xiaomijingshuiqi.jpg" alt=""></a>
-                                  <a href="#" class="my_pcoducts_name">小米净水器</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/xiaomijingshuiqi.jpg" alt=""></a>
+                                  <a href="javascript:" class="my_pcoducts_name">小米净水器</a> 
                                   <p class="my_price">1999元起</p>  
                               </li>
                               <li>
                                       <div class="new_pcoducts">新品</div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/saodijiqiren320-220.jpg" alt="" class=""></a>
-                                  <a href="#" class="my_pcoducts_name">米家扫地机器人</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/saodijiqiren320-220.jpg" alt="" class=""></a>
+                                  <a href="javascript:" class="my_pcoducts_name">米家扫地机器人</a> 
                                   <p class="my_price">1699元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/dfb.jpg" alt="" class=""></a>
-                                  <a href="#" class="my_pcoducts_name">米家压力IH电饭煲</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/dfb.jpg" alt="" class=""></a>
+                                  <a href="javascript:" class="my_pcoducts_name">米家压力IH电饭煲</a> 
                                   <p class="my_price">999元起</p>  
                               </li>
                               <li>
                                   <div class="new_pcoducts new_pcoducts_bor"></div>
-                                  <a href="#"><img src="http://127.0.0.1:3000/img/air2.jpg" alt="" class="my_none"></a>
-                                  <a href="#" class="my_pcoducts_name">查看全部智能硬件</a> 
+                                  <a href="javascript:"><img src="http://127.0.0.1:3000/img/air2.jpg" alt="" class="my_none"></a>
+                                  <a href="javascript:" class="my_pcoducts_name">查看全部智能硬件</a> 
                                   <p class="my_price"></p>  
                               </li>
                           </ul>
